@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
-        double[] a = new double[]{1, 1, 2, 3, 5, 8, 2, 4};
+        double[] a = new double[]{1, 1, 2, 3, 5, 8, 2, 4, 3};
 
         System.out.printf("For array: %s\n", Arrays.toString(a));
         System.out.printf("Max element is: %s\n", findMax(a));
