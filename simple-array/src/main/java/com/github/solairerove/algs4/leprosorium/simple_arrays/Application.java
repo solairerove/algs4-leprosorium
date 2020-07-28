@@ -11,6 +11,7 @@ public class Application {
         System.out.printf("Average value is: %s\n", averageValue(a));
         System.out.printf("New copy of arraY?): %s\n", Arrays.toString(arrayCopy(a)));
         System.out.printf("Reversed array is: %s\n", Arrays.toString(reverseCopy(a)));
+        System.out.printf("Steroid reverse is: %s\n", Arrays.toString(steroidReverseCopy(a)));
     }
 
     private static double findMax(double[] a) {
@@ -37,9 +38,7 @@ public class Application {
         int size = a.length;
         double[] b = new double[size];
 
-        for (int i = 0; i < size; ++i) {
-            b[i] = a[i];
-        }
+        System.arraycopy(a, 0, b, 0, size);
 
         return b;
     }
@@ -53,5 +52,17 @@ public class Application {
         }
 
         return b;
+    }
+
+    private static double[] steroidReverseCopy(double[] a) {
+        int length = a.length;
+
+        for (int i = 0; i < length / 2; ++i) {
+            double temp = a[i];
+            a[i] = a[length - i - 1];
+            a[length - i - 1] = temp;
+        }
+
+        return a;
     }
 }
