@@ -20,7 +20,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.github.solairerove.algs4.leprosarium.euclid.Application</mainClass>
+                            <mainClass>com.github.solairerove.algs4.leprosorium.gcd_euclid.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

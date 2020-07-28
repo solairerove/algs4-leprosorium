@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosarium.euclid;
+package com.github.solairerove.algs4.leprosorium.gcd_euclid;
 
 public class Application {
     public static void main(String[] args) {
