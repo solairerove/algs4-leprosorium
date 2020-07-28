@@ -10,6 +10,7 @@ public class Application {
         System.out.printf("Max element is: %s\n", findMax(a));
         System.out.printf("Average value is: %s\n", averageValue(a));
         System.out.printf("New copy of arraY?): %s\n", Arrays.toString(arrayCopy(a)));
+        System.out.printf("Reversed array is: %s\n", Arrays.toString(reverseCopy(a)));
     }
 
     private static double findMax(double[] a) {
@@ -38,6 +39,17 @@ public class Application {
 
         for (int i = 0; i < size; ++i) {
             b[i] = a[i];
+        }
+
+        return b;
+    }
+
+    private static double[] reverseCopy(double[] a) {
+        int size = a.length;
+        double[] b = new double[size];
+
+        for (int i = 0; i < size; ++i) {
+            b[size - i - 1] = a[i];
         }
 
         return b;
