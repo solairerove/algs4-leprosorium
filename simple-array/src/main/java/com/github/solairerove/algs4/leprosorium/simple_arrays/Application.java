@@ -12,6 +12,33 @@ public class Application {
         System.out.printf("New copy of arraY?): %s\n", Arrays.toString(arrayCopy(a)));
         System.out.printf("Reversed array is: %s\n", Arrays.toString(reverseCopy(a)));
         System.out.printf("Steroid reverse is: %s\n", Arrays.toString(steroidReverseCopy(a)));
+
+        double[][] aa = new double[][]{
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        double[][] bb = new double[][]{
+                {2, 2, 2},
+                {3, 3, 3},
+                {4, 4, 4}
+        };
+
+        System.out.println("Matrix aa");
+        for (double[] value : aa) {
+            System.out.printf("%s\n", Arrays.toString(value));
+        }
+
+        System.out.println("Matrix bb");
+        for (double[] doubles : bb) {
+            System.out.printf("%s\n", Arrays.toString(doubles));
+        }
+
+        System.out.println("Matrix cc");
+        for (double[] doubles : matrixMultiply(aa, bb)) {
+            System.out.printf("%s\n", Arrays.toString(doubles));
+        }
     }
 
     private static double findMax(double[] a) {
@@ -64,5 +91,20 @@ public class Application {
         }
 
         return a;
+    }
+
+    private static double[][] matrixMultiply(double[][] a, double[][] b) {
+        int length = a.length;
+        double[][] c = new double[length][length];
+
+        for (int i = 0; i < length; ++i) {
+            for (int k = 0; k < length; ++k) {
+                for (int j = 0; j < length; ++j) {
+                    c[i][k] += a[i][j] * b[j][k];
+                }
+            }
+        }
+
+        return c;
     }
 }
