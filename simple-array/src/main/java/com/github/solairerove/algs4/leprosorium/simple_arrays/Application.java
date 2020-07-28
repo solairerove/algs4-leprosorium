@@ -9,6 +9,7 @@ public class Application {
         System.out.printf("For array: %s\n", Arrays.toString(a));
         System.out.printf("Max element is: %s\n", findMax(a));
         System.out.printf("Average value is: %s\n", averageValue(a));
+        System.out.printf("New copy of arraY?): %s\n", Arrays.toString(arrayCopy(a)));
     }
 
     private static double findMax(double[] a) {
@@ -29,5 +30,16 @@ public class Application {
         }
 
         return sum / a.length;
+    }
+
+    private static double[] arrayCopy(double[] a) {
+        int size = a.length;
+        double[] b = new double[size];
+
+        for (int i = 0; i < size; ++i) {
+            b[i] = a[i];
+        }
+
+        return b;
     }
 }
