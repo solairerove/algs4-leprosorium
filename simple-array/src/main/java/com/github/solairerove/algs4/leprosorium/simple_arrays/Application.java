@@ -8,6 +8,7 @@ public class Application {
 
         System.out.printf("For array: %s\n", Arrays.toString(a));
         System.out.printf("Max element is: %s\n", findMax(a));
+        System.out.printf("Average value is: %s\n", averageValue(a));
     }
 
     private static double findMax(double[] a) {
@@ -19,5 +20,14 @@ public class Application {
         }
 
         return max;
+    }
+
+    private static double averageValue(double[] a) {
+        double sum = 0.0;
+        for (double v : a) {
+            sum += v;
+        }
+
+        return sum / a.length;
     }
 }
