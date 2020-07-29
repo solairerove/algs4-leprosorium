@@ -15,6 +15,7 @@
     <modules>
         <module>euclid-highest-common-factor</module>
         <module>simple-array</module>
+        <module>binary</module>
     </modules>
 
     <properties>
