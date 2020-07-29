@@ -36,8 +36,7 @@ public class Application {
         int low = 0;
         int high = length - 1;
 
-        for (int i = 0; i < length / 2; ++i) {
-
+        do {
             if (low > high) {
                 return -1;
             }
@@ -51,7 +50,6 @@ public class Application {
             } else {
                 return mid;
             }
-        }
-        return -1;
+        } while (true);
     }
 }
