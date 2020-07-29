@@ -8,6 +8,7 @@ public class Application {
 
         System.out.printf("For array: %s\n", Arrays.toString(a));
         System.out.printf("Index of element %s is %s\n", 8, rank(8, a));
+        System.out.printf("Index of element %s is %s\n", 8, ownRank(8, a));
     }
 
     public static int rank(int key, int[] a) {
@@ -28,5 +29,29 @@ public class Application {
         } else {
             return mid;
         }
+    }
+
+    public static int ownRank(int key, int[] a) {
+        int length = a.length;
+        int low = 0;
+        int high = length - 1;
+
+        for (int i = 0; i < length / 2; ++i) {
+
+            if (low > high) {
+                return -1;
+            }
+
+            int mid = low + (high - low) / 2;
+
+            if (key < a[mid]) {
+                high = mid - 1;
+            } else if (key > a[mid]) {
+                low = mid + 1;
+            } else {
+                return mid;
+            }
+        }
+        return -1;
     }
 }
