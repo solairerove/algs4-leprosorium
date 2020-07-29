@@ -32,15 +32,10 @@ public class Application {
     }
 
     public static int ownRank(int key, int[] a) {
-        int length = a.length;
         int low = 0;
-        int high = length - 1;
+        int high = a.length - 1;
 
-        do {
-            if (low > high) {
-                return -1;
-            }
-
+        while (low <= high) {
             int mid = low + (high - low) / 2;
 
             if (key < a[mid]) {
@@ -50,6 +45,8 @@ public class Application {
             } else {
                 return mid;
             }
-        } while (true);
+        }
+
+        return -1;
     }
 }
