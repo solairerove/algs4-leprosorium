@@ -4,13 +4,20 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class StdlibExample {
     public static void main(String[] args) {
-        int f = 0;
-        int g = 1;
+        System.out.printf("Fibonacci for n: %s \n", 15);
+        fibonacci(15);
+    }
 
-        for (int i = 0; i <= 15; i++) {
-            StdOut.println(f);
-            f = f + g;
-            g = f - g;
+    public static void fibonacci(int n) {
+        int a = 0;
+        int b = 1;
+
+        for (int i = 0; i <= n; ++i) {
+            StdOut.print(a + " ");
+
+            a += b;
+            b = a - b;
         }
+        StdOut.println();
     }
 }
