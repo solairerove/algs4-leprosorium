@@ -6,13 +6,13 @@ public class StdlibExample {
     public static void main(String[] args) {
         System.out.printf("Fibonacci for n: %s \n", 15);
         fibonacci(15);
-        fibonacciMoreClear(15);
-        recursiveFibonacci(15);
+        fibonacciMoreClear(80);
+        classicFibonacci();
     }
 
     public static void fibonacci(int n) {
-        int a = 0;
-        int b = 1;
+        long a = 0L;
+        long b = 1L;
 
         for (int i = 0; i <= n; ++i) {
             StdOut.print(a + " ");
@@ -24,32 +24,33 @@ public class StdlibExample {
     }
 
     public static void fibonacciMoreClear(int n) {
-        int a = 0;
-        int b = 1;
+        long a = 0L;
+        long b = 1L;
 
         for (int i = 0; i <= n; ++i) {
             StdOut.print(a + " ");
 
-            int temp = a;
+            long temp = a;
             a += b;
             b = temp;
         }
         StdOut.println();
     }
 
-    public static void recursiveFibonacci(int n) {
-        recursiveFibonacci(n, 0, 0, 1);
+    public static long F(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        if (n == 1) {
+            return 1;
+        }
+
+        return F(n - 1) + F(n - 2);
     }
 
-    public static void recursiveFibonacci(int n, int i, int a, int b) {
-        if (i <= n) {
-            StdOut.print(a + " ");
-
-            a += b;
-            b = a - b;
-            i++;
-
-            recursiveFibonacci(n, i, a, b);
+    public static void classicFibonacci() {
+        for (int n = 0; n <= 15; n++) {
+            StdOut.print(F(n) + " ");
         }
     }
 }
