@@ -7,6 +7,7 @@ public class StdlibExample {
         System.out.printf("Fibonacci for n: %s \n", 15);
         fibonacci(15);
         fibonacciMoreClear(15);
+        recursiveFibonacci(15);
     }
 
     public static void fibonacci(int n) {
@@ -34,5 +35,21 @@ public class StdlibExample {
             b = temp;
         }
         StdOut.println();
+    }
+
+    public static void recursiveFibonacci(int n) {
+        recursiveFibonacci(n, 0, 0, 1);
+    }
+
+    public static void recursiveFibonacci(int n, int i, int a, int b) {
+        if (i <= n) {
+            StdOut.print(a + " ");
+
+            a += b;
+            b = a - b;
+            i++;
+
+            recursiveFibonacci(n, i, a, b);
+        }
     }
 }
