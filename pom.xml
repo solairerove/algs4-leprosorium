@@ -23,6 +23,15 @@
         <java.version>11</java.version>
     </properties>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/edu.princeton.cs/algs4 -->
+        <dependency>
+            <groupId>edu.princeton.cs</groupId>
+            <artifactId>algs4</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -35,5 +44,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>bintray</id>
+            <url>https://dl.bintray.com/algs4/maven/</url>
+        </repository>
+    </repositories>
 
 </project>
