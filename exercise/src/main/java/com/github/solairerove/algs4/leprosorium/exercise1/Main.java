@@ -35,6 +35,9 @@ public class Main {
         System.out.printf("%s in binary string is %s\n", 5, Integer.toBinaryString(5));
         System.out.printf("%s in binary string is %s\n", 1, Integer.toBinaryString(1));
         System.out.printf("%s in binary string is %s\n", 0, Integer.toBinaryString(0));
+
+        System.out.println();
+        someShit4();
     }
 
     private static boolean inRangeOfZeroAndOne(double a, double b) {
@@ -67,5 +70,21 @@ public class Main {
             }
         }
         StdOut.println(sum);
+    }
+
+    private static void someShit4() {
+        int[] a = new int[10];
+
+        for (int i = 0; i < 10; i++) {
+            a[i] = 9 - i;
+        }
+
+        for (int i = 0; i < 10; i++) {
+            a[i] = a[a[i]];
+        }
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println(a[i]);
+        }
     }
 }
