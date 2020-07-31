@@ -12,11 +12,12 @@ public class ToBinaryStringApplication {
     }
 
     private static String toBinaryString(int n) {
-        String s = "";
+        StringBuilder stringBuilder = new StringBuilder();
         for (int i = n; i > 0; i /= 2) {
-            s = (i % 2) + s;
+            // s = (i % 2) + s;
+            stringBuilder.insert(0, i % 2);
         }
 
-        return s;
+        return stringBuilder.toString();
     }
 }
