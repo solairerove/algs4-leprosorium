@@ -6,6 +6,8 @@ public class Application {
         System.out.printf("For 15 and 5 highest common factor is: %s\n", ownGcd(15, 5)); // 5
         System.out.printf("For 5 and 15 highest common factor is: %s\n", ownGcd(5, 15)); // 5
         System.out.printf("For 13 and 10 highest common factor is: %s\n", ownGcd(13, 10)); // 1
+        System.out.printf("For 105 and 24 highest common factor is: %s\n", ownGcd(105, 24)); // 3
+        System.out.printf("For 1111111 and 1234567 highest common factor is: %s\n", ownGcd(1111111, 1234567)); // 1
     }
 
     // greatest common divisor

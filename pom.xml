@@ -17,6 +17,7 @@
         <module>simple-array</module>
         <module>binary</module>
         <module>exercise</module>
+        <module>fibonacci</module>
     </modules>
 
     <properties>
