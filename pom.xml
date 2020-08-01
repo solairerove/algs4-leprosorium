@@ -18,6 +18,7 @@
         <module>binary</module>
         <module>exercise</module>
         <module>fibonacci</module>
+        <module>simple-string</module>
     </modules>
 
     <properties>
