@@ -7,4 +7,5 @@ Algorithms playground [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/ho
 - index of el in array binary search
 - fibonacci
 - binary string of int
-- is string palindrome
+- [is string palindrome](https://github.com/solairerove/algs4-leprosorium/blob/39400707393632541e2db715d39a7fcdff85822b/simple-string/src/main/java/com/github/solairerove/algs4/leprosorium/simple_string/IsPalindromeApplication.java#L13)
+- is string array sorted
