@@ -8,6 +8,8 @@ public class Application {
         System.out.printf("For 13 and 10 highest common factor is: %s\n", ownGcd(13, 10)); // 1
         System.out.printf("For 105 and 24 highest common factor is: %s\n", ownGcd(105, 24)); // 3
         System.out.printf("For 1111111 and 1234567 highest common factor is: %s\n", ownGcd(1111111, 1234567)); // 1
+        System.out.printf("For 98 and 56 highest common factor is: %s\n", ownGcd(98, 56)); // 14
+        System.out.printf("For 48 and 48 highest common factor is: %s\n", ownGcd(48, 48)); // 6
     }
 
     // greatest common divisor
