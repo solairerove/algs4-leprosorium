@@ -19,6 +19,7 @@
         <module>exercise</module>
         <module>fibonacci</module>
         <module>simple-string</module>
+        <module>edsger-wybe-dijkstra</module>
     </modules>
 
     <properties>
