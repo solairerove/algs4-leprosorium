@@ -20,6 +20,7 @@
         <module>fibonacci</module>
         <module>simple-string</module>
         <module>edsger-wybe-dijkstra</module>
+        <module>simple-collection</module>
     </modules>
 
     <properties>
