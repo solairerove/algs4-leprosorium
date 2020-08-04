@@ -1,6 +1,6 @@
-package com.github.solairerove.algs4.leprosorium.simple_collection.fixed;
+package com.github.solairerove.algs4.leprosorium.simple_collection.stack.fixed;
 
-import com.github.solairerove.algs4.leprosorium.simple_collection.resized.ResizingArrayStack;
+import com.github.solairerove.algs4.leprosorium.simple_collection.stack.resized.ResizingArrayStack;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
