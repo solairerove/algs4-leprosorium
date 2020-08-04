@@ -12,3 +12,4 @@ Algorithms playground [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/ho
 - double stack Dijkstra's evaluate
 - simple-collection
     - fixed capacity stack of strings
+    - resizing array stack
