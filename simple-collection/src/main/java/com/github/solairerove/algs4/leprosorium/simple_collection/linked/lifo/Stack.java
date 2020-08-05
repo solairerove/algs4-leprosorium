@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.simple_collection.linked;
+package com.github.solairerove.algs4.leprosorium.simple_collection.linked.lifo;
 
 import java.util.Iterator;
 

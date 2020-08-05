@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.simple_collection.linked;
+package com.github.solairerove.algs4.leprosorium.simple_collection.linked.lifo;
 
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
