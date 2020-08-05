@@ -13,3 +13,5 @@ Algorithms playground [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/ho
 - simple-collection
     - fixed capacity stack of strings
     - resizing array stack
+    - linked lifo stack
+    - linked fifo queue
