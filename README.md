@@ -15,3 +15,4 @@ Algorithms playground [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/ho
     - resizing array stack
     - linked lifo stack
     - linked fifo queue
+    - linked lifo bag
