@@ -1,6 +1,6 @@
 # algs4-leprosorium
 
-Algorithms playground [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/home/)
+Algorithms playground [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/home/) [code](https://algs4.cs.princeton.edu/code/)
 
 - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/master/euclid-highest-common-factor/src/main/java/com/github/solairerove/algs4/leprosorium/gcd_euclid/Application.java)
 - [array reverse](https://github.com/solairerove/algs4-leprosorium/blob/dcb71b86dc350bb726cad951f3d2fa66998a12a9/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/Application.java#L84)
@@ -16,3 +16,4 @@ Algorithms playground [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/ho
     - linked lifo stack
     - linked fifo queue
     - linked lifo bag
+    - balanced parentheses
