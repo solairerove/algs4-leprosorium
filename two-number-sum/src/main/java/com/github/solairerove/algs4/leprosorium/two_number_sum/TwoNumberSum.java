@@ -1,6 +1,8 @@
 package com.github.solairerove.algs4.leprosorium.two_number_sum;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Write a function that takes in a non-empty array of distinct integers and an integer
@@ -30,9 +32,13 @@ public class TwoNumberSum {
 
         System.out.printf("Target sum: %s for %s -> %s\n",
                 targetSum, Arrays.toString(a), Arrays.toString(twoNumberSum(a, targetSum)));
+        System.out.printf("Target sum: %s for %s -> %s\n",
+                targetSum, Arrays.toString(a), Arrays.toString(twoNumberSum2(a, targetSum)));
 
         System.out.printf("Target sum: %s for %s -> %s\n",
                 targetSumB, Arrays.toString(b), Arrays.toString(twoNumberSum(b, targetSumB)));
+        System.out.printf("Target sum: %s for %s -> %s\n",
+                targetSumB, Arrays.toString(b), Arrays.toString(twoNumberSum2(b, targetSumB)));
     }
 
     // O(N^2) time | O(1) space
@@ -49,5 +55,21 @@ public class TwoNumberSum {
         }
 
         return b;
+    }
+
+    // O(N) time | O(N) space
+    public static int[] twoNumberSum2(int[] array, int targetSum) {
+        Set<Integer> nums = new HashSet<>();
+
+        for (int num : array) {
+            int potential = targetSum - num;
+            if (nums.contains(potential)) {
+                return new int[]{num, potential};
+            } else {
+                nums.add(num);
+            }
+        }
+
+        return new int[0];
     }
 }
