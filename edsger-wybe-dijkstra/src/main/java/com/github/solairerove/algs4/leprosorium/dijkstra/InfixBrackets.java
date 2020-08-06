@@ -12,16 +12,28 @@ public class InfixBrackets {
     private static String transform(String statement) {
         String s = "";
 
-        Stack<String> stack = new Stack<>();
-        stack.push("");
+        Stack<String> ops = new Stack<>();
+        Stack<String> vals = new Stack<>();
 
         String[] a = statement.split(" ");
-        for (int i = 0; i < a.length; ++i) {
-            String pop = stack.pop();
-            pop = pop + a[i] + " ";
-            stack.push(pop);
+        for (String el : a) {
+            if ("(".equals(el)) ;
+            else if ("+".equals(el)) ops.push(el);
+            else if ("-".equals(el)) ops.push(el);
+            else if ("*".equals(el)) ops.push(el);
+            else if ("/".equals(el)) ops.push(el);
+            else if (")".equals(el)) {
+                String op = ops.pop();
+                String val2 = vals.pop();
+                String val1 = vals.pop();
+
+                String sub = "( " + val1 + " " + op + " " + val2 + " )";
+                vals.push(sub);
+            } else {
+                vals.push(el);
+            }
         }
 
-        return stack.pop();
+        return vals.pop();
     }
 }
