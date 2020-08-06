@@ -21,6 +21,7 @@
         <module>simple-string</module>
         <module>edsger-wybe-dijkstra</module>
         <module>simple-collection</module>
+        <module>two-number-sum</module>
     </modules>
 
     <properties>
