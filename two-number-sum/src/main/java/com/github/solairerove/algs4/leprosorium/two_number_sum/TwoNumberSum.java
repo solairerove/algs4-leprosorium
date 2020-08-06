@@ -34,11 +34,15 @@ public class TwoNumberSum {
                 targetSum, Arrays.toString(a), Arrays.toString(twoNumberSum(a, targetSum)));
         System.out.printf("Target sum: %s for %s -> %s\n",
                 targetSum, Arrays.toString(a), Arrays.toString(twoNumberSum2(a, targetSum)));
+        System.out.printf("Target sum: %s for %s -> %s\n",
+                targetSum, Arrays.toString(a), Arrays.toString(twoNumberSum3(a, targetSum)));
 
         System.out.printf("Target sum: %s for %s -> %s\n",
                 targetSumB, Arrays.toString(b), Arrays.toString(twoNumberSum(b, targetSumB)));
         System.out.printf("Target sum: %s for %s -> %s\n",
                 targetSumB, Arrays.toString(b), Arrays.toString(twoNumberSum2(b, targetSumB)));
+        System.out.printf("Target sum: %s for %s -> %s\n",
+                targetSumB, Arrays.toString(b), Arrays.toString(twoNumberSum3(b, targetSumB)));
     }
 
     // O(N^2) time | O(1) space
@@ -67,6 +71,27 @@ public class TwoNumberSum {
                 return new int[]{num, potential};
             } else {
                 nums.add(num);
+            }
+        }
+
+        return new int[0];
+    }
+
+    // O(Nlog(N)) time | O(1) space
+    public static int[] twoNumberSum3(int[] array, int targetSum) {
+        Arrays.sort(array);
+
+        int low = 0;
+        int high = array.length - 1;
+
+        while (low < high) {
+            int currentSum = array[low] + array[high];
+            if (currentSum == targetSum) {
+                return new int[]{array[low], array[high]};
+            } else if (currentSum < targetSum) {
+                low++;
+            } else {
+                high--;
             }
         }
 
