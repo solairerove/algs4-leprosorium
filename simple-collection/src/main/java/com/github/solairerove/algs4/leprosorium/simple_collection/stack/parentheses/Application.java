@@ -7,7 +7,7 @@ public class Application {
         String balanced = "[()]{}{[()()]()}";
         System.out.printf("is %s balanced: %s\n", balanced, isBalanced(balanced));
 
-        String notBalanced = "[(])";
+        String notBalanced = "(()())((()))()(())(())()()()()";
         System.out.printf("is %s balanced: %s\n", notBalanced, isBalanced(notBalanced));
     }
 
