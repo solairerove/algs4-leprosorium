@@ -12,6 +12,7 @@ Algorithms playground [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/ho
 - reverse polish notation
     - double stack Dijkstra's evaluate
     - infix to postfix
+    - evaluate postfix
 - simple-collection
     - fixed capacity stack of strings
     - resizing array stack
