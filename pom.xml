@@ -22,6 +22,7 @@
         <module>edsger-wybe-dijkstra</module>
         <module>simple-collection</module>
         <module>two-number-sum</module>
+        <module>validate-subsequence</module>
     </modules>
 
     <properties>

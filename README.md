@@ -15,6 +15,7 @@ ___
     - [array reverse](https://github.com/solairerove/algs4-leprosorium/blob/dcb71b86dc350bb726cad951f3d2fa66998a12a9/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/Application.java#L84)
     - index of el in array binary search
     - two number sum
+    - validate subsequence
 - reverse polish notation
     - double stack Dijkstra's evaluate
     - infix to postfix
