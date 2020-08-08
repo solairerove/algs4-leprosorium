@@ -16,7 +16,7 @@ ___
     - index of el in array binary search
     - two number sum
     - validate subsequence
-- reverse polish notation
+- [reverse polish notation](https://github.com/solairerove/algs4-leprosorium/tree/master/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra)
     - double stack Dijkstra's evaluate
     - infix to postfix
     - evaluate postfix
