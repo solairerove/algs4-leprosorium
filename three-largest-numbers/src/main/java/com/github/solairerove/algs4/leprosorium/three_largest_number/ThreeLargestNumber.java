@@ -25,26 +25,22 @@ public class ThreeLargestNumber {
 
     // O(N) time | O(1) space
     private static int[] getThreeLargestNumbers(int[] array) {
-        int[] threeLargest = new int[]{Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE};
+        int[] threeLargestNumbers = {Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE};
 
         for (int num : array) {
-            updateLargest(threeLargest, num);
+            if (num > threeLargestNumbers[2]) {
+                shiftAndUpdate(threeLargestNumbers, num, 2);
+            } else if (num > threeLargestNumbers[1]) {
+                shiftAndUpdate(threeLargestNumbers, num, 1);
+            } else if (num > threeLargestNumbers[0]) {
+                shiftAndUpdate(threeLargestNumbers, num, 0);
+            }
         }
 
-        return threeLargest;
+        return threeLargestNumbers;
     }
 
-    private static void updateLargest(int[] threeLargest, int num) {
-        if (num > threeLargest[2]) {
-            moveAndUpdate(threeLargest, num, 2);
-        } else if (num > threeLargest[1]) {
-            moveAndUpdate(threeLargest, num, 1);
-        } else if (num > threeLargest[0]) {
-            moveAndUpdate(threeLargest, num, 0);
-        }
-    }
-
-    private static void moveAndUpdate(int[] array, int num, int idx) {
+    private static void shiftAndUpdate(int[] array, int num, int idx) {
         for (int i = 0; i <= idx; ++i) {
             if (i == idx) {
                 array[i] = num;
