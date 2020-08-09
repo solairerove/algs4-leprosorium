@@ -6,18 +6,14 @@ import java.util.List;
  * Given two non-empty arrays of integers, write a function that determines
  * whether the second array is a subsequence of the first one.
  * <p>
- * A subsequence of array is a set of numbers that aren't necessarily
- * adjacent in the array but that are in the same order as they appear
- * in the array.
- * <p>
  * Sample Input
- * array = [5, 1, 22, 25, 6, -1, 8, 10]
- * sequence = [1, 6, -1, 10]
+ * array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ * sequence = [2, 3, 7, 8]
  */
 public class ValidateSubsequence {
     public static void main(String... args) {
-        List<Integer> array = List.of(5, 1, 22, 25, 6, -1, 8, 10);
-        List<Integer> sequence = List.of(1, 6, -1, 10);
+        List<Integer> array = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> sequence = List.of(2, 3, 7, 8);
 
         System.out.printf("Arrays is %s\n", array);
         System.out.printf("Sequnce is %s\n", sequence);

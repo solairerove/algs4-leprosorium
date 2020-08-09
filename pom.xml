@@ -23,6 +23,7 @@
         <module>simple-collection</module>
         <module>two-number-sum</module>
         <module>validate-subsequence</module>
+        <module>three-largest-numbers</module>
     </modules>
 
     <properties>
