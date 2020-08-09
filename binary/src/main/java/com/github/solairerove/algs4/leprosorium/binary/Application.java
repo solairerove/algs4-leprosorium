@@ -7,7 +7,7 @@ public class Application {
         int[] a = new int[]{1, 1, 2, 3, 5, 8, 11, 15, 33};
 
         System.out.printf("For array: %s\n", Arrays.toString(a));
-        System.out.printf("Index of element %s is %s\n", 8, rank(8, a));
+        System.out.printf("Index of element %s is %s\n", 8, rank(8, a)); // 5
         System.out.printf("Index of element %s is %s\n", 8, ownRank(8, a));
     }
 
