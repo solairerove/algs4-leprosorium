@@ -40,6 +40,12 @@ public class ThreeLargestNumber {
         return threeLargestNumbers;
     }
 
+    /*
+    [1, 2, 3] <- 4
+	[2, 2, 3] <- 4
+	[2, 3, 3] <- 4
+	[2, 3, 4]
+     */
     private static void shiftAndUpdate(int[] array, int num, int idx) {
         for (int i = 0; i <= idx; ++i) {
             if (i == idx) {
