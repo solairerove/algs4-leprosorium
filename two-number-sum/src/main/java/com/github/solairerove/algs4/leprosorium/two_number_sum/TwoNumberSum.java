@@ -43,18 +43,16 @@ public class TwoNumberSum {
 
     // O(N^2) time | O(1) space
     public static int[] twoNumberSum(int[] array, int targetSum) {
-        int[] b = new int[2];
-
-        for (int value : array) {
-            for (int i : array) {
-                if (value + i == targetSum) {
-                    b[0] = value;
-                    b[1] = i;
+        for (int i = 0; i < array.length - 1; ++i) {
+            for (int j = i + 1; j < array.length; ++j) {
+                if (targetSum == array[i] + array[j]) {
+                    return new int[]{array[i], array[j]};
                 }
             }
         }
 
-        return b;
+
+        return new int[0];
     }
 
     // O(N) time | O(N) space
