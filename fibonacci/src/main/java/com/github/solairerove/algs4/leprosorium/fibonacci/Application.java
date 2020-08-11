@@ -7,6 +7,8 @@ public class Application {
         fibonacci1(15);
         System.out.printf("\n%sth fibonacci: %s\n", 5, getNthFibonacci(5));
         System.out.printf("%sth fibonacci: %s\n", 6, getNthFibonacci(6));
+        System.out.printf("%sth fibonacci: %s\n", 6, getAnotherNthFibonacci(6));
+        System.out.printf("%sth fibonacci: %s\n", 6, getForAnotherNthFibonacci(6));
     }
 
     private static void fibonacci(int n) {
@@ -60,6 +62,19 @@ public class Application {
             b = next;
 
             counter++;
+        }
+
+        return n > 1 ? b : a;
+    }
+
+    private static int getForAnotherNthFibonacci(int n) {
+        int a = 0;
+        int b = 1;
+
+        for (int counter = 3; counter <= n; ++counter) {
+            int next = a + b;
+            a = b;
+            b = next;
         }
 
         return n > 1 ? b : a;
