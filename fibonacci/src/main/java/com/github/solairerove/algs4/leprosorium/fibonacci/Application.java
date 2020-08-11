@@ -6,6 +6,7 @@ public class Application {
         System.out.println();
         fibonacci1(15);
         System.out.printf("\n%sth fibonacci: %s\n", 5, getNthFibonacci(5));
+        System.out.printf("%sth fibonacci: %s\n", 6, getNthFibonacci(6));
     }
 
     private static void fibonacci(int n) {
@@ -46,5 +47,21 @@ public class Application {
         }
 
         return n > 1 ? lastTwo[1] : lastTwo[0];
+    }
+
+    private static int getAnotherNthFibonacci(int n) {
+        int a = 0;
+        int b = 1;
+        int counter = 3;
+
+        while (counter <= n) {
+            int next = a + b;
+            a = b;
+            b = next;
+
+            counter++;
+        }
+
+        return n > 1 ? b : a;
     }
 }
