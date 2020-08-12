@@ -18,6 +18,7 @@ ___
     - two numbers sum
     - two numbers sum is zero
     - three numbers sum is zero
+    - three numbers sum as triplets
     - validate subsequence
     - three largest numbers in array
 - [reverse polish notation](https://github.com/solairerove/algs4-leprosorium/tree/master/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra)

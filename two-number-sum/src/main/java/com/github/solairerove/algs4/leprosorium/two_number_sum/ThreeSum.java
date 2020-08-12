@@ -3,7 +3,9 @@ package com.github.solairerove.algs4.leprosorium.two_number_sum;
 import edu.princeton.cs.algs4.BinarySearch;
 import edu.princeton.cs.algs4.In;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Подсчет трех чисел с нулевой суммой
@@ -15,6 +17,14 @@ public class ThreeSum {
         int[] array = new In(path).readAllInts();
 
         System.out.printf("Null sum count: %s", count(array));
+
+        int[] b = new int[] {12, 3, 1, 2, -6, 5, -8, 6};
+        int targetSum = 0;
+        System.out.printf("\n%s with %s\n", Arrays.toString(b), targetSum);
+        List<Integer[]> integers = threeNumberSum(b, targetSum);
+        System.out.print("[");
+        integers.forEach(el -> System.out.printf("%s", Arrays.toString(el)));
+        System.out.print("]");
     }
 
     // O(n^2 * log(n)) time | O(1) space
@@ -33,5 +43,44 @@ public class ThreeSum {
         }
 
         return cnt;
+    }
+
+    /**
+     * Find all triplets in the array that sum up to the target sum,
+     * and a two dimensional array of all these triplets.
+     */
+    public static List<Integer[]> threeNumberSum(int[] array, int targetSum) {
+        Arrays.sort(array);
+        List<Integer[]> triplets = new ArrayList<>();
+
+        for (int i = 0; i < array.length; ++i) {
+            for (int j = i + 1; j < array.length; ++j) {
+                int num = targetSum - (array[i] + array[j]);
+
+                int idx = rank(array, num);
+                if (rank(array, num) > j) {
+                    Integer[] triplet = {array[i], array[j], array[idx]};
+                    triplets.add(triplet);
+                }
+            }
+        }
+
+        return triplets;
+    }
+
+    private static int rank(int[] array, int key) {
+        int length = array.length;
+        int low = 0;
+        int high = length - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            if (key < array[mid]) high = mid - 1;
+            else if (key > array[mid]) low = mid + 1;
+            else return mid;
+        }
+
+        return -1;
     }
 }
