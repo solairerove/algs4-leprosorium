@@ -16,6 +16,7 @@ ___
     - [array reverse](https://github.com/solairerove/algs4-leprosorium/blob/dcb71b86dc350bb726cad951f3d2fa66998a12a9/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/Application.java#L84)
     - [index of el in array binary search](https://github.com/solairerove/algs4-leprosorium/blob/a1a6c3a6329faf6999f29254a0fa16374d80abfc/binary/src/main/java/com/github/solairerove/algs4/leprosorium/binary/Application.java#L34)
     - two number sum
+    - two number sum is zero
     - validate subsequence
     - three largest numbers in array
 - [reverse polish notation](https://github.com/solairerove/algs4-leprosorium/tree/master/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra)
