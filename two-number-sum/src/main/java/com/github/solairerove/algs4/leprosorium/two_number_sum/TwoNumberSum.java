@@ -36,6 +36,8 @@ public class TwoNumberSum {
                 targetSum, Arrays.toString(a), Arrays.toString(twoNumberSum3(a, targetSum)));
         System.out.printf("Target sum: %s for %s -> %s\n",
                 targetSum, Arrays.toString(a), Arrays.toString(twoNumberSum4(a, targetSum)));
+        System.out.printf("Target sum: %s for %s -> %s\n",
+                targetSum, Arrays.toString(a), Arrays.toString(thoNumbersSum5(a, targetSum)));
 
         System.out.printf("Target sum: %s for %s -> %s\n",
                 targetSumB, Arrays.toString(b), Arrays.toString(twoNumberSum(b, targetSumB)));
@@ -45,6 +47,8 @@ public class TwoNumberSum {
                 targetSumB, Arrays.toString(b), Arrays.toString(twoNumberSum3(b, targetSumB)));
         System.out.printf("Target sum: %s for %s -> %s\n",
                 targetSumB, Arrays.toString(b), Arrays.toString(twoNumberSum4(b, targetSumB)));
+        System.out.printf("Target sum: %s for %s -> %s\n",
+                targetSumB, Arrays.toString(b), Arrays.toString(thoNumbersSum5(b, targetSumB)));
     }
 
     // O(N^2) time | O(1) space
@@ -111,5 +115,42 @@ public class TwoNumberSum {
         }
 
         return new int[0];
+    }
+
+    // O(Nlog(N)) time | O(1) space
+    public static int[] thoNumbersSum5(int[] array, int targetSum) {
+        Arrays.sort(array);
+
+        for (int i = 0; i < array.length; ++i) {
+            int current = array[i];
+            int num = targetSum - current;
+
+            if (binaryIndexOf(array, num) > i) {
+                return new int[]{num, current};
+            }
+        }
+
+        return new int[0];
+    }
+
+    private static int binaryIndexOf(int[] array, int key) {
+        int length = array.length;
+
+        int low = 0;
+        int high = length - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            if (key < array[mid]) {
+                high = mid - 1;
+            } else if (key > array[mid]) {
+                low = mid + 1;
+            } else {
+                return mid;
+            }
+        }
+
+        return -1;
     }
 }
