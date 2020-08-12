@@ -23,8 +23,8 @@ public class TwoSum {
 
         int cnt = 0;
 
-        for (int value : a) {
-            if (BinarySearch.indexOf(a, -value) > 1) {
+        for (int i = 0; i < a.length; ++i) {
+            if (BinarySearch.indexOf(a, -a[i]) > i) {
                 cnt++;
             }
         }

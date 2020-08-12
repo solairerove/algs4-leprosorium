@@ -1,5 +1,7 @@
 package com.github.solairerove.algs4.leprosorium.two_number_sum;
 
+import edu.princeton.cs.algs4.BinarySearch;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -32,6 +34,8 @@ public class TwoNumberSum {
                 targetSum, Arrays.toString(a), Arrays.toString(twoNumberSum2(a, targetSum)));
         System.out.printf("Target sum: %s for %s -> %s\n",
                 targetSum, Arrays.toString(a), Arrays.toString(twoNumberSum3(a, targetSum)));
+        System.out.printf("Target sum: %s for %s -> %s\n",
+                targetSum, Arrays.toString(a), Arrays.toString(twoNumberSum4(a, targetSum)));
 
         System.out.printf("Target sum: %s for %s -> %s\n",
                 targetSumB, Arrays.toString(b), Arrays.toString(twoNumberSum(b, targetSumB)));
@@ -39,6 +43,8 @@ public class TwoNumberSum {
                 targetSumB, Arrays.toString(b), Arrays.toString(twoNumberSum2(b, targetSumB)));
         System.out.printf("Target sum: %s for %s -> %s\n",
                 targetSumB, Arrays.toString(b), Arrays.toString(twoNumberSum3(b, targetSumB)));
+        System.out.printf("Target sum: %s for %s -> %s\n",
+                targetSumB, Arrays.toString(b), Arrays.toString(twoNumberSum4(b, targetSumB)));
     }
 
     // O(N^2) time | O(1) space
@@ -86,6 +92,21 @@ public class TwoNumberSum {
                 low++;
             } else {
                 high--;
+            }
+        }
+
+        return new int[0];
+    }
+
+    // O(Nlog(N)) time | O(1) space
+    public static int[] twoNumberSum4(int[] array, int targetSum) {
+        Arrays.sort(array);
+
+        for (int i = 0; i < array.length; ++i) {
+            int num = targetSum - array[i];
+
+            if (BinarySearch.indexOf(array, num) > i) {
+                return new int[]{num, array[i]};
             }
         }
 
