@@ -18,12 +18,17 @@ public class ThreeSum {
 
         System.out.printf("Null sum count: %s", count(array));
 
-        int[] b = new int[] {12, 3, 1, 2, -6, 5, -8, 6};
+        int[] b = new int[]{12, 3, 1, 2, -6, 5, -8, 6};
         int targetSum = 0;
         System.out.printf("\n%s with %s\n", Arrays.toString(b), targetSum);
         List<Integer[]> integers = threeNumberSum(b, targetSum);
         System.out.print("[");
         integers.forEach(el -> System.out.printf("%s", Arrays.toString(el)));
+        System.out.print("]");
+
+        List<Integer[]> integers2 = threeNumberSum2(b, targetSum);
+        System.out.print("\n[");
+        integers2.forEach(el -> System.out.printf("%s", Arrays.toString(el)));
         System.out.print("]");
     }
 
@@ -82,5 +87,34 @@ public class ThreeSum {
         }
 
         return -1;
+    }
+
+    // O(n^2) time | O(n) space
+    private static List<Integer[]> threeNumberSum2(int[] array, int targetSum) {
+        Arrays.sort(array);
+
+        List<Integer[]> triplets = new ArrayList<>();
+        for (int i = 0; i < array.length - 2; ++i) {
+            int low = i + 1;
+            int high = array.length - 1;
+
+            while (low < high) {
+                int currentSum = array[i] + array[low] + array[high];
+
+                if (currentSum > targetSum) {
+                    high--;
+                } else if (currentSum < targetSum) {
+                    low++;
+                } else {
+                    Integer[] triplet = {array[i], array[low], array[high]};
+                    triplets.add(triplet);
+
+                    low++;
+                    high--;
+                }
+            }
+        }
+
+        return triplets;
     }
 }
