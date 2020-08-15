@@ -8,7 +8,7 @@ ___
 
 - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/master/euclid-highest-common-factor/src/main/java/com/github/solairerove/algs4/leprosorium/gcd_euclid/Application.java)
 - [fibonacci](https://github.com/solairerove/algs4-leprosorium/blob/6981facfdce0753c01b4e3a25ae21ba1b9035f70/fibonacci/src/main/java/com/github/solairerove/algs4/leprosorium/fibonacci/Application.java#L54)
-- factorial
+- [factorial](https://github.com/solairerove/algs4-leprosorium/blob/41154b2f7152dff03257f8e3ebcddeb28511b344/factorial/src/main/java/com/github/solairerove/algs4/leprosorium/factorial/Application.java#L10)
 - strings
     - binary string of int
     - [is string palindrome](https://github.com/solairerove/algs4-leprosorium/blob/39400707393632541e2db715d39a7fcdff85822b/simple-string/src/main/java/com/github/solairerove/algs4/leprosorium/simple_string/IsPalindromeApplication.java#L13)
