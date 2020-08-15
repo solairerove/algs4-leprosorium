@@ -7,7 +7,7 @@ Algorithms playground
 ___
 
 - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/master/euclid-highest-common-factor/src/main/java/com/github/solairerove/algs4/leprosorium/gcd_euclid/Application.java)
-- fibonacci
+- [fibonacci](https://github.com/solairerove/algs4-leprosorium/blob/6981facfdce0753c01b4e3a25ae21ba1b9035f70/fibonacci/src/main/java/com/github/solairerove/algs4/leprosorium/fibonacci/Application.java#L54)
 - factorial
 - strings
     - binary string of int
