@@ -20,7 +20,6 @@ public class CaesarCipherEncryptor {
 
     private static String decrypt(String s, int key) {
         char[] newLetters = new char[s.length()];
-        // TODO: хуйня
         int newKey = key % 26;
 
         for (int i = 0; i < s.length(); ++i) {
