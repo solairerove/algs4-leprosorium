@@ -13,6 +13,11 @@ import java.util.List;
  */
 public class ProductSum {
     // [2, 5, [6, -2], 4, [7, [-10, 5], 4]]
+    // (2 + 5), (6 - 2) * 2, + 4, ((-10 + 5) * 3 + 7 + 4) * 2
+    // 7 + 8 + 4 + (-5 * 3 + 11) * 2
+    // 19 + (-15 + 11) * 2
+    // 19 + -4 * 2
+    // 19 - 8 = 11
     public static void main(String... args) {
         List<Object> array = new ArrayList<>();
         array.add(2);
@@ -36,5 +41,26 @@ public class ProductSum {
         inner2.add(4);
 
         array.add(inner2);
+
+        System.out.printf("sum of %s is %s\n", "[2, 5, [6, -2], 4, [7, [-10, 5], 4]]",
+                productSum(array));
+    }
+
+    private static int productSum(List<Object> array) {
+        return productSum(array, 1);
+    }
+
+    private static int productSum(List<Object> array, int depth) {
+        int sum = 0;
+
+        for (Object el : array) {
+            if (el instanceof ArrayList) {
+                sum += productSum((List<Object>) el, depth + 1);
+            } else {
+                sum += (int) el;
+            }
+        }
+
+        return sum * depth;
     }
 }
