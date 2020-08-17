@@ -36,3 +36,4 @@ ___
     - linked lifo bag
     - balanced parentheses
 - sorting
+    - selection sort
