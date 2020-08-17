@@ -25,6 +25,7 @@
         <module>validate-subsequence</module>
         <module>three-largest-numbers</module>
         <module>factorial</module>
+        <module>sorting</module>
     </modules>
 
     <properties>

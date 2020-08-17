@@ -35,3 +35,4 @@ ___
     - linked fifo queue
     - linked lifo bag
     - balanced parentheses
+- sorting
