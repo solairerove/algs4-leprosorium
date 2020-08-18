@@ -40,3 +40,4 @@ ___
 - sorting
     - selection sort
     - insertion sort
+    - bubble sort
