@@ -37,3 +37,4 @@ ___
     - balanced parentheses
 - sorting
     - selection sort
+    - insertion sort
