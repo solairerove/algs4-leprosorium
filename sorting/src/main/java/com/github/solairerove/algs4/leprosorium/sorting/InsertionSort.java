@@ -6,7 +6,13 @@ import edu.princeton.cs.algs4.StdOut;
 public class InsertionSort {
 
     public static void sort(Comparable[] a) {
+        int N = a.length;
 
+        for (int i = 1; i < N; i++) {
+            for (int j = i; j > 0 && less(a[j], a[j - 1]); j--) {
+                swap(a, j, j - 1);
+            }
+        }
     }
 
     private static boolean less(Comparable v, Comparable w) {
@@ -40,6 +46,7 @@ public class InsertionSort {
         String s = new In("/Users/solairerove/Downloads/algs4-data/tiny.txt").readLine();
         String[] array = s.split(" ");
 
+        show(array);
         sort(array);
         show(array);
     }
