@@ -4,6 +4,8 @@ Algorithms playground
 - [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/home/)
 - [code](https://algs4.cs.princeton.edu/code/)
 - [rosettacode](https://rosettacode.org/wiki/Category:Programming_Tasks)
+- [ComparisonSort](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
+- [sorting.at](http://sorting.at/)
 ___
 
 - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/master/euclid-highest-common-factor/src/main/java/com/github/solairerove/algs4/leprosorium/gcd_euclid/Application.java)

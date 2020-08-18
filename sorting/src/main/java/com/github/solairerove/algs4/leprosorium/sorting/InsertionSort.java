@@ -5,6 +5,8 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class InsertionSort {
 
+    // O(n) time best | O(1) space
+    // O(n^2) time | O(1) space
     public static void sort(Comparable[] a) {
         int N = a.length;
 
