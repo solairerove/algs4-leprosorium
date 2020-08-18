@@ -16,7 +16,7 @@ public class IsStringArraySorted {
 
     public static boolean isSorted(String[] a) {
         for (int i = 1; i < a.length; ++i) {
-            if (a[i - 1].compareTo(a[i]) > 0) {
+            if (a[i].compareTo(a[i - 1]) < 0) {
                 return false;
             }
         }
