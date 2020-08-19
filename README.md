@@ -41,3 +41,4 @@ ___
     - selection sort
     - insertion sort
     - bubble sort
+    - shell sort

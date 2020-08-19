@@ -3,7 +3,8 @@ package com.github.solairerove.algs4.leprosorium.sorting;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
-public class Template {
+// insertion steroid
+public class ShellSort {
 
     public static void sort(Comparable[] a) {
 
