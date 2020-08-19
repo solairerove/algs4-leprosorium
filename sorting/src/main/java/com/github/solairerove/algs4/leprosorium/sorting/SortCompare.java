@@ -10,6 +10,7 @@ public class SortCompare {
         if ("Selection".equals(alg)) SelectionSort.sort(a);
         if ("Insertion".equals(alg)) InsertionSort.sort(a);
         if ("Bubble".equals(alg)) BubbleSort.sort(a);
+        if ("Shell".equals(alg)) ShellSort.sort(a);
 
         return stopwatch.elapsedTime();
     }
@@ -33,12 +34,14 @@ public class SortCompare {
         String alg1 = "Selection";
         String alg2 = "Insertion";
         String alg3 = "Bubble";
-        int N = 1000;
+        String alg4 = "Shell";
+        int N = 10000;
         int T = 100;
 
         double t1 = timeRandomInput(alg1, N, T);
         double t2 = timeRandomInput(alg2, N, T);
         double t3 = timeRandomInput(alg3, N, T);
+        double t4 = timeRandomInput(alg4, N, T);
 
         StdOut.printf("For %d random Doubles\n %s in", N, alg1);
         StdOut.printf(" %.1f times faster than %s\n", t2 / t1, alg2);
@@ -48,5 +51,11 @@ public class SortCompare {
 
         StdOut.printf("For %d random Doubles\n %s in", N, alg1);
         StdOut.printf(" %.1f times faster than %s\n", t3 / t1, alg3);
+
+        StdOut.printf("For %d random Doubles\n %s in", N, alg4);
+        StdOut.printf(" %.1f times faster than %s\n", t2 / t4, alg2);
+
+        StdOut.printf("For %d random Doubles\n %s in", N, alg4);
+        StdOut.printf(" %.1f times faster than %s\n", t1 / t4, alg1);
     }
 }
