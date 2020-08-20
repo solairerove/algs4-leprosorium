@@ -42,3 +42,4 @@ ___
     - insertion sort
     - bubble sort
     - shell sort
+    - merge sort
