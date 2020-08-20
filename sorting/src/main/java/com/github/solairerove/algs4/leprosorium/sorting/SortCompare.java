@@ -11,6 +11,7 @@ public class SortCompare {
         if ("Insertion".equals(alg)) InsertionSort.sort(a);
         if ("Bubble".equals(alg)) BubbleSort.sort(a);
         if ("Shell".equals(alg)) ShellSort.sort(a);
+        if ("Merge".equals(alg)) MergeSort.sort(a);
 
         return stopwatch.elapsedTime();
     }
@@ -35,27 +36,32 @@ public class SortCompare {
         String alg2 = "Insertion";
         String alg3 = "Bubble";
         String alg4 = "Shell";
+        String alg5 = "Merge";
         int N = 10000;
         int T = 100;
 
-        double t1 = timeRandomInput(alg1, N, T);
-        double t2 = timeRandomInput(alg2, N, T);
-        double t3 = timeRandomInput(alg3, N, T);
+//        double t1 = timeRandomInput(alg1, N, T);
+//        double t2 = timeRandomInput(alg2, N, T);
+//        double t3 = timeRandomInput(alg3, N, T);
         double t4 = timeRandomInput(alg4, N, T);
+        double t5 = timeRandomInput(alg5, N, T);
 
-        StdOut.printf("For %d random Doubles\n %s in", N, alg1);
-        StdOut.printf(" %.1f times faster than %s\n", t2 / t1, alg2);
-
-        StdOut.printf("For %d random Doubles\n %s in", N, alg2);
-        StdOut.printf(" %.1f times faster than %s\n", t3 / t2, alg3);
-
-        StdOut.printf("For %d random Doubles\n %s in", N, alg1);
-        StdOut.printf(" %.1f times faster than %s\n", t3 / t1, alg3);
+//        StdOut.printf("For %d random Doubles\n %s in", N, alg1);
+//        StdOut.printf(" %.1f times faster than %s\n", t2 / t1, alg2);
+//
+//        StdOut.printf("For %d random Doubles\n %s in", N, alg2);
+//        StdOut.printf(" %.1f times faster than %s\n", t3 / t2, alg3);
+//
+//        StdOut.printf("For %d random Doubles\n %s in", N, alg1);
+//        StdOut.printf(" %.1f times faster than %s\n", t3 / t1, alg3);
+//
+//        StdOut.printf("For %d random Doubles\n %s in", N, alg4);
+//        StdOut.printf(" %.1f times faster than %s\n", t2 / t4, alg2);
+//
+//        StdOut.printf("For %d random Doubles\n %s in", N, alg4);
+//        StdOut.printf(" %.1f times faster than %s\n", t1 / t4, alg1);
 
         StdOut.printf("For %d random Doubles\n %s in", N, alg4);
-        StdOut.printf(" %.1f times faster than %s\n", t2 / t4, alg2);
-
-        StdOut.printf("For %d random Doubles\n %s in", N, alg4);
-        StdOut.printf(" %.1f times faster than %s\n", t1 / t4, alg1);
+        StdOut.printf(" %.1f times faster than %s\n", t5 / t4, alg5);
     }
 }
