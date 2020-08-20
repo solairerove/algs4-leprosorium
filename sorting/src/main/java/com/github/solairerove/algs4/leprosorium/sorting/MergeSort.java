@@ -79,6 +79,11 @@ public class MergeSort {
         System.out.println(Arrays.toString(a));
         sortTD(a);
         System.out.println(Arrays.toString(a));
+
+        int[] b = new int[]{8, 5, 2, 9, 5, 6, 3};
+        System.out.println(Arrays.toString(b));
+        sortBU(b);
+        System.out.println(Arrays.toString(b));
     }
 
     private static void sortTD(int[] a) {
@@ -98,6 +103,17 @@ public class MergeSort {
         sortTD(a, aux, low, mid);
         sortTD(a, aux, mid + 1, high);
         merge(a, aux, low, mid, high);
+    }
+
+    private static void sortBU(int[] a) {
+        int n = a.length;
+        int[] aux = new int[n];
+
+        for (int sz = 1; sz < n; sz = sz + sz) { // sz - размер подмассива
+            for (int low = 0; low < n - sz; low += sz + sz) { // low - индекс в подмассиве
+                merge(a, aux, low, low + sz - 1, Math.min(low + sz + sz - 1, n - 1));
+            }
+        }
     }
 
     private static void merge(int[] a, int[] aux, int low, int mid, int high) {
