@@ -43,3 +43,4 @@ ___
     - bubble sort
     - shell sort
     - merge sort
+    - quick sort
