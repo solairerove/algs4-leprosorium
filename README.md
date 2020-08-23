@@ -20,7 +20,7 @@ ___
     - [array reverse](https://github.com/solairerove/algs4-leprosorium/blob/dcb71b86dc350bb726cad951f3d2fa66998a12a9/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/Application.java#L84)
     - [index of el in array binary search](https://github.com/solairerove/algs4-leprosorium/blob/a1a6c3a6329faf6999f29254a0fa16374d80abfc/binary/src/main/java/com/github/solairerove/algs4/leprosorium/binary/Application.java#L34)
     - [two numbers sum](https://github.com/solairerove/algs4-leprosorium/blob/c6f23c28aa86911bd39130913e78c7e14a96af7c/two-number-sum/src/main/java/com/github/solairerove/algs4/leprosorium/two_number_sum/TwoNumberSum.java#L69)
-    - two numbers sum is zero
+    - [two numbers sum is zero](https://github.com/solairerove/algs4-leprosorium/blob/5d06b09fa8edefec3caba92e568f57299b29fc4a/two-number-sum/src/main/java/com/github/solairerove/algs4/leprosorium/two_number_sum/TwoSum.java#L21)
     - three numbers sum is zero
     - three numbers sum as triplets
     - validate subsequence
