@@ -62,9 +62,8 @@ public class ThreeSum {
             for (int j = i + 1; j < array.length; ++j) {
                 int num = targetSum - (array[i] + array[j]);
 
-                int idx = rank(array, num);
                 if (rank(array, num) > j) {
-                    Integer[] triplet = {array[i], array[j], array[idx]};
+                    Integer[] triplet = {array[i], array[j], num};
                     triplets.add(triplet);
                 }
             }
