@@ -28,6 +28,7 @@ ___
     - [is string palindrome](https://github.com/solairerove/algs4-leprosorium/blob/39400707393632541e2db715d39a7fcdff85822b/simple-string/src/main/java/com/github/solairerove/algs4/leprosorium/simple_string/IsPalindromeApplication.java#L13)
     - [is string array sorted](https://github.com/solairerove/algs4-leprosorium/blob/dcb71b86dc350bb726cad951f3d2fa66998a12a9/simple-string/src/main/java/com/github/solairerove/algs4/leprosorium/simple_string/IsStringArraySorted.java#L17)
     - [caesar cipher shift](https://github.com/solairerove/algs4-leprosorium/blob/0e38a3a848ff60b8c9e28a4a008ac17a1adb80d8/simple-string/src/main/java/com/github/solairerove/algs4/leprosorium/simple_string/CaesarCipherEncryptor.java#L21)
+    - the longest palindrome in the string
 - arrays
     - [array reverse](https://github.com/solairerove/algs4-leprosorium/blob/dcb71b86dc350bb726cad951f3d2fa66998a12a9/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/Application.java#L84)
     - [index of el in array binary search](https://github.com/solairerove/algs4-leprosorium/blob/a1a6c3a6329faf6999f29254a0fa16374d80abfc/binary/src/main/java/com/github/solairerove/algs4/leprosorium/binary/Application.java#L34)
