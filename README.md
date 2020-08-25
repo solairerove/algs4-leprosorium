@@ -18,6 +18,7 @@ Repeat list
 - shell sort
 - merge sort
 - quick sort
+- the longest palindrome in the string
 ___
 
 - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/master/euclid-highest-common-factor/src/main/java/com/github/solairerove/algs4/leprosorium/gcd_euclid/Application.java)
