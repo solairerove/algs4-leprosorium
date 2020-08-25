@@ -43,14 +43,8 @@ public class LongestPalindromicString {
         for (int i = 1; i < s.length(); i++) {
             var nonSym = findTheLargestPalindrome(s, i - 1, i + 1);
             var sym = findTheLargestPalindrome(s, i - 1, i);
-            var current = nonSym[1] - nonSym[0]
-                    > sym[1] - sym[0]
-                    ? nonSym
-                    : sym;
-            theLongest = theLongest[1] - theLongest[0]
-                    > current[1] - current[0]
-                    ? theLongest
-                    : current;
+            var current = getBigger(nonSym, sym);
+            theLongest = getBigger(theLongest, current);
         }
 
         return s.substring(theLongest[0], theLongest[1]);
@@ -64,5 +58,9 @@ public class LongestPalindromicString {
         }
 
         return new int[]{low + 1, high};
+    }
+
+    private static int[] getBigger(int[] a, int[] b) {
+        return a[1] - a[0] > b[1] - b[0] ? a : b;
     }
 }
