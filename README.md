@@ -51,6 +51,7 @@ ___
     - linked fifo queue
     - linked lifo bag
     - balanced parentheses
+    - priority queue MaxPQ
 - sorting
     - selection sort
     - insertion sort
