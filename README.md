@@ -18,6 +18,7 @@ Repeat list
 - shell sort
 - merge sort
 - quick sort
+- heap sort
 - the longest palindrome in the string
 ___
 
@@ -59,3 +60,4 @@ ___
     - shell sort
     - merge sort
     - quick sort
+    - heap sort
