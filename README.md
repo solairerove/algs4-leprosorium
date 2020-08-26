@@ -6,19 +6,13 @@ Algorithms playground
 - [rosettacode](https://rosettacode.org/wiki/Category:Programming_Tasks)
 - [ComparisonSort](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
 - [sorting.at](http://sorting.at/)
+- [sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
 ___
 Repeat list
-- fibonacci
-- factorial
-- three numbers sum as triplets
-- three largest numbers in array
-- selection sort
-- insertion sort
-- bubble sort
-- shell sort
 - merge sort
 - quick sort
 - heap sort
+- quick select
 - the longest palindrome in the string
 ___
 
@@ -61,3 +55,4 @@ ___
     - merge sort
     - quick sort
     - heap sort
+    - quick select
