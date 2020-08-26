@@ -10,7 +10,7 @@ public class MaxPQ<Key extends Comparable<Key>> {
     }
 
     public MaxPQ(int max) {
-
+        pq = (Key[]) new Comparable[max + 1];
     }
 
     public MaxPQ(Key[] a) {
@@ -18,7 +18,8 @@ public class MaxPQ<Key extends Comparable<Key>> {
     }
 
     void insert(Key v) {
-
+        pq[++N] = v;
+        swim(N);
     }
 
     Key max() {
@@ -26,15 +27,20 @@ public class MaxPQ<Key extends Comparable<Key>> {
     }
 
     Key delMax() {
-        return null;
+        Key max = pq[1];
+        swap(1, N--);
+        pq[N + 1] = null;
+        sink(1);
+
+        return max;
     }
 
     boolean isEmpty() {
-        return false;
+        return N == 0;
     }
 
     int size() {
-        return 0;
+        return N;
     }
 
     private boolean less(int i, int j) {
