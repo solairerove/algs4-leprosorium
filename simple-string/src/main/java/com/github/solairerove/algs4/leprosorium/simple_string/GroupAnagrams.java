@@ -29,6 +29,7 @@ public class GroupAnagrams {
         System.out.print("]");
     }
 
+    // O(w * n * log(n)) time | O(wn) space
     private static List<List<String>> getGroupedAnagrams(String[] words) {
         Map<String, List<String>> map = new HashMap<>();
 
