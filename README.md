@@ -53,7 +53,7 @@ ___
     - insertion sort
     - bubble sort
     - shell sort
-    - merge sort
-    - quick sort
+    - merge sort (BU as well)
+    - quick sort (Q3 on his way)
     - heap sort
     - quick select
