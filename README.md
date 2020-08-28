@@ -57,3 +57,5 @@ ___
     - quick sort (Q3 on his way)
     - heap sort
     - quick select
+- just algorithms
+    - kadane 
