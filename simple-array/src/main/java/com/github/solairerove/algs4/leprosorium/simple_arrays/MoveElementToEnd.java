@@ -11,6 +11,21 @@ public class MoveElementToEnd {
     }
 
     private static void moveElementToTheEnd(int[] a, int k) {
+        int low = 0, high = a.length - 1;
 
+        while (high > low) {
+            if (k == a[low]) {
+                while (high > low && k == a[high]) high--;
+                swap(a, low, high);
+                high--;
+            }
+            low++;
+        }
+    }
+
+    private static void swap(int[] a, int i, int j) {
+        int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
     }
 }
