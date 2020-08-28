@@ -14,6 +14,8 @@ Repeat list
 - heap sort
 - quick select
 - the longest palindrome in the string
+- group anagrams
+- move el to the end
 ___
 
 - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/master/euclid-highest-common-factor/src/main/java/com/github/solairerove/algs4/leprosorium/gcd_euclid/Application.java)
@@ -37,6 +39,7 @@ ___
     - three largest numbers in array
     - product sum
     - max sub array sum problem(kadane)
+    - move element to the end
 - [reverse polish notation](https://github.com/solairerove/algs4-leprosorium/tree/master/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra)
     - double stack Dijkstra's evaluate
     - infix to postfix
