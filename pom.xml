@@ -26,7 +26,6 @@
         <module>three-largest-numbers</module>
         <module>factorial</module>
         <module>sorting</module>
-        <module>kadane</module>
     </modules>
 
     <properties>

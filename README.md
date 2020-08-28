@@ -36,6 +36,7 @@ ___
     - validate subsequence
     - three largest numbers in array
     - product sum
+    - max sub array sum problem(kadane)
 - [reverse polish notation](https://github.com/solairerove/algs4-leprosorium/tree/master/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra)
     - double stack Dijkstra's evaluate
     - infix to postfix
@@ -56,6 +57,4 @@ ___
     - merge sort (BU as well)
     - quick sort (Q3 on his way)
     - heap sort
-    - quick select
-- just algorithms
-    - kadane 
+    - quick select 
