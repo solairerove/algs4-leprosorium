@@ -40,6 +40,7 @@ ___
     - product sum
     - max sub array sum problem(kadane)
     - move element to the end
+    - monotonic array
 - [reverse polish notation](https://github.com/solairerove/algs4-leprosorium/tree/master/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra)
     - double stack Dijkstra's evaluate
     - infix to postfix
