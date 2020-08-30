@@ -34,7 +34,7 @@ ___
     - [two numbers sum](https://github.com/solairerove/algs4-leprosorium/blob/c6f23c28aa86911bd39130913e78c7e14a96af7c/two-number-sum/src/main/java/com/github/solairerove/algs4/leprosorium/two_number_sum/TwoNumberSum.java#L69)
     - [two numbers sum is zero](https://github.com/solairerove/algs4-leprosorium/blob/5d06b09fa8edefec3caba92e568f57299b29fc4a/two-number-sum/src/main/java/com/github/solairerove/algs4/leprosorium/two_number_sum/TwoSum.java#L21)
     - [three numbers sum is zero](https://github.com/solairerove/algs4-leprosorium/blob/e7abb3409d113e541a66cc2cafb87abadd45c2b5/two-number-sum/src/main/java/com/github/solairerove/algs4/leprosorium/two_number_sum/ThreeSum.java#L36)
-    - three numbers sum as triplets
+    - [three numbers sum as triplets](https://github.com/solairerove/algs4-leprosorium/blob/c0b34167395c082b4455025853055b9dcfb731b0/two-number-sum/src/main/java/com/github/solairerove/algs4/leprosorium/two_number_sum/ThreeSum.java#L57)
     - [validate subsequence](https://github.com/solairerove/algs4-leprosorium/blob/c0b34167395c082b4455025853055b9dcfb731b0/validate-subsequence/src/main/java/com/github/solairerove/algs4/leprosorium/validate_subsequence/ValidateSubsequence.java#L24)
     - three largest numbers in array
     - product sum
