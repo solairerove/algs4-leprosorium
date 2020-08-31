@@ -37,7 +37,7 @@ ___
     - [three numbers sum as triplets](https://github.com/solairerove/algs4-leprosorium/blob/c0b34167395c082b4455025853055b9dcfb731b0/two-number-sum/src/main/java/com/github/solairerove/algs4/leprosorium/two_number_sum/ThreeSum.java#L57)
     - [validate subsequence](https://github.com/solairerove/algs4-leprosorium/blob/c0b34167395c082b4455025853055b9dcfb731b0/validate-subsequence/src/main/java/com/github/solairerove/algs4/leprosorium/validate_subsequence/ValidateSubsequence.java#L24)
     - [three largest numbers in array](https://github.com/solairerove/algs4-leprosorium/blob/a58a7816babb4e0f904853685ff9ae36579d56d9/three-largest-numbers/src/main/java/com/github/solairerove/algs4/leprosorium/three_largest_number/ThreeLargestNumber.java#L27)
-    - product sum
+    - [product sum](https://github.com/solairerove/algs4-leprosorium/blob/7f7299b4f3fb514b67992494bccb0d55643458a3/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/ProductSum.java#L53)
     - max sub array sum problem(kadane)
     - move element to the end
     - monotonic array
