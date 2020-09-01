@@ -26,6 +26,7 @@
         <module>three-largest-numbers</module>
         <module>factorial</module>
         <module>sorting</module>
+        <module>symbol-table</module>
     </modules>
 
     <properties>

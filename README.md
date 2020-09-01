@@ -63,3 +63,5 @@ ___
     - quick sort (Q3 on his way)
     - heap sort
     - quick select 
+- symbol table
+    - sequential search st
