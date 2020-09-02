@@ -14,6 +14,35 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         return n;
     }
 
+    public boolean isEmpty() {
+        return size() == 0;
+    }
+
+    public Value get(Key key) {
+        if (isEmpty()) return null;
+
+        int i = rank(key);
+        if (i < n && keys[i].compareTo(key) == 0) return values[i];
+        else return null;
+    }
+
+    public void put(Key key, Value value) {
+        int i = rank(key);
+
+        if (i < n && keys[i].compareTo(key) == 0) {
+            values[i] = value;
+            return;
+        }
+
+        for (int j = n; j > i; j--) {
+            keys[j] = keys[j - 1];
+            values[j] = values[j - 1];
+        }
+        keys[i] = key;
+        values[i] = value;
+        n++;
+    }
+
     public int rank(Key key) {
         int low = 0, high = n - 1;
 
