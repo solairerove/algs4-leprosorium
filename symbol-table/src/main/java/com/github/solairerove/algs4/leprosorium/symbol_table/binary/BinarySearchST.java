@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.symbol_table;
+package com.github.solairerove.algs4.leprosorium.symbol_table.binary;
 
 public class BinarySearchST<Key extends Comparable<Key>, Value> {
     private Key[] keys;
@@ -34,6 +34,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
             return;
         }
 
+        // сдвиг впрво
         for (int j = n; j > i; j--) {
             keys[j] = keys[j - 1];
             values[j] = values[j - 1];

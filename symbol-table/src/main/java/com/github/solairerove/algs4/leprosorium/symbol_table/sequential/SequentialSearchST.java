@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.symbol_table;
+package com.github.solairerove.algs4.leprosorium.symbol_table.sequential;
 
 // Последовательный поиск в неупорядоченном связном списке
 public class SequentialSearchST<Key, Value> {
