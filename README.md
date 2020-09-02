@@ -65,3 +65,4 @@ ___
     - quick select 
 - symbol table
     - sequential search st
+    - binary search st
