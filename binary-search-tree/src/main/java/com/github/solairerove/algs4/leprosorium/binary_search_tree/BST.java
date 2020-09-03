@@ -22,15 +22,35 @@ public class BST<Key extends Comparable<Key>, Value> {
 
     private int size(Node x) {
         if (x == null) return 0;
-
         return x.n;
     }
 
     public Value get(Key key) {
-        throw new UnsupportedOperationException();
+        return get(root, key);
+    }
+
+    private Value get(Node x, Key key) {
+        if (x == null) return null;
+
+        int cmp = key.compareTo(x.key);
+        if (cmp < 0) return get(x.left, key);
+        else if (cmp > 0) return get(x.right, key);
+        else return x.value;
     }
 
     public void put(Key key, Value value) {
-        throw new UnsupportedOperationException();
+        root = put(root, key, value);
+    }
+
+    private Node put(Node x, Key key, Value value) {
+        if (x == null) return new Node(key, value, 1);
+
+        int cmp = key.compareTo(x.key);
+        if (cmp < 0) x.left = put(x.left, key, value);
+        else if (cmp > 0) x.right = put(x.right, key, value);
+        else x.value = value;
+
+        x.n = size(x.left) + size(x.right) + 1;
+        return x;
     }
 }
