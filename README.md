@@ -8,16 +8,6 @@ Algorithms playground
 - [sorting.at](http://sorting.at/)
 - [sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
 ___
-Repeat list
-- merge sort
-- quick sort
-- heap sort
-- quick select
-- the longest palindrome in the string
-- group anagrams
-- move el to the end
-___
-
 - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/master/euclid-highest-common-factor/src/main/java/com/github/solairerove/algs4/leprosorium/gcd_euclid/Application.java)
 - [fibonacci](https://github.com/solairerove/algs4-leprosorium/blob/6981facfdce0753c01b4e3a25ae21ba1b9035f70/fibonacci/src/main/java/com/github/solairerove/algs4/leprosorium/fibonacci/Application.java#L54)
 - [factorial](https://github.com/solairerove/algs4-leprosorium/blob/41154b2f7152dff03257f8e3ebcddeb28511b344/factorial/src/main/java/com/github/solairerove/algs4/leprosorium/factorial/Application.java#L10)
