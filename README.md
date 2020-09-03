@@ -62,7 +62,10 @@ ___
     - merge sort (BU as well)
     - quick sort (Q3 on his way)
     - heap sort
-    - quick select 
-- symbol table
-    - sequential search st
-    - binary search st
+    - quick select
+- searching
+    - symbol table
+        - sequential search st
+        - binary search st
+    - binary search tree
+        - bst

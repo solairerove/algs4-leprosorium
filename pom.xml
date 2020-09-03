@@ -27,6 +27,7 @@
         <module>factorial</module>
         <module>sorting</module>
         <module>symbol-table</module>
+        <module>binary-search-tree</module>
     </modules>
 
     <properties>
