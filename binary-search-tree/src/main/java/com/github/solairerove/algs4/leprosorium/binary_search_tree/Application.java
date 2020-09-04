@@ -13,5 +13,7 @@ public class Application {
         tree.put("A", 11);
 
         System.out.println(tree.get("A")); // 11
+        System.out.println(tree.max()); // X
+        System.out.println(tree.min()); // A
     }
 }
