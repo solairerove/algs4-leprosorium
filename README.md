@@ -18,7 +18,7 @@ ___
     - [caesar cipher shift](https://github.com/solairerove/algs4-leprosorium/blob/0e38a3a848ff60b8c9e28a4a008ac17a1adb80d8/simple-string/src/main/java/com/github/solairerove/algs4/leprosorium/simple_string/CaesarCipherEncryptor.java#L21)
     - [the longest palindrome in the string](https://github.com/solairerove/algs4-leprosorium/blob/ba617f6a0c1af4159dba4a95682e48bf6e202654/simple-string/src/main/java/com/github/solairerove/algs4/leprosorium/simple_string/LongestPalindromicString.java#L41)
     - [group anagrams](https://github.com/solairerove/algs4-leprosorium/blob/9bf72424aeb592039e996156c0f4b49a928aaff3/simple-string/src/main/java/com/github/solairerove/algs4/leprosorium/simple_string/GroupAnagrams.java#L33)
-    - the longest deduplicate substring
+    - [the longest deduplicate substring](https://github.com/solairerove/algs4-leprosorium/blob/eb4b02b7e1c6b6c690dbf24d0b8cae942f7a6558/simple-string/src/main/java/com/github/solairerove/algs4/leprosorium/simple_string/LongestDeduplicateSubstring.java#L13)
 - arrays
     - [array reverse](https://github.com/solairerove/algs4-leprosorium/blob/dcb71b86dc350bb726cad951f3d2fa66998a12a9/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/Application.java#L84)
     - [index of el in array binary search](https://github.com/solairerove/algs4-leprosorium/blob/a1a6c3a6329faf6999f29254a0fa16374d80abfc/binary/src/main/java/com/github/solairerove/algs4/leprosorium/binary/Application.java#L34)
