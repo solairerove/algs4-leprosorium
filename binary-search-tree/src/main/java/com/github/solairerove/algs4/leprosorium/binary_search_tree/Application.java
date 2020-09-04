@@ -15,5 +15,6 @@ public class Application {
         System.out.println(tree.get("A")); // 11
         System.out.println(tree.max()); // X
         System.out.println(tree.min()); // A
+        System.out.println(tree.floor("G")); // E
     }
 }
