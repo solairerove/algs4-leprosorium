@@ -30,7 +30,7 @@ ___
     - [three largest numbers in array](https://github.com/solairerove/algs4-leprosorium/blob/a58a7816babb4e0f904853685ff9ae36579d56d9/three-largest-numbers/src/main/java/com/github/solairerove/algs4/leprosorium/three_largest_number/ThreeLargestNumber.java#L27)
     - [product sum](https://github.com/solairerove/algs4-leprosorium/blob/7f7299b4f3fb514b67992494bccb0d55643458a3/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/ProductSum.java#L53)
     - [max sub array sum problem(kadane)](https://github.com/solairerove/algs4-leprosorium/blob/80b870e349fb1521457a21de626a2dbb31410923/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/MaxSubArraySumApplication.java#L37)
-    - move element to the end
+    - [move element to the end](https://github.com/solairerove/algs4-leprosorium/blob/eb36731cf736fb2224b0f0865e4ff80979f53f5e/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/MoveElementToEnd.java#L13)
     - monotonic array
 - [reverse polish notation](https://github.com/solairerove/algs4-leprosorium/tree/master/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra)
     - double stack Dijkstra's evaluate
