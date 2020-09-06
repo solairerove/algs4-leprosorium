@@ -22,7 +22,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 
     private int size(Node x) {
         if (x == null) return 0;
-        return x.n;
+        else return x.n;
     }
 
     public Value get(Key key) {
@@ -96,6 +96,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 
     private Node select(Node x, int k) {
         if (x == null) return null;
+
         int t = size(x.left);
         if (t > k) return select(x.left, k);
         else if (t < k) return select(x.right, k - t - 1);
