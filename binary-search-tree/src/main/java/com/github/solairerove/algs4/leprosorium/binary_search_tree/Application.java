@@ -16,5 +16,9 @@ public class Application {
         System.out.println(tree.max()); // X
         System.out.println(tree.min()); // A
         System.out.println(tree.floor("G")); // E
+        System.out.println(tree.select(3)); // H
+
+        tree.deleteMin();
+        System.out.println(tree.min()); // C
     }
 }
