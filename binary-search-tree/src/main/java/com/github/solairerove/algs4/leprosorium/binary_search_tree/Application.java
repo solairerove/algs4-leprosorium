@@ -11,6 +11,8 @@ public class Application {
         tree.put("E", 5);
         tree.put("C", 6);
         tree.put("A", 11);
+        tree.print();
+        System.out.println(); // A C E H M R S X
 
         System.out.println(tree.get("A")); // 11
         System.out.println(tree.max()); // X
@@ -25,5 +27,7 @@ public class Application {
 
         tree.delete("E");
         System.out.println(tree.size()); // 6
+
+        tree.print(); // C H M R S X
     }
 }
