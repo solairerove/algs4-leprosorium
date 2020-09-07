@@ -17,8 +17,13 @@ public class Application {
         System.out.println(tree.min()); // A
         System.out.println(tree.floor("G")); // E
         System.out.println(tree.select(3)); // H
+        System.out.println(tree.size()); // 8
 
         tree.deleteMin();
         System.out.println(tree.min()); // C
+        System.out.println(tree.size()); // 7
+
+        tree.delete("E");
+        System.out.println(tree.size()); // 6
     }
 }

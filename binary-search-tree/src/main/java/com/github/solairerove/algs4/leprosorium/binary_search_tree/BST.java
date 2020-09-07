@@ -69,7 +69,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 
     private Node max(Node x) {
         if (x.right == null) return x;
-        return max(x.right);
+        return min(x.right);
     }
 
     public Key floor(Key key) {
@@ -94,25 +94,27 @@ public class BST<Key extends Comparable<Key>, Value> {
         return select(root, k).key;
     }
 
+    // TODO: сложно
     private Node select(Node x, int k) {
         if (x == null) return null;
 
         int t = size(x.left);
         if (t > k) return select(x.left, k);
-        else if (t < k) return select(x.right, k - t - 1);
+        else if (t < k) return select(x.right, t - k - 1);
         else return x;
     }
 
     public int rank(Key key) {
-        return rank(key, root);
+        return rank(root, key);
     }
 
-    private int rank(Key key, Node x) {
+    // TODO: сложно
+    private int rank(Node x, Key key) {
         if (x == null) return 0;
 
         int cmp = key.compareTo(x.key);
-        if (cmp < 0) return rank(key, x.left);
-        else if (cmp > 0) return 1 + size(x.left) + rank(key, x.right);
+        if (cmp < 0) return rank(x.left, key);
+        else if (cmp > 0) return 1 + size(x.left) + rank(x.right, key);
         else return size(x.left);
     }
 
@@ -124,6 +126,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         if (x.left == null) return x.right;
 
         x.left = deleteMin(x.left);
+
         x.n = size(x.left) + size(x.right) + 1;
         return x;
     }
@@ -146,6 +149,7 @@ public class BST<Key extends Comparable<Key>, Value> {
             x.right = deleteMin(t.right);
             x.left = t.left;
         }
+
         x.n = size(x.left) + size(x.right) + 1;
         return x;
     }
