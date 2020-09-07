@@ -34,7 +34,7 @@ ___
     - [monotonic array](https://github.com/solairerove/algs4-leprosorium/blob/eb36731cf736fb2224b0f0865e4ff80979f53f5e/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/MonotonicArray.java#L14)
 - [reverse polish notation](https://github.com/solairerove/algs4-leprosorium/tree/master/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra)
     - [double stack Dijkstra's evaluate](https://github.com/solairerove/algs4-leprosorium/blob/6e15e46700812fcac048c1f520f76190037d3b22/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra/DoubleStackEvaluate.java#L23)
-    - infix to postfix
+    - [infix to postfix](https://github.com/solairerove/algs4-leprosorium/blob/0fb3aae1a1a35d6b351cb1d99b32715ff2164233/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra/InfixToPostfix.java#L38)
     - evaluate postfix
 - simple-collection
     - fixed capacity stack of strings
