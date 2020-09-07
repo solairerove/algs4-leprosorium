@@ -29,5 +29,8 @@ public class Application {
         System.out.println(tree.size()); // 6
 
         tree.print(); // C H M R S X
+        System.out.println();
+
+        tree.keys().forEach(s -> System.out.printf("%s ", s)); // C H M R S X
     }
 }

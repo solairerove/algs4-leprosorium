@@ -1,5 +1,6 @@
 package com.github.solairerove.algs4.leprosorium.binary_search_tree;
 
+import edu.princeton.cs.algs4.Queue;
 import edu.princeton.cs.algs4.StdOut;
 
 public class BST<Key extends Comparable<Key>, Value> {
@@ -138,6 +139,7 @@ public class BST<Key extends Comparable<Key>, Value> {
     }
 
     // удаление хиббарда
+    // TODO: сложно
     private Node delete(Node x, Key key) {
         if (x == null) return null;
 
@@ -167,5 +169,27 @@ public class BST<Key extends Comparable<Key>, Value> {
         print(x.left);
         StdOut.printf("%s ", x.key);
         print(x.right);
+    }
+
+    // TODO: сложно
+    public Iterable<Key> keys() {
+        return keys(min(), max());
+    }
+
+    public Iterable<Key> keys(Key low, Key high) {
+        Queue<Key> queue = new Queue<>();
+        keys(root, queue, low, high);
+
+        return queue;
+    }
+
+    private void keys(Node x, Queue<Key> queue, Key low, Key high) {
+        if (x == null) return;
+
+        int cmpLow = low.compareTo(x.key);
+        int cmpHigh = high.compareTo(x.key);
+        if (cmpLow < 0) keys(x.left, queue, low, high);
+        if (cmpLow <= 0 && cmpHigh >= 0) queue.enqueue(x.key);
+        if (cmpHigh > 0) keys(x.right, queue, low, high);
     }
 }
