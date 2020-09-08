@@ -72,13 +72,13 @@ public class BST<Key extends Comparable<Key>, Value> {
 
     private Node max(Node x) {
         if (x.right == null) return x;
-        return min(x.right);
+        return max(x.right);
     }
 
     public Key floor(Key key) {
         Node x = floor(root, key);
         if (x == null) return null;
-        return x.key;
+        else return x.key;
     }
 
     private Node floor(Node x, Key key) {
@@ -97,13 +97,12 @@ public class BST<Key extends Comparable<Key>, Value> {
         return select(root, k).key;
     }
 
-    // TODO: сложно
     private Node select(Node x, int k) {
         if (x == null) return null;
 
         int t = size(x.left);
         if (t > k) return select(x.left, k);
-        else if (t < k) return select(x.right, t - k - 1);
+        else if (t < k) return select(x.right, k - t - 1);
         else return x;
     }
 
@@ -111,7 +110,6 @@ public class BST<Key extends Comparable<Key>, Value> {
         return rank(root, key);
     }
 
-    // TODO: сложно
     private int rank(Node x, Key key) {
         if (x == null) return 0;
 
@@ -138,8 +136,6 @@ public class BST<Key extends Comparable<Key>, Value> {
         root = delete(root, key);
     }
 
-    // удаление хиббарда
-    // TODO: сложно
     private Node delete(Node x, Key key) {
         if (x == null) return null;
 
@@ -171,7 +167,6 @@ public class BST<Key extends Comparable<Key>, Value> {
         print(x.right);
     }
 
-    // TODO: сложно
     public Iterable<Key> keys() {
         return keys(min(), max());
     }
