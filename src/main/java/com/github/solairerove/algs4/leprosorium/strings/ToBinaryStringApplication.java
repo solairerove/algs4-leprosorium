@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.exercise1;
+package com.github.solairerove.algs4.leprosorium.strings;
 
 public class ToBinaryStringApplication {
     public static void main(String[] args) {
