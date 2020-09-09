@@ -12,7 +12,7 @@ ___
 - [fibonacci](https://github.com/solairerove/algs4-leprosorium/blob/6981facfdce0753c01b4e3a25ae21ba1b9035f70/fibonacci/src/main/java/com/github/solairerove/algs4/leprosorium/fibonacci/Application.java#L54)
 - [factorial](https://github.com/solairerove/algs4-leprosorium/blob/41154b2f7152dff03257f8e3ebcddeb28511b344/factorial/src/main/java/com/github/solairerove/algs4/leprosorium/factorial/Application.java#L10)
 - strings
-    - [binary string of int](https://github.com/solairerove/algs4-leprosorium/blob/a476ba05ba9549e21b5fa1b4096ecad73e14d3ca/exercise/src/main/java/com/github/solairerove/algs4/leprosorium/exercise1/ToBinaryStringApplication.java#L11)
+    - [binary string of int](https://github.com/solairerove/algs4-leprosorium/blob/b6319148a26f5a288f2e4b886cec5f5b06cdda6e/src/main/java/com/github/solairerove/algs4/leprosorium/strings/ToBinaryStringApplication.java#L11)
     - [is string palindrome](https://github.com/solairerove/algs4-leprosorium/blob/39400707393632541e2db715d39a7fcdff85822b/simple-string/src/main/java/com/github/solairerove/algs4/leprosorium/simple_string/IsPalindromeApplication.java#L13)
     - [is string array sorted](https://github.com/solairerove/algs4-leprosorium/blob/dcb71b86dc350bb726cad951f3d2fa66998a12a9/simple-string/src/main/java/com/github/solairerove/algs4/leprosorium/simple_string/IsStringArraySorted.java#L17)
     - [caesar cipher shift](https://github.com/solairerove/algs4-leprosorium/blob/0e38a3a848ff60b8c9e28a4a008ac17a1adb80d8/simple-string/src/main/java/com/github/solairerove/algs4/leprosorium/simple_string/CaesarCipherEncryptor.java#L21)
