@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.simple_string;
+package com.github.solairerove.algs4.leprosorium.strings;
 
 import java.util.Arrays;
 

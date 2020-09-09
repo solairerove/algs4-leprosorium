@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.simple_string;
+package com.github.solairerove.algs4.leprosorium.strings;
 
 /**
  * given a string and positive integer as key, write a method,

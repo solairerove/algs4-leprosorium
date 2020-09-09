@@ -18,14 +18,12 @@
         <module>binary</module>
         <module>exercise</module>
         <module>fibonacci</module>
-        <module>simple-string</module>
         <module>edsger-wybe-dijkstra</module>
         <module>simple-collection</module>
         <module>two-number-sum</module>
         <module>validate-subsequence</module>
         <module>three-largest-numbers</module>
         <module>factorial</module>
-        <module>sorting</module>
         <module>symbol-table</module>
         <module>binary-search-tree</module>
     </modules>

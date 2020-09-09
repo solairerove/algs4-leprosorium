@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.simple_string;
+package com.github.solairerove.algs4.leprosorium.strings;
 
 public class IsPalindromeApplication {
     public static void main(String[] args) {
