@@ -45,14 +45,14 @@ ___
     - balanced parentheses
     - priority queue MaxPQ
 - sorting
-    - selection sort
-    - insertion sort
-    - bubble sort
-    - shell sort
-    - merge sort (BU as well)
-    - quick sort (Q3 on his way)
-    - heap sort
-    - quick select
+    - [selection sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/SelectionSort.java#L66)
+    - [insertion sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/InsertionSort.java#L63)
+    - [bubble sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/BubbleSort.java#L10)
+    - [shell sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/ShellSort.java#L66)
+    - [merge sort (BU as well)](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/MergeSort.java#L89)
+    - [quick sort (Q3 on his way)](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/QuickSort.java#L8)
+    - [heap sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/HeapSort.java#L8)
+    - [quick select](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/QuickSelect.java#L10)
 - searching
     - symbol table
         - sequential search st
