@@ -8,9 +8,14 @@ Algorithms playground
 - [sorting.at](http://sorting.at/)
 - [sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
 ___
-- [gcd](https://github.com/solairerove/algs4-leprosorium/blob/master/euclid-highest-common-factor/src/main/java/com/github/solairerove/algs4/leprosorium/gcd_euclid/Application.java)
-- [fibonacci](https://github.com/solairerove/algs4-leprosorium/blob/6981facfdce0753c01b4e3a25ae21ba1b9035f70/fibonacci/src/main/java/com/github/solairerove/algs4/leprosorium/fibonacci/Application.java#L54)
-- [factorial](https://github.com/solairerove/algs4-leprosorium/blob/41154b2f7152dff03257f8e3ebcddeb28511b344/factorial/src/main/java/com/github/solairerove/algs4/leprosorium/factorial/Application.java#L10)
+- classic
+    - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/master/euclid-highest-common-factor/src/main/java/com/github/solairerove/algs4/leprosorium/gcd_euclid/Application.java)
+    - [fibonacci](https://github.com/solairerove/algs4-leprosorium/blob/6981facfdce0753c01b4e3a25ae21ba1b9035f70/fibonacci/src/main/java/com/github/solairerove/algs4/leprosorium/fibonacci/Application.java#L54)
+    - [factorial](https://github.com/solairerove/algs4-leprosorium/blob/41154b2f7152dff03257f8e3ebcddeb28511b344/factorial/src/main/java/com/github/solairerove/algs4/leprosorium/factorial/Application.java#L10)
+    - [reverse polish notation](https://github.com/solairerove/algs4-leprosorium/tree/master/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra)
+        - [double stack Dijkstra's evaluate](https://github.com/solairerove/algs4-leprosorium/blob/6e15e46700812fcac048c1f520f76190037d3b22/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra/DoubleStackEvaluate.java#L23)
+        - [infix to postfix](https://github.com/solairerove/algs4-leprosorium/blob/0fb3aae1a1a35d6b351cb1d99b32715ff2164233/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra/InfixToPostfix.java#L38)
+        - [evaluate postfix](https://github.com/solairerove/algs4-leprosorium/blob/97150fcb7bff96157977496c51bbaa92e53c503b/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra/EvaluatePostfix.java#L18)
 - strings
     - [binary string of int](https://github.com/solairerove/algs4-leprosorium/blob/abdafe5d6804c18b5633434224789609ba9629cb/src/main/java/com/github/solairerove/algs4/leprosorium/strings/ToBinaryStringApplication.java#L11)
     - [is string palindrome](https://github.com/solairerove/algs4-leprosorium/blob/abdafe5d6804c18b5633434224789609ba9629cb/src/main/java/com/github/solairerove/algs4/leprosorium/strings/IsPalindromeApplication.java#L13)
@@ -33,10 +38,6 @@ ___
     - [max sub array sum problem(kadane)](https://github.com/solairerove/algs4-leprosorium/blob/80b870e349fb1521457a21de626a2dbb31410923/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/MaxSubArraySumApplication.java#L37)
     - [move element to the end](https://github.com/solairerove/algs4-leprosorium/blob/eb36731cf736fb2224b0f0865e4ff80979f53f5e/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/MoveElementToEnd.java#L13)
     - [monotonic array](https://github.com/solairerove/algs4-leprosorium/blob/eb36731cf736fb2224b0f0865e4ff80979f53f5e/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/MonotonicArray.java#L14)
-- [reverse polish notation](https://github.com/solairerove/algs4-leprosorium/tree/master/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra)
-    - [double stack Dijkstra's evaluate](https://github.com/solairerove/algs4-leprosorium/blob/6e15e46700812fcac048c1f520f76190037d3b22/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra/DoubleStackEvaluate.java#L23)
-    - [infix to postfix](https://github.com/solairerove/algs4-leprosorium/blob/0fb3aae1a1a35d6b351cb1d99b32715ff2164233/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra/InfixToPostfix.java#L38)
-    - [evaluate postfix](https://github.com/solairerove/algs4-leprosorium/blob/97150fcb7bff96157977496c51bbaa92e53c503b/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra/EvaluatePostfix.java#L18)
 - simple-collection
     - fixed capacity stack of strings
     - resizing array stack
