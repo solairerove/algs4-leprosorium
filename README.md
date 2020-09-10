@@ -8,15 +8,15 @@ Algorithms playground
 - [sorting.at](http://sorting.at/)
 - [sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
 ___
-- classic
-    - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/master/euclid-highest-common-factor/src/main/java/com/github/solairerove/algs4/leprosorium/gcd_euclid/Application.java)
-    - [fibonacci](https://github.com/solairerove/algs4-leprosorium/blob/6981facfdce0753c01b4e3a25ae21ba1b9035f70/fibonacci/src/main/java/com/github/solairerove/algs4/leprosorium/fibonacci/Application.java#L54)
-    - [factorial](https://github.com/solairerove/algs4-leprosorium/blob/41154b2f7152dff03257f8e3ebcddeb28511b344/factorial/src/main/java/com/github/solairerove/algs4/leprosorium/factorial/Application.java#L10)
-    - [reverse polish notation](https://github.com/solairerove/algs4-leprosorium/tree/master/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra)
-        - [double stack Dijkstra's evaluate](https://github.com/solairerove/algs4-leprosorium/blob/6e15e46700812fcac048c1f520f76190037d3b22/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra/DoubleStackEvaluate.java#L23)
-        - [infix to postfix](https://github.com/solairerove/algs4-leprosorium/blob/0fb3aae1a1a35d6b351cb1d99b32715ff2164233/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra/InfixToPostfix.java#L38)
-        - [evaluate postfix](https://github.com/solairerove/algs4-leprosorium/blob/97150fcb7bff96157977496c51bbaa92e53c503b/edsger-wybe-dijkstra/src/main/java/com/github/solairerove/algs4/leprosorium/dijkstra/EvaluatePostfix.java#L18)
-- strings
+- [classic](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/classic)
+    - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/classic/HighestCommonFactor.java#L16)
+    - [fibonacci](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/classic/Fibonacci.java#L39)
+    - [factorial](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/classic/Factorial.java#L10)
+    - [reverse polish notation](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/classic/polish)
+        - [double stack Dijkstra's evaluate](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/classic/polish/DoubleStackEvaluate.java#L23)
+        - [infix to postfix](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/classic/polish/InfixToPostfix.java#L38)
+        - [evaluate postfix](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/classic/polish/EvaluatePostfix.java#L18)
+- [strings](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/strings)
     - [binary string of int](https://github.com/solairerove/algs4-leprosorium/blob/abdafe5d6804c18b5633434224789609ba9629cb/src/main/java/com/github/solairerove/algs4/leprosorium/strings/ToBinaryStringApplication.java#L11)
     - [is string palindrome](https://github.com/solairerove/algs4-leprosorium/blob/abdafe5d6804c18b5633434224789609ba9629cb/src/main/java/com/github/solairerove/algs4/leprosorium/strings/IsPalindromeApplication.java#L13)
     - [is string array sorted](https://github.com/solairerove/algs4-leprosorium/blob/abdafe5d6804c18b5633434224789609ba9629cb/src/main/java/com/github/solairerove/algs4/leprosorium/strings/IsStringArraySorted.java#L17)
@@ -25,19 +25,19 @@ ___
     - [group anagrams](https://github.com/solairerove/algs4-leprosorium/blob/abdafe5d6804c18b5633434224789609ba9629cb/src/main/java/com/github/solairerove/algs4/leprosorium/strings/GroupAnagrams.java#L33)
     - [the longest deduplicate substring](https://github.com/solairerove/algs4-leprosorium/blob/abdafe5d6804c18b5633434224789609ba9629cb/src/main/java/com/github/solairerove/algs4/leprosorium/strings/LongestDeduplicateSubstring.java#L13)
     - [rearrange repeated chars in string](https://github.com/solairerove/algs4-leprosorium/blob/38a96d095e7b32c5fb7a1a9a497d9a956e07200b/src/main/java/com/github/solairerove/algs4/leprosorium/strings/RearrangeRepeatedCharactersInString.java#L28)
-- arrays
-    - [array reverse](https://github.com/solairerove/algs4-leprosorium/blob/dcb71b86dc350bb726cad951f3d2fa66998a12a9/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/Application.java#L84)
-    - [index of el in array binary search](https://github.com/solairerove/algs4-leprosorium/blob/a1a6c3a6329faf6999f29254a0fa16374d80abfc/binary/src/main/java/com/github/solairerove/algs4/leprosorium/binary/Application.java#L34)
-    - [two numbers sum](https://github.com/solairerove/algs4-leprosorium/blob/c6f23c28aa86911bd39130913e78c7e14a96af7c/two-number-sum/src/main/java/com/github/solairerove/algs4/leprosorium/two_number_sum/TwoNumberSum.java#L69)
-    - [two numbers sum is zero](https://github.com/solairerove/algs4-leprosorium/blob/5d06b09fa8edefec3caba92e568f57299b29fc4a/two-number-sum/src/main/java/com/github/solairerove/algs4/leprosorium/two_number_sum/TwoSum.java#L21)
-    - [three numbers sum is zero](https://github.com/solairerove/algs4-leprosorium/blob/e7abb3409d113e541a66cc2cafb87abadd45c2b5/two-number-sum/src/main/java/com/github/solairerove/algs4/leprosorium/two_number_sum/ThreeSum.java#L36)
-    - [three numbers sum as triplets](https://github.com/solairerove/algs4-leprosorium/blob/c0b34167395c082b4455025853055b9dcfb731b0/two-number-sum/src/main/java/com/github/solairerove/algs4/leprosorium/two_number_sum/ThreeSum.java#L57)
-    - [validate subsequence](https://github.com/solairerove/algs4-leprosorium/blob/c0b34167395c082b4455025853055b9dcfb731b0/validate-subsequence/src/main/java/com/github/solairerove/algs4/leprosorium/validate_subsequence/ValidateSubsequence.java#L24)
-    - [three largest numbers in array](https://github.com/solairerove/algs4-leprosorium/blob/a58a7816babb4e0f904853685ff9ae36579d56d9/three-largest-numbers/src/main/java/com/github/solairerove/algs4/leprosorium/three_largest_number/ThreeLargestNumber.java#L27)
-    - [product sum](https://github.com/solairerove/algs4-leprosorium/blob/7f7299b4f3fb514b67992494bccb0d55643458a3/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/ProductSum.java#L53)
-    - [max sub array sum problem(kadane)](https://github.com/solairerove/algs4-leprosorium/blob/80b870e349fb1521457a21de626a2dbb31410923/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/MaxSubArraySumApplication.java#L37)
-    - [move element to the end](https://github.com/solairerove/algs4-leprosorium/blob/eb36731cf736fb2224b0f0865e4ff80979f53f5e/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/MoveElementToEnd.java#L13)
-    - [monotonic array](https://github.com/solairerove/algs4-leprosorium/blob/eb36731cf736fb2224b0f0865e4ff80979f53f5e/simple-array/src/main/java/com/github/solairerove/algs4/leprosorium/simple_arrays/MonotonicArray.java#L14)
+- [arrays](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/arrays)
+    - [array reverse](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/ReverseArray.java#L24)
+    - [index of el in array binary search](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/BinarySearch.java#L14)
+    - [two numbers sum](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/TwoNumberSum.java#L121)
+    - [two numbers sum is zero](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/TwoNumbersSumIsZeroCount.java#L21)
+    - [three numbers sum is zero](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/ThreeSum.java#L36)
+    - [three numbers sum as triplets](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/ThreeSum.java#L57)
+    - [validate subsequence](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/ValidateSubsequence.java#L24)
+    - [three largest numbers in array](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/ThreeLargestNumber.java#L27)
+    - [product sum](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/ProductSum.java#L49)
+    - [max sub array sum problem(kadane)](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/MaxSubArraySumApplication.java#L37)
+    - [move element to the end](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/MoveElementToEnd.java#L13)
+    - [monotonic array](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/MonotonicArray.java#L14)
 - simple-collection
     - fixed capacity stack of strings
     - resizing array stack
@@ -46,7 +46,7 @@ ___
     - linked lifo bag
     - balanced parentheses
     - priority queue MaxPQ
-- sorting
+- [sorting](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/sorting)
     - [selection sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/SelectionSort.java#L66)
     - [insertion sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/InsertionSort.java#L63)
     - [bubble sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/BubbleSort.java#L10)
