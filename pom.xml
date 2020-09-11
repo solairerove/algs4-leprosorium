@@ -12,12 +12,6 @@
     <name>algs4-leprosorium</name>
     <description>Algorithms playground</description>
 
-    <modules>
-        <module>simple-collection</module>
-        <module>symbol-table</module>
-        <module>binary-search-tree</module>
-    </modules>
-
     <properties>
         <java.version>11</java.version>
     </properties>
