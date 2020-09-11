@@ -47,17 +47,17 @@ ___
     - [quick sort (Q3 on his way)](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/QuickSort.java#L8)
     - [heap sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/HeapSort.java#L8)
     - [quick select](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/QuickSelect.java#L10)
-- [data structures]
-    - classic
-        - fixed capacity stack of strings
-        - resizing array stack
-        - linked lifo stack
-        - linked fifo queue
-        - linked lifo bag
-        - balanced parentheses
-        - priority queue MaxPQ
-    - symbol table
-        - sequential search st
-        - binary search st
-    - binary search tree
-        - bst
+- [data structures](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures)
+    - [classic](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/classic)
+        - [fixed capacity stack of strings](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/classic/stack/fixed/FixedCapacityStackOfStrings.java)
+        - [resizing array stack](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/classic/stack/resized/ResizingArrayStack.java)
+        - [linked lifo stack](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/classic/linked/lifo/Stack.java)
+        - [linked fifo queue](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/classic/linked/fifo/Queue.java)
+        - [linked lifo bag](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/classic/linked/container/Bag.java)
+        - [balanced parentheses](https://github.com/solairerove/algs4-leprosorium/blob/75acde7e7276987a27b4e9f844a1dc505797f6a6/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/classic/stack/parentheses/Application.java#L14)
+        - [priority queue MaxPQ](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/classic/priority/MaxPQ.java)
+    - [symbol table](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table)
+        - [sequential search st](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/sequential/SequentialSearchST.java)
+        - [binary search st](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/binary/BinarySearchST.java)
+    - [binary search tree](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/binary_search_tree)
+        - [bst](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/binary_search_tree/BST.java)
