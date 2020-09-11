@@ -38,14 +38,6 @@ ___
     - [max sub array sum problem(kadane)](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/MaxSubArraySumApplication.java#L37)
     - [move element to the end](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/MoveElementToEnd.java#L13)
     - [monotonic array](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/MonotonicArray.java#L14)
-- simple-collection
-    - fixed capacity stack of strings
-    - resizing array stack
-    - linked lifo stack
-    - linked fifo queue
-    - linked lifo bag
-    - balanced parentheses
-    - priority queue MaxPQ
 - [sorting](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/sorting)
     - [selection sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/SelectionSort.java#L66)
     - [insertion sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/InsertionSort.java#L63)
@@ -55,7 +47,15 @@ ___
     - [quick sort (Q3 on his way)](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/QuickSort.java#L8)
     - [heap sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/HeapSort.java#L8)
     - [quick select](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/QuickSelect.java#L10)
-- searching
+- [data structures]
+    - classic
+        - fixed capacity stack of strings
+        - resizing array stack
+        - linked lifo stack
+        - linked fifo queue
+        - linked lifo bag
+        - balanced parentheses
+        - priority queue MaxPQ
     - symbol table
         - sequential search st
         - binary search st
