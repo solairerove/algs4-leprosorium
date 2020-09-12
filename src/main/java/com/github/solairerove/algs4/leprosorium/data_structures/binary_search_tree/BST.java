@@ -1,7 +1,6 @@
 package com.github.solairerove.algs4.leprosorium.data_structures.binary_search_tree;
 
-import edu.princeton.cs.algs4.Queue;
-import edu.princeton.cs.algs4.StdOut;
+import com.github.solairerove.algs4.leprosorium.data_structures.classic.linked.fifo.Queue;
 
 public class BST<Key extends Comparable<Key>, Value> {
     private Node root;
@@ -63,7 +62,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 
     private Node min(Node x) {
         if (x.left == null) return x;
-        return min(x.left);
+        else return min(x.left);
     }
 
     public Key max() {
@@ -72,7 +71,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 
     private Node max(Node x) {
         if (x.right == null) return x;
-        return max(x.right);
+        else return max(x.right);
     }
 
     public Key floor(Key key) {
@@ -101,8 +100,8 @@ public class BST<Key extends Comparable<Key>, Value> {
         if (x == null) return null;
 
         int t = size(x.left);
-        if (t > k) return select(x.left, k);
-        else if (t < k) return select(x.right, k - t - 1);
+        if (k < t) return select(x.left, k);
+        else if (k > t) return select(x.right, k - t - 1);
         else return x;
     }
 
@@ -145,6 +144,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         else {
             if (x.right == null) return x.left;
             if (x.left == null) return x.right;
+
             Node t = x;
             x = min(t.right);
             x.right = deleteMin(t.right);
@@ -163,7 +163,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         if (x == null) return;
 
         print(x.left);
-        StdOut.printf("%s ", x.key);
+        System.out.printf("%s ", x.key);
         print(x.right);
     }
 
@@ -174,7 +174,6 @@ public class BST<Key extends Comparable<Key>, Value> {
     public Iterable<Key> keys(Key low, Key high) {
         Queue<Key> queue = new Queue<>();
         keys(root, queue, low, high);
-
         return queue;
     }
 

@@ -3,10 +3,10 @@ package com.github.solairerove.algs4.leprosorium.data_structures.classic.linked.
 import java.util.Iterator;
 
 public class Stack<Item> implements Iterable<Item> {
-
     private Node first;
     private int N;
-    private class Node{
+
+    private class Node {
         Item item;
         Node next;
     }

@@ -14,7 +14,7 @@ public class Queue<Item> implements Iterable<Item> {
     }
 
     public boolean isEmpty() {
-        return N == 0;
+        return first == null;
     }
 
     public int size() {
@@ -23,19 +23,12 @@ public class Queue<Item> implements Iterable<Item> {
 
     public void enqueue(Item item) {
         Node oldLast = last;
-
         last = new Node();
         last.item = item;
         last.next = null;
 
-        if (isEmpty()) {
-            first = last;
-        } else {
-            // TODO: не понял
-            oldLast.next = last;
-        }
-
-        last.next = oldLast;
+        if (isEmpty()) first = last;
+        else oldLast.next = last;
 
         N++;
     }
@@ -44,9 +37,7 @@ public class Queue<Item> implements Iterable<Item> {
         Item item = first.item;
         first = first.next;
 
-        if (isEmpty()) {
-            last = null;
-        }
+        if (isEmpty()) last = null;
         N--;
 
         return item;
@@ -54,6 +45,27 @@ public class Queue<Item> implements Iterable<Item> {
 
     @Override
     public Iterator<Item> iterator() {
-        return null;
+        return new QueueIterator(first);
+    }
+
+    private class QueueIterator implements Iterator<Item> {
+        private Node current;
+
+        public QueueIterator(Node current) {
+            this.current = current;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        @Override
+        public Item next() {
+            Item item = current.item;
+            current = current.next;
+
+            return item;
+        }
     }
 }
