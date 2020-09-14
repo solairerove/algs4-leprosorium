@@ -26,8 +26,25 @@ public class SudokuCheck {
                 {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
         };
 
-//        boolean res = isValidSudoku(board);
-//
-//        System.out.println(res);
+        boolean res = isValidSudoku(board);
+
+        System.out.println(res);
+    }
+
+    private static boolean isValidSudoku(char[][] board) {
+        Set<Character> set = new HashSet<>();
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+                if (!isUnique(board[i][j], set) || !isUnique(board[j][i], set)) {
+                    return false;
+                }
+            }
+            set = new HashSet<>();
+        }
+        return true;
+    }
+
+    private static boolean isUnique(char current, Set<Character> set) {
+        return current == '.' || set.add(current);
     }
 }
