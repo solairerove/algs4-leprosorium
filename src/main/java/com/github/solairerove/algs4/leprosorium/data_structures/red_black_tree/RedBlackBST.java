@@ -98,6 +98,49 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     }
 
     /***************************************************************************
+     *  Red-black tree insertion.
+     ***************************************************************************/
+
+    // insert the key-value pair in the subtree rooted at h
+    private Node put(Node h, Key key, Value value) {
+        if (h == null) return new Node(key, value, RED, 1);
+
+        int cmp = key.compareTo(h.key);
+        if (cmp < 0) h.left = put(h.left, key, value);
+        else if (cmp > 0) h.right = put(h.right, key, value);
+        else h.value = value;
+
+        if (isRed(h.right) && !isRed(h.left)) h = rotateLeft(h);
+        if (isRed(h.left) && isRed(h.left.left)) h = rotateRight(h);
+        if (isRed(h.left) && isRed(h.right)) flipColors(h);
+
+        h.n = size(h.left) + size(h.right) + 1;
+        return h;
+    }
+
+    /**
+     * Inserts the specified key-value pair into the symbol table, overwriting the old
+     * value with the new value if the symbol table already contains the specified key.
+     * Deletes the specified key (and its associated value) from this symbol table
+     * if the specified value is {@code null}.
+     *
+     * @param key   the key
+     * @param value the value
+     * @throws IllegalArgumentException if {@code key} is {@code null}
+     */
+    public void put(Key key, Value value) {
+        /*
+         if (key == null) throw  new IllegalArgumentException("first argument to put is null");
+         if (value == null) {
+            delete(key);
+            return;
+        }
+        */
+        root = put(root, key, value);
+        root.color = BLACK;
+    }
+
+    /***************************************************************************
      *  Red-black tree helper functions.
      ***************************************************************************/
 
@@ -131,5 +174,12 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         x.n = h.n;
         h.n = 1 + size(h.left) + size(h.right);
         return x;
+    }
+
+    // flip the colors of a node and its two children
+    private void flipColors(Node h) {
+        h.color = RED;
+        h.left.color = BLACK;
+        h.right.color = BLACK;
     }
 }
