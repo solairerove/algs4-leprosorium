@@ -41,6 +41,7 @@ ___
     - [smallest difference](https://github.com/solairerove/algs4-leprosorium/blob/6037bacf81f068f9384f6706ea93e6598ae6d5ad/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/SmallestDifference.java#L17)
     - [sudoku check](https://github.com/solairerove/algs4-leprosorium/blob/53961940c250d942a123e7ee96d9fa86195bd78d/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/SudokuCheck.java#L45)
     - [longest peak](https://github.com/solairerove/algs4-leprosorium/blob/53961940c250d942a123e7ee96d9fa86195bd78d/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/LongestPeak.java#L12)
+    - [spiral traverse]()
 - [sorting](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/sorting)
     - [selection sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/SelectionSort.java#L66)
     - [insertion sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/InsertionSort.java#L63)
@@ -64,4 +65,4 @@ ___
         - [binary search st](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/binary/BinarySearchST.java)
     - [binary search tree](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/binary_search_tree)
         - [bst](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/binary_search_tree/BST.java)
-        - [red black bst]()
+        - [red black bst](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/red_black_tree/RedBlackBST.java)
