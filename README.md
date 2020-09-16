@@ -64,3 +64,4 @@ ___
         - [binary search st](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/binary/BinarySearchST.java)
     - [binary search tree](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/binary_search_tree)
         - [bst](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/binary_search_tree/BST.java)
+        - [red black bst]()
