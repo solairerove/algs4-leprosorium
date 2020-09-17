@@ -1,5 +1,7 @@
 package com.github.solairerove.algs4.leprosorium.data_structures.red_black_tree;
 
+import java.util.NoSuchElementException;
+
 public class RedBlackBST<Key extends Comparable<Key>, Value> {
     private Node root;
 
@@ -146,7 +148,53 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
 
     // delete the key-value pair with the minimum key rooted at h
     private Node deleteMin(Node h) {
-        return h;
+        if (h.left == null) {
+            return null;
+        }
+
+        if (!isRed(h.left) && !isRed(h.left.left)) {
+            h = moveRedLeft(h);
+        }
+        h.left = deleteMin(h.left);
+        return balance(h);
+    }
+
+    /**
+     * Removes the smallest key and associated value from the symbol table.
+     *
+     * @throws NoSuchElementException if the symbol table is empty
+     */
+    public void deleteMin() {
+        if (isEmpty()) throw new NoSuchElementException("BST is empty");
+
+        // if both children of root are black, set root to red
+        if (!isRed(root.left) && !isRed(root.right)) {
+            root.color = RED;
+        }
+
+        root = deleteMin(root);
+        if (!isEmpty()) root.color = BLACK;
+    }
+
+    /***************************************************************************
+     *  Ordered symbol table methods.
+     ***************************************************************************/
+
+    // the smallest key in subtree rooted at x; null if no such key
+    private Node min(Node x) {
+        if (x.left == null) return x;
+        else return min(x.left);
+    }
+
+    /**
+     * Returns the smallest key in the symbol table.
+     *
+     * @return the smallest key in the symbol table
+     * @throws NoSuchElementException if the symbol table is empty
+     */
+    public Key min() {
+        if (isEmpty()) throw new NoSuchElementException("calls min() with empty symbol table");
+        return min(root).key;
     }
 
     /***************************************************************************
