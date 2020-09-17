@@ -141,6 +141,15 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     }
 
     /***************************************************************************
+     *  Red-black tree deletion.
+     ***************************************************************************/
+
+    // delete the key-value pair with the minimum key rooted at h
+    private Node deleteMin(Node h) {
+        return h;
+    }
+
+    /***************************************************************************
      *  Red-black tree helper functions.
      ***************************************************************************/
 
@@ -181,5 +190,26 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         h.color = RED;
         h.left.color = BLACK;
         h.right.color = BLACK;
+    }
+
+    private Node balance(Node h) {
+        if (isRed(h.right)) h = rotateLeft(h);
+        if (isRed(h.left) && isRed(h.left.left)) h = rotateRight(h);
+        if (isRed(h.left) && isRed(h.right)) flipColors(h);
+
+        h.n = size(h.left) + size(h.right) + 1;
+        return h;
+    }
+
+    // Assuming that h is red and both h.left and h.left.left
+    // are black, make h.left or one of its children red.
+    private Node moveRedLeft(Node h) {
+        flipColors(h);
+
+        if (isRed(h.right.left)) {
+            h.right = rotateRight(h.right);
+            h = rotateLeft(h);
+        }
+        return h;
     }
 }
