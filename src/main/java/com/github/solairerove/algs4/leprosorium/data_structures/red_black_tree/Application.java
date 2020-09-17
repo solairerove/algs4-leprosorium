@@ -12,9 +12,14 @@ public class Application {
         tree.put("C", 6);
         tree.put("A", 11);
 
-        System.out.println(tree.min()); // A
         System.out.println(tree.get("A"));
+
+        System.out.println(tree.min()); // A
         tree.deleteMin();
         System.out.println(tree.min()); // C
+
+        System.out.println(tree.max()); // X
+        tree.deleteMax();
+        System.out.println(tree.max()); // S
     }
 }

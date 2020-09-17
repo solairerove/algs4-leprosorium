@@ -176,6 +176,41 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         if (!isEmpty()) root.color = BLACK;
     }
 
+    // delete the key-value pair with the maximum key rooted at h
+    private Node deleteMax(Node h) {
+        if (isRed(h.left)) {
+            h = rotateRight(h);
+        }
+
+        if (h.right == null) {
+            return null;
+        }
+
+        if (!isRed(h.right) && !isRed(h.right.left)) {
+            h = moveRedRight(h);
+        }
+
+        h.right = deleteMax(h.right);
+        return balance(h);
+    }
+
+    /**
+     * Removes the largest key and associated value from the symbol table.
+     *
+     * @throws NoSuchElementException if the symbol table is empty
+     */
+    public void deleteMax() {
+        if (isEmpty()) throw new NoSuchElementException("BST underflow");
+
+        // if both children of root are black, set root to red
+        if (!isRed(root.left) && !isRed(root.right)) {
+            root.color = RED;
+        }
+
+        root = deleteMax(root);
+        if (!isEmpty()) root.color = BLACK;
+    }
+
     /***************************************************************************
      *  Ordered symbol table methods.
      ***************************************************************************/
@@ -195,6 +230,23 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     public Key min() {
         if (isEmpty()) throw new NoSuchElementException("calls min() with empty symbol table");
         return min(root).key;
+    }
+
+    // the largest key in the subtree rooted at x; null if no such key
+    private Node max(Node x) {
+        if (x.right == null) return x;
+        else return max(x.right);
+    }
+
+    /**
+     * Returns the largest key in the symbol table.
+     *
+     * @return the largest key in the symbol table
+     * @throws NoSuchElementException if the symbol table is empty
+     */
+    public Key max() {
+        if (isEmpty()) throw new NoSuchElementException("calls max() with empty symbol table");
+        return max(root).key;
     }
 
     /***************************************************************************
@@ -257,6 +309,18 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         if (isRed(h.right.left)) {
             h.right = rotateRight(h.right);
             h = rotateLeft(h);
+        }
+        return h;
+    }
+
+    // Assuming that h is red and both h.right and h.right.left
+    // are black, make h.right or one of its children red.
+    private Node moveRedRight(Node h) {
+        flipColors(h);
+
+        if (isRed(h.left.left)) {
+            h = rotateRight(h);
+            flipColors(h);
         }
         return h;
     }
