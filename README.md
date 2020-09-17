@@ -41,7 +41,7 @@ ___
     - [smallest difference](https://github.com/solairerove/algs4-leprosorium/blob/6037bacf81f068f9384f6706ea93e6598ae6d5ad/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/SmallestDifference.java#L17)
     - [sudoku check](https://github.com/solairerove/algs4-leprosorium/blob/53961940c250d942a123e7ee96d9fa86195bd78d/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/SudokuCheck.java#L45)
     - [longest peak](https://github.com/solairerove/algs4-leprosorium/blob/53961940c250d942a123e7ee96d9fa86195bd78d/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/LongestPeak.java#L12)
-    - [spiral traverse]()
+    - [spiral traverse](https://github.com/solairerove/algs4-leprosorium/blob/2a073dbec3f733cd179d11b80caff83314deb10a/src/main/java/com/github/solairerove/algs4/leprosorium/arrays/SpiralTraverse.java#L18)
 - [sorting](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/sorting)
     - [selection sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/SelectionSort.java#L66)
     - [insertion sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/InsertionSort.java#L63)
