@@ -211,6 +211,56 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         if (!isEmpty()) root.color = BLACK;
     }
 
+    // delete the key-value pair with the given key rooted at h
+    private Node delete(Node h, Key key) {
+        if (key.compareTo(h.key) < 0) {
+            if (!isRed(h.left) && !isRed(h.left.left)) {
+                h = moveRedLeft(h);
+            }
+            h.left = delete(h.left, key);
+        } else {
+            if (isRed(h.left)) {
+                h = rotateRight(h);
+            }
+            if (key.compareTo(h.key) == 0 && h.right == null) {
+                return null;
+            }
+            if (!isRed(h.right) && !isRed(h.right.left)) {
+                h = moveRedRight(h);
+            }
+            if (key.compareTo(h.key) == 0) {
+                Node x = min(h.right);
+                h.key = x.key;
+                h.value = x.value;
+                h.right = deleteMin(h.right);
+            } else {
+                h.right = delete(h.right, key);
+            }
+        }
+        return balance(h);
+    }
+
+    /**
+     * Removes the specified key and its associated value from this symbol table
+     * (if the key is in this symbol table).
+     *
+     * @param key the key
+     * @throws IllegalArgumentException if {@code key} is {@code null}
+     */
+
+    public void delete(Key key) {
+        if (key == null) throw new IllegalArgumentException("argument to delete() is null");
+        if (!contains(key)) return;
+
+        // if both children of root are black, set root to red
+        if (!isRed(root.left) && !isRed(root.right)) {
+            root.color = RED;
+        }
+
+        root = delete(root, key);
+        if (!isEmpty()) root.color = BLACK;
+    }
+
     /***************************************************************************
      *  Ordered symbol table methods.
      ***************************************************************************/
@@ -258,9 +308,6 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         Node x = h.right;
         h.right = x.left;
         x.left = h;
-
-        // x.color = x.left.color;
-        // x.left.color = RED;
         x.color = h.color;
         h.color = RED;
 
@@ -274,9 +321,6 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         Node x = h.left;
         h.left = x.right;
         x.right = h;
-
-        // x.color = x.right.color;
-        // x.right.color = RED;
         x.color = h.color;
         h.color = RED;
 
@@ -287,9 +331,9 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
 
     // flip the colors of a node and its two children
     private void flipColors(Node h) {
-        h.color = RED;
-        h.left.color = BLACK;
-        h.right.color = BLACK;
+        h.color = !h.color;
+        h.left.color = !h.left.color;
+        h.right.color = !h.right.color;
     }
 
     private Node balance(Node h) {

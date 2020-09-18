@@ -21,5 +21,9 @@ public class Application {
         System.out.println(tree.max()); // X
         tree.deleteMax();
         System.out.println(tree.max()); // S
+
+        System.out.println(tree.get("R")); // 2
+        tree.delete("S");
+        System.out.println(tree.max()); // R
     }
 }
