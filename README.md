@@ -52,7 +52,7 @@ ___
     - [heap sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/HeapSort.java#L8)
     - [quick select](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/QuickSelect.java#L10)
 - [dynamic](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/dynamic)
-    - [max sum no adjacent elements](https://github.com/solairerove/algs4-leprosorium/blob/34d1b5027f27321aeb50e8112230f567ba4dfffb/src/main/java/com/github/solairerove/algs4/leprosorium/dynamic/MaxSumOfNoAdjacentElements.java#L12)
+    - [max sum no adjacent elements](https://github.com/solairerove/algs4-leprosorium/blob/2cedfaf6f3d2f029d7e1489014a999bc06cde67d/src/main/java/com/github/solairerove/algs4/leprosorium/dynamic/MaxSumOfNoAdjacentElements.java#L29)
 - [data structures](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures)
     - [classic](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/classic)
         - [fixed capacity stack of strings](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/classic/stack/fixed/FixedCapacityStackOfStrings.java)
