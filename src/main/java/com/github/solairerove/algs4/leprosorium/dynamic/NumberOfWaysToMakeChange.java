@@ -17,6 +17,7 @@ public class NumberOfWaysToMakeChange {
         System.out.printf("Number of ways for %s is %s", Arrays.toString(a1), numberOfWays(a1, n1));
     }
 
+    // O(dn) time | O(n) space, where d is number of denominations
     private static int numberOfWays(int[] a, int n) {
         int[] ways = new int[n + 1];
         ways[0] = 1;
