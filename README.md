@@ -54,7 +54,7 @@ ___
 - [dynamic](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/dynamic)
     - [max sum no adjacent elements](https://github.com/solairerove/algs4-leprosorium/blob/2cedfaf6f3d2f029d7e1489014a999bc06cde67d/src/main/java/com/github/solairerove/algs4/leprosorium/dynamic/MaxSumOfNoAdjacentElements.java#L29)
     - [number of ways to make change](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/dynamic/NumberOfWaysToMakeChange.java)
-    - [min number of coins for change]()
+    - [min number of coins for change](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/dynamic/MinNumberOfCoinsForChange.java)
 - [data structures](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures)
     - [classic](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/classic)
         - [fixed capacity stack of strings](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/classic/stack/fixed/FixedCapacityStackOfStrings.java)
