@@ -10,6 +10,7 @@ public class LevenshteinDistance {
         System.out.println(levenshteinDistance("abcd", "abczy"));
     }
 
+    // O(nm) time | O(nm) space
     private static int levenshteinDistance(String s1, String s2) {
         int n1 = s1.length() + 1, n2 = s2.length() + 1;
         int[][] edits = new int[n1][n2];
