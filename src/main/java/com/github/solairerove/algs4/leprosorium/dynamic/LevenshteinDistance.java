@@ -34,6 +34,7 @@ public class LevenshteinDistance {
         return edits[n1 - 1][n2 - 1];
     }
 
+    // O(nm) time | O(min(n, m)) space
     private static int levenshtein(String s1, String s2) {
         int n1 = s1.length(), n2 = s2.length();
         String small = n1 < n2 ? s1 : s2;
