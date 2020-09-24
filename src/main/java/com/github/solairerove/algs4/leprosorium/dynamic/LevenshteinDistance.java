@@ -24,8 +24,11 @@ public class LevenshteinDistance {
 
         for (int i = 1; i < n1; i++) {
             for (int j = 1; j < n2; j++) {
-                if (s1.charAt(i - 1) == s2.charAt(j - 1)) edits[i][j] = edits[i - 1][j - 1];
-                else edits[i][j] = 1 + Math.min(edits[i - 1][j - 1], Math.min(edits[i][j - 1], edits[i - 1][j]));
+                if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
+                    edits[i][j] = edits[i - 1][j - 1];
+                } else {
+                    edits[i][j] = 1 + Math.min(edits[i - 1][j - 1], Math.min(edits[i][j - 1], edits[i - 1][j]));
+                }
             }
         }
 
