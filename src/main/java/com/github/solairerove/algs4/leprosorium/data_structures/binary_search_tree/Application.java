@@ -32,5 +32,7 @@ public class Application {
         System.out.println();
 
         tree.keys().forEach(s -> System.out.printf("%s ", s)); // C H M R S X
+
+        System.out.printf("\n%s \n", tree.ceiling("K")); // M
     }
 }
