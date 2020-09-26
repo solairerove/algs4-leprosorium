@@ -68,8 +68,8 @@ ___
     - [symbol table](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table)
         - [sequential search st](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/sequential/SequentialSearchST.java)
         - [binary search st](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/binary/BinarySearchST.java)
-        - [binary search tree](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/binary_search_tree)
+        - [binary search tree](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/binary_search_tree)
             - [bst](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/binary_search_tree/BST.java)
-            - [red black bst](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/red_black_tree/RedBlackBST.java) not all api
+            - [red black bst](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/binary_search_tree/red_black_tree/RedBlackBST.java) not all api
         - [hash st](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/hash)
             - [separate chaining st](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/hash/SeparateChainingHashST.java)
