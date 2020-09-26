@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.data_structures.hash;
+package com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.binary.hash;
 
 import com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.sequential.SequentialSearchST;
 

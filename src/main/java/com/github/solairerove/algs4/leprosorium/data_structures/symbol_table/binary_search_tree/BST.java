@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.data_structures.binary_search_tree;
+package com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.binary_search_tree;
 
 import com.github.solairerove.algs4.leprosorium.data_structures.classic.linked.fifo.Queue;
 

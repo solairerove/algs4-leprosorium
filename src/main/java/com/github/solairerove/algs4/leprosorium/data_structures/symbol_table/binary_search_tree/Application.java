@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.data_structures.binary_search_tree;
+package com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.binary_search_tree;
 
 public class Application {
     public static void main(String... args) {
