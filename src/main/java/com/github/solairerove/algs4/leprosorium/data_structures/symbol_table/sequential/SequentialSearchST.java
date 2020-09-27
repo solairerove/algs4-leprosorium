@@ -1,5 +1,7 @@
 package com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.sequential;
 
+import com.github.solairerove.algs4.leprosorium.data_structures.classic.linked.fifo.Queue;
+
 // Последовательный поиск в неупорядоченном связном списке
 public class SequentialSearchST<Key, Value> {
     private int n;
@@ -66,5 +68,12 @@ public class SequentialSearchST<Key, Value> {
         }
         x.next = delete(x.next, key);
         return x;
+    }
+
+    public Iterable<Key> keys() {
+        Queue<Key> queue = new Queue<>();
+        for (Node x = first; x != null; x = x.next) queue.enqueue(x.key);
+
+        return queue;
     }
 }

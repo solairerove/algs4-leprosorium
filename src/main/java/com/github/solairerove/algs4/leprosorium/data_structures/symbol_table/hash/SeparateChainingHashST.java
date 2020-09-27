@@ -20,7 +20,15 @@ public class SeparateChainingHashST<Key, Value> {
     }
 
     private void resize(int chains) {
-
+        SeparateChainingHashST<Key, Value> temp = new SeparateChainingHashST<>(chains);
+        for (int i = 0; i < m; i++) {
+            for (Key key : st[i].keys()) {
+                temp.put(key, st[i].get(key));
+            }
+        }
+        this.m = temp.m;
+        this.n = temp.n;
+        this.st = temp.st;
     }
 
     private int hash(Key key) {
@@ -48,11 +56,25 @@ public class SeparateChainingHashST<Key, Value> {
 
     public void put(Key key, Value value) {
         if (key == null) throw new IllegalArgumentException("key argument to put() is null");
+        if (value == null) {
+            delete(key);
+            return;
+        }
 
         if (n >= 10 * m) resize(2 * m);
 
         int i = hash(key);
         if (!st[i].contains(key)) n++;
         st[i].put(key, value);
+    }
+
+    public void delete(Key key) {
+        if (key == null) throw new IllegalArgumentException("argument to delete() is null");
+
+        int i = hash(key);
+        if (st[i].contains(key)) n--;
+        st[i].delete(key);
+
+        if (m > INIT_CAPACITY && n <= 2 * m) resize(m / 2);
     }
 }
