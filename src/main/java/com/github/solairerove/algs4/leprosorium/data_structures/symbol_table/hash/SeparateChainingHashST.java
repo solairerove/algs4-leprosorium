@@ -1,5 +1,6 @@
 package com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.hash;
 
+import com.github.solairerove.algs4.leprosorium.data_structures.classic.linked.fifo.Queue;
 import com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.sequential.SequentialSearchST;
 
 public class SeparateChainingHashST<Key, Value> {
@@ -76,5 +77,16 @@ public class SeparateChainingHashST<Key, Value> {
         st[i].delete(key);
 
         if (m > INIT_CAPACITY && n <= 2 * m) resize(m / 2);
+    }
+
+    public Iterable<Key> keys() {
+        Queue<Key> queue = new Queue<>();
+        for (int i = 0; i < m; i++) {
+            for (Key key : st[i].keys()) {
+                queue.enqueue(key);
+            }
+        }
+
+        return queue;
     }
 }

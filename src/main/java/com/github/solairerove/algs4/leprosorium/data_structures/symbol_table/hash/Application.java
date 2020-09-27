@@ -12,6 +12,9 @@ public class Application {
         st.put("C", 6);
         st.put("A", 11);
 
+        st.keys().forEach(System.out::println);
         System.out.println(st.get("X")); // 0
+        st.delete("X"); // 0
+        st.keys().forEach(System.out::println);
     }
 }
