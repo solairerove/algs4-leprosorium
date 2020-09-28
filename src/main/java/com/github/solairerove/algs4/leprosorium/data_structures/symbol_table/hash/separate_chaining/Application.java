@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.hash;
+package com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.hash.separate_chaining;
 
 public class Application {
     public static void main(String[] args) {

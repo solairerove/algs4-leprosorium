@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.hash;
+package com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.hash.separate_chaining;
 
 import com.github.solairerove.algs4.leprosorium.data_structures.classic.linked.fifo.Queue;
 import com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.sequential.SequentialSearchST;

@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.hash;
+package com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.hash.linear_probing;
 
 import com.github.solairerove.algs4.leprosorium.data_structures.classic.linked.fifo.Queue;
 
