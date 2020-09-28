@@ -1,5 +1,7 @@
 package com.github.solairerove.algs4.leprosorium.data_structures.symbol_table.hash;
 
+import com.github.solairerove.algs4.leprosorium.data_structures.classic.linked.fifo.Queue;
+
 public class LinearProbingHashST<Key, Value> {
     private static final int INIT_CAPACITY = 4;
 
@@ -106,5 +108,13 @@ public class LinearProbingHashST<Key, Value> {
         n--;
 
         if (n > 0 && n <= m / 8) resize(m / 2);
+    }
+
+    public Iterable<Key> keys() {
+        Queue<Key> queue = new Queue<>();
+        for (int i = 0; i < m; i++) {
+            if (keys[i] != null) queue.enqueue(keys[i]);
+        }
+        return queue;
     }
 }
