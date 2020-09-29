@@ -74,5 +74,5 @@ ___
         - [hash st](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/hash)
             - [separate chaining st](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/hash/separate_chaining/SeparateChainingHashST.java)
             - [linear probing st](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/hash/linear_probing/LinearProbingHashST.java)
-        - [set]()
-            - [tree set wrapper]()
+        - [set](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/set)
+            - [tree set wrapper](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/set/Set.java)
