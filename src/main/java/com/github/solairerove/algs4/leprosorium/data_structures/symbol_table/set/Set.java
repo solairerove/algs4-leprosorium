@@ -7,6 +7,10 @@ import java.util.TreeSet;
 public class Set<Key extends Comparable<Key>> implements Iterable<Key> {
     private TreeSet<Key> set;
 
+    public Set() {
+        set = new TreeSet<>();
+    }
+
     public Set(Set<Key> x) {
         set = new TreeSet<>(x.set);
     }
@@ -68,5 +72,29 @@ public class Set<Key extends Comparable<Key>> implements Iterable<Key> {
         Key k = set.floor(key);
         if (k == null) throw new NoSuchElementException("all keys are greater than " + key);
         return k;
+    }
+
+    public Set<Key> union(Set<Key> that) {
+        if (that == null) throw new IllegalArgumentException("called union() with a null argument");
+        Set<Key> c = new Set<>();
+        for (Key x : this) c.add(x);
+        for (Key x : that) c.add(x);
+
+        return c;
+    }
+
+    public Set<Key> intersects(Set<Key> that) {
+        if (that == null) throw new IllegalArgumentException("called intersects() with a null argument");
+        Set<Key> c = new Set<>();
+        if (this.size() < that.size()) {
+            for (Key x : this) {
+                if (that.contains(x)) c.add(x);
+            }
+        } else {
+            for (Key x : that) {
+                if (this.contains(x)) c.add(x);
+            }
+        }
+        return c;
     }
 }
