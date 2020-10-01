@@ -76,5 +76,5 @@ ___
             - [linear probing st](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/hash/linear_probing/LinearProbingHashST.java)
         - [set](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/set)
             - [tree set wrapper](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/set/Set.java)
-        - [page rank]()
-            - [sparse vector]()
+        - [page rank](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/page_rank)
+            - [sparse vector](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/page_rank/SparseVector.java)
