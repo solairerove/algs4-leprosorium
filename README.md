@@ -51,6 +51,7 @@ ___
     - [quick sort (Q3 on his way)](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/QuickSort.java#L8)
     - [heap sort](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/HeapSort.java#L8)
     - [quick select](https://github.com/solairerove/algs4-leprosorium/blob/911a66d42871385c47a9c0ae00fd8b188ac06df4/src/main/java/com/github/solairerove/algs4/leprosorium/sorting/QuickSelect.java#L10)
+    - [count search]()
 - [dynamic](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/dynamic)
     - [max sum no adjacent elements](https://github.com/solairerove/algs4-leprosorium/blob/2cedfaf6f3d2f029d7e1489014a999bc06cde67d/src/main/java/com/github/solairerove/algs4/leprosorium/dynamic/MaxSumOfNoAdjacentElements.java#L29)
     - [number of ways to make change](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/dynamic/NumberOfWaysToMakeChange.java)
