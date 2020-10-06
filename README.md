@@ -80,3 +80,4 @@ ___
             - [tree set wrapper](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/set/Set.java)
         - [page rank](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/page_rank)
             - [sparse vector](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/page_rank/SparseVector.java)
+    - [graphs]()
