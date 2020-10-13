@@ -82,3 +82,4 @@ ___
             - [sparse vector](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/symbol_table/page_rank/SparseVector.java)
     - [graphs](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/data_structures/graphs)
         - [undirected graph]()
+        - [depth first search]()
