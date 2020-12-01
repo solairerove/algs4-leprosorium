@@ -9,6 +9,7 @@ public class Fibonacci {
         System.out.printf("%sth fibonacci: %s\n", 6, getNthFibonacci(6));
         System.out.printf("%sth fibonacci: %s\n", 6, getAnotherNthFibonacci(6));
         System.out.printf("%sth fibonacci: %s\n", 6, getForAnotherNthFibonacci(6));
+        System.out.printf("%sth fibonacci: %s\n", 6, recursiveFibonacci(6));
     }
 
     private static void fibonacci(int n) {
@@ -78,5 +79,11 @@ public class Fibonacci {
         }
 
         return n > 1 ? b : a;
+    }
+
+    private static int recursiveFibonacci(int n) {
+        if (n <= 1) return 1;
+
+        return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
     }
 }
