@@ -7,7 +7,18 @@ Algorithms playground
 - [ComparisonSort](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
 - [sorting.at](http://sorting.at/)
 - [sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
+
 ___
+
+### Kotlin
+
+- [classic]()
+    - [binary search]()
+
+___
+
+### Java (old but gold)
+
 - [classic](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/java/com/github/solairerove/algs4/leprosorium/classic)
     - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/classic/HighestCommonFactor.java#L16)
     - [fibonacci](https://github.com/solairerove/algs4-leprosorium/blob/85343acff335709121a7a30ba698f93f81e48ee3/src/main/java/com/github/solairerove/algs4/leprosorium/classic/Fibonacci.java#L39)
