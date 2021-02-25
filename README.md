@@ -12,8 +12,8 @@ ___
 
 ### Kotlin
 
-- [classic]()
-    - [binary search]()
+- [classic](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/classic)
+    - [binary search](https://github.com/solairerove/algs4-leprosorium/blob/d86025ab778bafb214f631ddff23c71e970ef325/src/main/kotlin/com/github/solairerove/algs4/leprosorium/classic/BinarySearch.kt#L14)
 
 ___
 
