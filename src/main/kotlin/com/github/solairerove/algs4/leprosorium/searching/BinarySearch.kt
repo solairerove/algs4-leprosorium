@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.classic
+package com.github.solairerove.algs4.leprosorium.searching
 
 fun main() {
     val items = listOf(5, 6, 4, 3, 10, 9, 5, 6, 7)
