@@ -7,6 +7,7 @@ fun main() {
     print("items: $items \n")
 }
 
+// O(n^2) time | O(1) space
 private fun selectionSort(arr: MutableList<Int>) {
     val n = arr.size
 
