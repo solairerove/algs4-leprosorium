@@ -12,10 +12,10 @@ ___
 
 ### Kotlin
 
-- [searching](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/classic)
-    - [binary search](https://github.com/solairerove/algs4-leprosorium/blob/d86025ab778bafb214f631ddff23c71e970ef325/src/main/kotlin/com/github/solairerove/algs4/leprosorium/classic/BinarySearch.kt#L14)
-- [sorting]()
-    - [selection sort]()
+- [searching](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching)
+    - [binary search](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/BinarySearch.kt)
+- [sorting](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting)
+    - [selection sort](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting/SelectionSort.kt)
 
 ___
 
