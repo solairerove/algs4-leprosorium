@@ -3,6 +3,7 @@
 Algorithms playground 
 - [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/home/)
 - [code](https://algs4.cs.princeton.edu/code/)
+- [stepik course part 1](https://stepik.org/course/217/syllabus)
 - [rosettacode](https://rosettacode.org/wiki/Category:Programming_Tasks)
 - [ComparisonSort](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
 - [sorting.at](http://sorting.at/)
@@ -12,6 +13,8 @@ ___
 
 ### Kotlin
 
+- [recursion](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/recursion)
+  - [fibonacci](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/recursion/Fibonacci.kt)
 - [searching](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching)
     - [binary search](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/BinarySearch.kt)
 - [sorting](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting)
