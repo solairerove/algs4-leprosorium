@@ -2,6 +2,7 @@ package com.github.solairerove.algs4.leprosorium.recursion
 
 import java.math.BigInteger
 
+// TODO: add recursive variant
 fun main() {
     for (i in 1..6) {
         print("${getNthFibonacci(i)} ")
