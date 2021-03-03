@@ -9,6 +9,7 @@ fun main() {
     print("'racecar' is palindrome ${isPalindrome("racecar")}\n")
 }
 
+// O(n) time | O(1) space
 private fun isPalindrome(s: String): Boolean {
     for (i in s.indices) {
         if (s[i] != s[s.length - 1 - i]) {
