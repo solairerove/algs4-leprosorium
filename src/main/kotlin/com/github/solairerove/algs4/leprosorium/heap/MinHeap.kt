@@ -24,7 +24,7 @@ class MinHeap(arr: MutableList<Int>) {
     fun remove(): Int {
         swap(heap, 0, heap.size - 1)
         val min = heap.removeAt(heap.size - 1)
-        siftDown(heap, 0, heap.size - 1)
+        sink(heap, 0, heap.size - 1)
 
         return min
     }
@@ -32,47 +32,42 @@ class MinHeap(arr: MutableList<Int>) {
     // O(log(n)) time | O(1) space
     fun insert(value: Int) {
         heap.add(value)
-        siftUp(heap, heap.size - 1)
+        swim(heap, heap.size - 1)
     }
 
     // O(n) time | O(1) space
     private fun buildHeap(arr: MutableList<Int>): MutableList<Int> {
         val parentIdx = (arr.size - 2) / 2
         for (k in parentIdx downTo 0) {
-            siftDown(arr, k, arr.size - 1)
+            sink(arr, k, arr.size - 1)
         }
 
         return arr
     }
 
     // O(log(n)) time | O(1) space
-    private fun siftDown(arr: MutableList<Int>, k: Int, n: Int) {
+    private fun sink(arr: MutableList<Int>, k: Int, n: Int) {
         var idx = k
-        var childOne = idx * 2 + 1
-        while (childOne <= n) {
-            val childTwo = if (idx * 2 + 2 <= n) idx * 2 + 2 else -1
-            val idxToSwap: Int = if (childTwo != -1 && arr[childTwo] < arr[childOne]) childTwo else childOne
-
-            if (arr[idxToSwap] < arr[idx]) {
-                swap(arr, idxToSwap, idx)
-                idx = idxToSwap
-                childOne = idx * 2 + 1
-            } else {
-                return
-            }
+        while (idx * 2 + 1 <= n) {
+            var j = idx * 2 + 1
+            if (j < n && less(arr, j, j + 1)) j++
+            if (!less(arr, idx, j)) break
+            swap(arr, idx, j)
+            idx = j
         }
     }
 
     // O(log(n)) time | O(1) space
-    private fun siftUp(arr: MutableList<Int>, k: Int) {
+    private fun swim(arr: MutableList<Int>, k: Int) {
         var idx = k
-        var parentIdx = (k - 1) / 2
-
-        while (idx > 0 && heap[idx] < heap[parentIdx]) {
-            swap(arr, idx, parentIdx)
-            idx = parentIdx
-            parentIdx = (idx - 1) / 2
+        while (idx > 0 && less(arr, (idx - 1) / 2, idx)) {
+            swap(arr, (idx - 1) / 2, idx)
+            idx = (idx - 1) / 2
         }
+    }
+
+    private fun less(arr: MutableList<Int>, i: Int, j: Int): Boolean {
+        return arr[i] > arr[j]
     }
 
     private fun swap(arr: MutableList<Int>, i: Int, j: Int) {
