@@ -11,17 +11,15 @@ fun main() {
     println(heap.remove())
 }
 
-class MinHeap() {
+class MinHeap(arr: MutableList<Int>) {
 
-    private lateinit var heap: MutableList<Int>
+    private var heap: MutableList<Int> = arr
 
-    constructor(arr: MutableList<Int>) : this() {
+    init {
         val n = arr.size
         for (k in n / 2 downTo 0) {
             sink(arr, k, n - 1)
         }
-
-        heap = arr
     }
 
     // O(1) time | O(1) space
