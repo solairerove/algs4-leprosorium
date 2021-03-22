@@ -15,10 +15,10 @@ private fun minimumWaitingTime(queries: MutableList<Int>): Int {
     queries.sort()
 
     var minimumWaitingTime = 0
-    var previousSum = 0
-    for (i in 1..queries.size) {
+    var previousSum = queries[0]
+    for (i in 1 until queries.size) {
         minimumWaitingTime += previousSum
-        previousSum += queries[i - 1]
+        previousSum += queries[i]
     }
 
     return minimumWaitingTime
