@@ -7,6 +7,7 @@ fun main() {
     print("items: $items \n")
 }
 
+// O(nlog(n)) time | O(n) space
 private fun mergeSort(arr: MutableList<Int>) {
     val n = arr.size
 
