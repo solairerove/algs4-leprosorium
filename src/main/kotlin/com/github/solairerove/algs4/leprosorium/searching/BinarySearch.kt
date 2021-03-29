@@ -12,18 +12,17 @@ fun main() {
 }
 
 // O(log(n)) time | O(1) space
-private fun binarySearch(items: List<Int>, item: Int): Int {
+private fun binarySearch(items: List<Int>, target: Int): Int {
     var low = 0
     var high = items.size - 1
 
-    while (low <= high) {
-        val mid = (low + high) / 2
-        val guess = items[mid]
+    while (high <= low) {
+        val mid = low + (high - low) / 2
 
         when {
-            guess == item -> return mid
-            guess > item -> high = mid - 1
-            else -> low = mid + 1
+            items[mid] < target -> high = mid - 1
+            items[mid] > target -> low = mid + 1
+            else -> return mid
         }
     }
 
