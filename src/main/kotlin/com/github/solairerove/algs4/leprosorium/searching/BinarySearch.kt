@@ -6,9 +6,9 @@ fun main() {
 
     val sorted = items.sorted()
     print("items: $items \n")
-    print("trying to fine 10, index: ${binarySearch(sorted, 10)} - ${rank(sorted, 10)} \n") // 8
-    print("trying to fine 10, index: ${binarySearch(sorted, 6)} - ${rank(sorted, 6)} \n") // 4
-    print("trying to fine 10, index: ${binarySearch(sorted, 0)} - ${rank(sorted, 0)} \n") // -1
+    print("trying to find 10, index: ${binarySearch(sorted, 10)} - ${rank(sorted, 10)} \n") // 8
+    print("trying to find 10, index: ${binarySearch(sorted, 6)} - ${rank(sorted, 6)} \n") // 4
+    print("trying to find 10, index: ${binarySearch(sorted, 0)} - ${rank(sorted, 0)} \n") // -1
 }
 
 // O(log(n)) time | O(1) space
@@ -16,12 +16,12 @@ private fun binarySearch(items: List<Int>, target: Int): Int {
     var low = 0
     var high = items.size - 1
 
-    while (high <= low) {
+    while (low <= high) {
         val mid = low + (high - low) / 2
 
         when {
-            items[mid] < target -> high = mid - 1
-            items[mid] > target -> low = mid + 1
+            items[mid] < target -> low = mid + 1
+            items[mid] > target -> high = mid - 1
             else -> return mid
         }
     }
