@@ -1,5 +1,11 @@
 package com.github.solairerove.algs4.leprosorium.greedy
 
+/**
+ * По данному числу n найти максимальное число k,
+ * для которого n можно представить как сумму k различных натуральных слагаемых.
+ * Sample Input: 6
+ * Sample Output: 3 (1 2 3)
+ */
 fun main() {
     var n = 6
 
