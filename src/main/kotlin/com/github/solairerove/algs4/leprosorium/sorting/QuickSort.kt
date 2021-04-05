@@ -7,7 +7,7 @@ fun main() {
     print("items: $items \n")
 }
 
-// O(nlog(n)) time | O(n) space
+// O(nlog(n)) time | O(log(n)) space
 private fun quickSort(arr: MutableList<Int>) {
     quickSort(arr, 0, arr.size - 1)
 }
