@@ -6,6 +6,7 @@ fun main() {
     print("inversions: ${count(items)} \n")
 }
 
+// O(nlog(n)) time | O(n) space
 private fun count(arr: MutableList<Int>): Long {
     val n = arr.size
     val b = MutableList(n) { i -> i }
