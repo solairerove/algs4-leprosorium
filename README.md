@@ -18,6 +18,8 @@ ___
   - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/recursion/HighestCommonFactor.kt)  
 - [searching](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching)
     - [binary search](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/BinarySearch.kt)
+    - [binary select right](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/BiSectRight.kt)
+    - [binary select left](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/BiSectLeft.kt)
 - [sorting](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting)
     - [bubble sort](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting/BubbleSort.kt)
     - [insertion sort](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting/InsertionSort.kt)
