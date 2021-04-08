@@ -9,6 +9,7 @@ fun main() {
     print("trying to find 10, index: ${biSectLeft(sorted, 10)} \n") // 8
 }
 
+// O(log(n)) time | O(1) space
 private fun biSectLeft(arr: List<Int>, target: Int, lo: Int = 0, hi: Int = arr.size): Int {
     val n = arr.size
     if (n == 0) return 0
