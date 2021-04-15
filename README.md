@@ -9,6 +9,7 @@ Algorithms playground
 - [ComparisonSort](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
 - [sorting.at](http://sorting.at/)
 - [sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
+- [leetcode](https://leetcode.com/)
 
 ___
 
@@ -30,9 +31,10 @@ ___
   - [gcd](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/recursion/HighestCommonFactor.kt)  
 - [searching](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching)
     - [binary search](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/BinarySearch.kt)
-    - [binary select right](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/BiSectRight.kt)
     - [binary select left](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/BiSectLeft.kt)
+    - [binary select right](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/BiSectRight.kt)
     - [quick select](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/QuickSelect.kt)
+    - [third maximum number](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/ThirdMaximumNumber.kt)
 - [sorting](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting)
     - [bubble sort](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting/BubbleSort.kt)
     - [count sort](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting/CountSort.kt)
