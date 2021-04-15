@@ -6,7 +6,7 @@ fun main() {
 }
 
 // O(n) time | O(1) space
-fun thirdMaximumNumber(arr: List<Int>): Int {
+private fun thirdMaximumNumber(arr: List<Int>): Int {
     val largestNumbers = mutableListOf(Int.MIN_VALUE, Int.MIN_VALUE, Int.MIN_VALUE)
 
     for (element in arr) {
@@ -20,7 +20,7 @@ fun thirdMaximumNumber(arr: List<Int>): Int {
     return largestNumbers[0]
 }
 
-fun shift(arr: MutableList<Int>, toInsert: Int, position: Int) {
+private fun shift(arr: MutableList<Int>, toInsert: Int, position: Int) {
     for (i in 0 until position + 1) {
         arr[i] = if (i == position) toInsert else arr[i + 1]
     }
