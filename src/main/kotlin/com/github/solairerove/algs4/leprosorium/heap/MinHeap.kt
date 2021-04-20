@@ -11,7 +11,7 @@ fun main() {
     println(heap.remove())
 }
 
-class MinHeap(arr: MutableList<Int>) {
+private class MinHeap(arr: MutableList<Int>) {
 
     private var heap: MutableList<Int> = arr
 
