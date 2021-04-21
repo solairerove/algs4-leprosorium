@@ -46,8 +46,7 @@ private fun countSort(arr: MutableList<Int>, digit: Int) {
     val output = MutableList(n) { 0 }
     for (i in n - 1 downTo 0) {
         val cntIdx = (arr[i] / digitColumn) % 10
-        count[cntIdx]--
-        val outputIdx = count[cntIdx]
+        val outputIdx = --count[cntIdx]
         output[outputIdx] = arr[i]
     }
 
