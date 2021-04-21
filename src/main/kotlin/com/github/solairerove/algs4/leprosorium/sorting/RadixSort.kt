@@ -14,6 +14,7 @@ fun main() {
     print(arr)
 }
 
+// O(d * (n + m)) time | O(n + m) space
 private fun radixSort(arr: MutableList<Int>) {
     // find max
     var max = arr[0]
@@ -37,18 +38,17 @@ private fun countSort(arr: MutableList<Int>, digit: Int) {
     }
 
     // cumulate sum
-    for (i in 1 until 10) {
+    for (i in 1..9) {
         count[i] += count[i - 1]
     }
 
-    val output = MutableList(arr.size) { 0 }
-    for (i in arr.size - 1 downTo 0) {
+    val n = arr.size
+    val output = MutableList(n) { 0 }
+    for (i in n - 1 downTo 0) {
         val cntIdx = (arr[i] / digitColumn) % 10
         count[cntIdx]--
         val outputIdx = count[cntIdx]
         output[outputIdx] = arr[i]
-//        output[count[arr[i]] - 1] = arr[i]
-//        count[arr[i]]--
     }
 
     arr.forEachIndexed { i, _ -> arr[i] = output[i] }
