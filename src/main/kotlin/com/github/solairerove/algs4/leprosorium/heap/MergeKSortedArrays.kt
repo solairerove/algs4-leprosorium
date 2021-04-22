@@ -14,7 +14,7 @@ private fun mergeKSortedArrays(arrays: List<List<Int>>): List<Int> {
         min.add(Element(i, 0, arrays[i][0]))
     }
 
-    val minHeap = Heap(min)
+    val minHeap = ElementHeap(min)
     while (minHeap.size() != 0) {
         val (arrIdx, idx, el) = minHeap.remove()
         res.add(el)
@@ -28,7 +28,7 @@ private fun mergeKSortedArrays(arrays: List<List<Int>>): List<Int> {
 
 private data class Element(val arrIdx: Int, val idx: Int, val el: Int)
 
-private class Heap(arr: MutableList<Element>) {
+private class ElementHeap(arr: MutableList<Element>) {
     private val heap: MutableList<Element> = arr
 
     init {

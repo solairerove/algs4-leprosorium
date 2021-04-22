@@ -11,7 +11,7 @@ fun main() {
     println(heap.remove())
 }
 
-private class MinHeap(arr: MutableList<Int>) {
+class MinHeap(arr: MutableList<Int>) {
 
     private var heap: MutableList<Int> = arr
 
@@ -40,6 +40,11 @@ private class MinHeap(arr: MutableList<Int>) {
     fun insert(value: Int) {
         heap.add(value)
         swim(heap, heap.size - 1)
+    }
+
+    // O(1) time | O(1) space
+    fun size(): Int {
+        return heap.size
     }
 
     // O(log(n)) time | O(1) space
