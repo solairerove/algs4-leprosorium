@@ -26,6 +26,7 @@ ___
     - [naive huffman encode](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/greedy/NaiveHuffmanEncode.kt)
     - [number partition](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/greedy/NumberPartition.kt)  
     - [segment covering by unit](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/greedy/SegmentCoveringByUnit.kt)
+    - [tandem bicycle](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/greedy/TandemBicycle.kt)
 - [heap](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/heap)
     - [merge k sorted arrays](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/heap/MergeKSortedArrays.kt)
     - [min heap](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/heap/MinHeap.kt)
