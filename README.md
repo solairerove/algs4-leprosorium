@@ -61,6 +61,7 @@ ___
     - [quick sort 3 way](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting/QuickSort3Way.kt)
     - [radix sort](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting/RadixSort.kt)  
     - [selection sort](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting/SelectionSort.kt)
+    - [shell sort](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting/ShellSort.kt)
 - [strings](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings)
     - [palindrome check](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/PalindromeCheck.kt)
 
