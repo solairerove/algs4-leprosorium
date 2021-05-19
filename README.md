@@ -77,6 +77,7 @@ ___
     - [shell sort](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/sorting/ShellSort.kt)
 - [strings](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings)
     - [caesar cipher encryptor](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/CaesarCipherEncryptor.kt)
+    - [generate document](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/GenerateDocument.kt)  
     - [group anagrams](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/GroupAnagrams.kt)
     - [longest palindrome](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/LongestPalindrome.kt)
     - [palindrome check](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/PalindromeCheck.kt)
