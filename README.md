@@ -83,5 +83,6 @@ ___
     - [longest palindrome](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/LongestPalindrome.kt)
     - [non repeating char pivot](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/NonRepeatingCharPivot.kt)  
     - [palindrome check](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/PalindromeCheck.kt)
+    - [reverse words in string](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/ReverseWordsInString.kt)
     - [run length encoding](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/RunLengthEncoding.kt)
     - [valid ip addresses](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/ValidIPAddresses.kt)
