@@ -18,19 +18,6 @@ fun main() {
     printLinkedList(head)
 }
 
-private fun printLinkedList(head: ListNode?) {
-    var curr: ListNode? = head
-    while (curr != null) {
-        print("${curr.value} ")
-        val next = curr.next
-        curr = next
-    }
-}
-
-private class ListNode(var value: Int) {
-    var next: ListNode? = null
-}
-
 // O(n) time | O(1) space
 private fun reverseList(head: ListNode?): ListNode? {
     var prev: ListNode? = null
