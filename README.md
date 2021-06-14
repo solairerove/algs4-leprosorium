@@ -63,6 +63,7 @@ ___
     - [permutations](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/recursion/Permutations.kt)
     - [powerset](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/recursion/Powerset.kt)
     - [product sum](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/recursion/ProductSum.kt)
+    - [staircase traverse](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/recursion/StaircaseTraverse.kt)
 - [searching](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching)
     - [binary search](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/BinarySearch.kt)
     - [binary select left](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/searching/BiSectLeft.kt)
