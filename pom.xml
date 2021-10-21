@@ -24,12 +24,6 @@
             <artifactId>kotlin-stdlib</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/edu.princeton.cs/algs4 -->
-        <dependency>
-            <groupId>edu.princeton.cs</groupId>
-            <artifactId>algs4</artifactId>
-            <version>1.0.4</version>
-        </dependency>
     </dependencies>
 
     <build>
