@@ -34,24 +34,21 @@ private open class BST(var value: Int) {
 
 // O(log(n)) time | O(1) space
 // worst O(n) time | O(1) space
-private fun findTheClosestValueInBst(tree: BST, target: Int): Int {
-    return findTheClosestValueInBst(tree, target, tree.value)
-}
+private fun findTheClosestValueInBst(tree: BST?, target: Int): Int {
+    var closest = tree!!.value
+    var node = tree
 
-private fun findTheClosestValueInBst(tree: BST?, target: Int, closest: Int): Int {
-    var newClosest = closest
-    var currNode = tree
-    inner@ while (currNode != null) {
-        if (abs(target - newClosest) > abs(target - currNode.value)) {
-            newClosest = currNode.value
+    inner@ while (node != null) {
+        if (abs(target - node.value) < abs(target - closest)) {
+            closest = node.value
         }
 
-        currNode = when {
-            target < currNode.value -> currNode.left
-            target > currNode.value -> currNode.right
+        node = when {
+            target < node.value -> node.left
+            target > node.value -> node.right
             else -> break@inner
         }
     }
 
-    return newClosest
+    return closest
 }
