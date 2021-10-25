@@ -1,22 +1,7 @@
 package com.github.solairerove.algs4.leprosorium.binary_search_tree
 
-// TODO: move construction to getValidBST
 fun main() {
-    val root = BSTNode(14)
-    val rightNode1 = BSTNode(15)
-    val rightNode2 = BSTNode(25)
-    val rightNode3 = BSTNode(21)
-    val leftNode1 = BSTNode(7)
-    val leftNode2 = BSTNode(8)
-    val leftNode3 = BSTNode(3)
-    root.left = leftNode1
-    root.right = rightNode3
-    rightNode3.left = rightNode1
-    rightNode3.right = rightNode2
-    leftNode1.left = leftNode3
-    leftNode1.right = leftNode2
-
-    print(validateBST(tree = root))
+    print(validateBST(tree = getValidBST()))
 }
 
 // O(n) time | O(d) space

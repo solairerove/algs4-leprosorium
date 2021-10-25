@@ -2,29 +2,8 @@ package com.github.solairerove.algs4.leprosorium.binary_search_tree
 
 import kotlin.math.abs
 
-/**
-          14
-        /   \
-       7    21
-      / \  / \
-     3  8 15 25
-*/
 fun main() {
-    val root = BSTNode(14)
-    val rightNode1 = BSTNode(15)
-    val rightNode2 = BSTNode(25)
-    val rightNode3 = BSTNode(21)
-    val leftNode1 = BSTNode(7)
-    val leftNode2 = BSTNode(8)
-    val leftNode3 = BSTNode(3)
-    root.left = leftNode1
-    root.right = rightNode3
-    rightNode3.left = rightNode1
-    rightNode3.right = rightNode2
-    leftNode1.left = leftNode3
-    leftNode1.right = leftNode2
-
-    print(findTheClosestValueInBst(tree = root, target = 16))
+    print(findTheClosestValueInBst(tree = getValidBST(), target = 16))
 }
 
 // O(log(n)) time | O(1) space
