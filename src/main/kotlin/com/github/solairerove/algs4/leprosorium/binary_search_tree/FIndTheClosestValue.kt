@@ -39,9 +39,7 @@ private fun findTheClosestValueInBst(tree: BST?, target: Int): Int {
     var node = tree
 
     inner@ while (node != null) {
-        if (abs(target - node.value) < abs(target - closest)) {
-            closest = node.value
-        }
+        if (abs(target - node.value) < abs(target - closest)) closest = node.value
 
         node = when {
             target < node.value -> node.left
