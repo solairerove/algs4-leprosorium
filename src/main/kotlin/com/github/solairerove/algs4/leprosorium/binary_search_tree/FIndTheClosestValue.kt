@@ -10,13 +10,13 @@ import kotlin.math.abs
      3  8 15 25
 */
 fun main() {
-    val root = BST(14)
-    val rightNode1 = BST(15)
-    val rightNode2 = BST(25)
-    val rightNode3 = BST(21)
-    val leftNode1 = BST(7)
-    val leftNode2 = BST(8)
-    val leftNode3 = BST(3)
+    val root = BSTNode(14)
+    val rightNode1 = BSTNode(15)
+    val rightNode2 = BSTNode(25)
+    val rightNode3 = BSTNode(21)
+    val leftNode1 = BSTNode(7)
+    val leftNode2 = BSTNode(8)
+    val leftNode3 = BSTNode(3)
     root.left = leftNode1
     root.right = rightNode3
     rightNode3.left = rightNode1
@@ -27,14 +27,9 @@ fun main() {
     print(findTheClosestValueInBst(tree = root, target = 16))
 }
 
-private open class BST(var value: Int) {
-    var left: BST? = null
-    var right: BST? = null
-}
-
 // O(log(n)) time | O(1) space
 // worst O(n) time | O(1) space
-private fun findTheClosestValueInBst(tree: BST?, target: Int): Int {
+private fun findTheClosestValueInBst(tree: BSTNode?, target: Int): Int {
     var closest = tree!!.value
     var node = tree
 
