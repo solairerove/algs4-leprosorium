@@ -6,16 +6,16 @@ fun main() {
     println(maxPathSum(node = getValidTree())) // 58 (15 + 7 + 3 + 8 + 25)
 }
 
-var maxValue = 0
+private var maxValue = 0
 
 // O(n) space | O(log(n))
-fun maxPathSum(node: TreeNode?): Int {
+private fun maxPathSum(node: TreeNode?): Int {
     maxValue = Int.MIN_VALUE
     maxPathDown(node)
     return maxValue
 }
 
-fun maxPathDown(node: TreeNode?): Int {
+private fun maxPathDown(node: TreeNode?): Int {
     if (node == null) return 0
     val left = max(0, maxPathDown(node.left))
     val right = max(0, maxPathDown(node.right))
