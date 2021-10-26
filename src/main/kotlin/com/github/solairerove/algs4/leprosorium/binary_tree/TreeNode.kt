@@ -14,12 +14,13 @@ class TreeNode(var value: Int) {
  */
 fun getValidTree(): TreeNode {
     val root = TreeNode(3)
+    val leftNode1 = TreeNode(7)
+    val rightNode3 = TreeNode(8)
+    val leftNode3 = TreeNode(14)
+    val leftNode2 = TreeNode(15)
     val rightNode1 = TreeNode(21)
     val rightNode2 = TreeNode(25)
-    val rightNode3 = TreeNode(8)
-    val leftNode1 = TreeNode(7)
-    val leftNode2 = TreeNode(15)
-    val leftNode3 = TreeNode(14)
+
     root.left = leftNode1
     root.right = rightNode3
     rightNode3.left = rightNode1
