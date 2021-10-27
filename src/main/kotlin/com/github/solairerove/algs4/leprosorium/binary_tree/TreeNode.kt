@@ -3,6 +3,7 @@ package com.github.solairerove.algs4.leprosorium.binary_tree
 class TreeNode(var value: Int) {
     var left: TreeNode? = null
     var right: TreeNode? = null
+    val parent: TreeNode? = null
 }
 
 /**
