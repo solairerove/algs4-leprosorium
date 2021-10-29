@@ -10,7 +10,6 @@ fun printLinkedList(head: ListNode?) {
     var curr: ListNode? = head
     while (curr != null) {
         print("${curr.value} ")
-        val next = curr.next
-        curr = next
+        curr = curr.next
     }
 }
