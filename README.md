@@ -124,3 +124,5 @@ ___
     - [run length encoding](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/RunLengthEncoding.kt)
     - [to binary string](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/ToBinaryString.kt)
     - [valid ip addresses](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/ValidIPAddresses.kt)
+- [symbol table](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/symbol_table)
+    - [sequential st](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/symbol_table/SequentialSearchST.kt)
