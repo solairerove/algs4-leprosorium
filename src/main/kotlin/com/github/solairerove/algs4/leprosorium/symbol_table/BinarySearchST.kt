@@ -1,7 +1,9 @@
 package com.github.solairerove.algs4.leprosorium.symbol_table
 
+import java.util.*
+
 fun main() {
-    val binarySearchST = BinarySearchST<String, Int>()
+    val binarySearchST = BinarySearchST<String, Int>(capacity = 7)
     binarySearchST.put("S", 0)
     binarySearchST.put("E", 1)
     binarySearchST.put("A", 2)
@@ -11,6 +13,10 @@ fun main() {
     binarySearchST.put("E", 6)
 
     println(binarySearchST.get("E")) // 6
+    println(binarySearchST.min()) // A
+    println(binarySearchST.max()) // S
+    println(binarySearchST.size()) // 6
+    println(binarySearchST.keys()) // A, C, E, H, R, S
 }
 
 private const val INITIAL_CAPACITY = 2
@@ -58,12 +64,12 @@ class BinarySearchST<Key : Comparable<Key>, Value> {
 
 
         for (j in size() downTo i + 1) {
-                keys[j] = keys[j - 1]
-                vals[j] = vals[j - 1]
+            keys[j] = keys[j - 1]
+            vals[j] = vals[j - 1]
         }
 
-        keys.add(i, key)
-        vals.add(i, value)
+        keys[i] = key
+        vals[i] = value
         n++
     }
 
@@ -90,5 +96,32 @@ class BinarySearchST<Key : Comparable<Key>, Value> {
         }
 
         return low
+    }
+
+    fun min(): Key {
+        if (isEmpty()) throw NoSuchElementException("called min() with empty symbol table")
+        return keys[0]!!
+    }
+
+    fun max(): Key {
+        if (isEmpty()) throw NoSuchElementException("called max() with empty symbol table")
+        return keys[n - 1]!!
+    }
+
+    fun keys(): Iterable<Key> {
+        return keys(min(), max())
+    }
+
+    fun keys(low: Key?, high: Key?): Iterable<Key> {
+        if (low == null) throw IllegalArgumentException("first arg to keys() is null")
+        if (high == null) throw IllegalArgumentException("second arg to keys() is null")
+
+        val queue = LinkedList<Key>()
+        if (low > high) return queue
+        for (i in rank(low)..rank(high)) {
+            queue.add(keys[i]!!)
+        }
+        if (contains(high)) queue.add(keys[rank(high)]!!)
+        return queue
     }
 }
