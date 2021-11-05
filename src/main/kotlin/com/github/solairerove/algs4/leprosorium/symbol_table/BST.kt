@@ -21,6 +21,7 @@ fun main() {
     println(bst.min()) // A
     println(bst.floor("G")) // E
     println(bst.select(3)) // H
+    println(bst.rank("H")) // 3
 }
 
 class BST<Key : Comparable<Key>, Value> {
@@ -102,6 +103,19 @@ class BST<Key : Comparable<Key>, Value> {
             t > k -> select(x.left, k)
             t < k -> select(x.right, k - t - 1)
             else -> x
+        }
+    }
+
+    fun rank(key: Key): Int = rank(key, root)
+
+    private fun rank(key: Key, x: Node?): Int {
+        if (x == null) return 0
+
+        val cmp = key.compareTo(x.key)
+        return when {
+            cmp < 0 -> rank(key, x.left)
+            cmp > 0 -> rank(key, x.right) + size(x.left) + 1
+            else -> return size(x.left)
         }
     }
 }
