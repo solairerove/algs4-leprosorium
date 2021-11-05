@@ -9,11 +9,18 @@ fun main() {
     bst.put("C", 4)
     bst.put("H", 5)
     bst.put("E", 6)
+    bst.put("X", 7)
+    bst.put("A", 8)
+    bst.put("M", 9)
+    bst.put("P", 10)
+    bst.put("L", 11)
+    bst.put("E", 12)
 
-    println(bst.size()) // 6
-    println(bst.get("E")) // 6
+    println(bst.size()) // 10
+    println(bst.get("E")) // 12
     println(bst.min()) // A
     println(bst.floor("G")) // E
+    println(bst.select(3)) // H
 }
 
 class BST<Key : Comparable<Key>, Value> {
@@ -83,5 +90,18 @@ class BST<Key : Comparable<Key>, Value> {
         if (cmp < 0) return floor(x.left, key)
 
         return floor(x.right, key) ?: x
+    }
+
+    fun select(k: Int): Key? = select(root, k)?.key
+
+    private fun select(x: Node?, k: Int): Node? {
+        if (x == null) return null
+
+        val t = size(x.left)
+        return when {
+            t > k -> select(x.left, k)
+            t < k -> select(x.right, k - t - 1)
+            else -> x
+        }
     }
 }
