@@ -12,6 +12,7 @@ fun main() {
 
     println(bst.size()) // 6
     println(bst.get("E")) // 6
+    println(bst.min()) // A
 }
 
 class BST<Key : Comparable<Key>, Value> {
@@ -59,5 +60,12 @@ class BST<Key : Comparable<Key>, Value> {
         x.n = size(x.left) + size(x.right) + 1
 
         return x
+    }
+
+    fun min(): Key = min(root!!).key
+
+    fun min(x: Node): Node {
+        if (x.left == null) return x
+        return min(x.left!!)
     }
 }
