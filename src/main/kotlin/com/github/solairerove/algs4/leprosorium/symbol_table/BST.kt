@@ -13,6 +13,7 @@ fun main() {
     println(bst.size()) // 6
     println(bst.get("E")) // 6
     println(bst.min()) // A
+    println(bst.floor("G")) // E
 }
 
 class BST<Key : Comparable<Key>, Value> {
@@ -26,14 +27,14 @@ class BST<Key : Comparable<Key>, Value> {
 
     fun size(): Int = size(x = root)
 
-    fun size(x: Node?): Int {
+    private fun size(x: Node?): Int {
         if (x == null) return 0
         return x.n
     }
 
     fun get(key: Key): Value? = get(x = root, key = key)
 
-    fun get(x: Node?, key: Key): Value? {
+    private fun get(x: Node?, key: Key): Value? {
         if (x == null) return null
 
         val cmp = key.compareTo(x.key)
@@ -48,7 +49,7 @@ class BST<Key : Comparable<Key>, Value> {
         root = put(x = root, key = key, value = value)
     }
 
-    fun put(x: Node?, key: Key, value: Value): Node {
+    private fun put(x: Node?, key: Key, value: Value): Node {
         if (x == null) return Node(key = key, value = value, n = 1)
 
         val cmp = key.compareTo(x.key)
@@ -64,8 +65,23 @@ class BST<Key : Comparable<Key>, Value> {
 
     fun min(): Key = min(root!!).key
 
-    fun min(x: Node): Node {
+    private fun min(x: Node): Node {
         if (x.left == null) return x
         return min(x.left!!)
+    }
+
+    fun floor(key: Key): Key? {
+        val x = floor(root, key) ?: return null
+        return x.key
+    }
+
+    private fun floor(x: Node?, key: Key): Node? {
+        if (x == null) return null
+
+        val cmp = key.compareTo(x.key)
+        if (cmp == 0) return x
+        if (cmp < 0) return floor(x.left, key)
+
+        return floor(x.right, key) ?: x
     }
 }
