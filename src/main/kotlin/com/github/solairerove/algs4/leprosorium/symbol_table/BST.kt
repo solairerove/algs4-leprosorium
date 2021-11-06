@@ -24,6 +24,8 @@ fun main() {
     println(bst.rank("H")) // 3
     bst.deleteMin()
     println(bst.min()) // C
+    bst.delete("E")
+    println(bst.get("E")) // null
 }
 
 class BST<Key : Comparable<Key>, Value> {
@@ -73,9 +75,9 @@ class BST<Key : Comparable<Key>, Value> {
         return x
     }
 
-    fun min(): Key = min(root!!).key
+    fun min(): Key = min(root!!)!!.key
 
-    private fun min(x: Node): Node {
+    private fun min(x: Node): Node? {
         if (x.left == null) return x
         return min(x.left!!)
     }
@@ -128,6 +130,31 @@ class BST<Key : Comparable<Key>, Value> {
     private fun deleteMin(x: Node?): Node? {
         if (x?.left == null) return x?.right
         x.left = deleteMin(x.left)
+        x.n = size(x.left) + size(x.right) + 1
+        return x
+    }
+
+    fun delete(key: Key) {
+        root = delete(root, key)
+    }
+
+    private fun delete(node: Node?, key: Key): Node? {
+        var x = node ?: return null
+
+        val cmp = key.compareTo(x.key)
+        when {
+            cmp < 0 -> x.left = delete(x.left, key)
+            cmp > 0 -> x.right = delete(x.right, key)
+            else -> {
+                if (x.right == null) return x.left
+                if (x.left == null) return x.right
+
+                val t: Node = x
+                x = min(t.right!!)!!
+                x.right = deleteMin(t.right)
+                x.left = t.left
+            }
+        }
         x.n = size(x.left) + size(x.right) + 1
         return x
     }
