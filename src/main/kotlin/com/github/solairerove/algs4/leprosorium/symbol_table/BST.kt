@@ -22,6 +22,8 @@ fun main() {
     println(bst.floor("G")) // E
     println(bst.select(3)) // H
     println(bst.rank("H")) // 3
+    bst.deleteMin()
+    println(bst.min()) // C
 }
 
 class BST<Key : Comparable<Key>, Value> {
@@ -117,5 +119,16 @@ class BST<Key : Comparable<Key>, Value> {
             cmp > 0 -> rank(key, x.right) + size(x.left) + 1
             else -> return size(x.left)
         }
+    }
+
+    fun deleteMin() {
+        root = deleteMin(root)
+    }
+
+    private fun deleteMin(x: Node?): Node? {
+        if (x?.left == null) return x?.right
+        x.left = deleteMin(x.left)
+        x.n = size(x.left) + size(x.right) + 1
+        return x
     }
 }
