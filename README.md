@@ -41,6 +41,7 @@ ___
   - [convert sorted array to bst](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/binary_search_tree/ConvertSortedArrayToBST.kt) 
   - [find kth largest element in a bst](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/binary_search_tree/FindKthLargestElementInABST.kt) 
   - [find the closest value](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/binary_search_tree/FIndTheClosestValue.kt)
+  - [same bsts](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/binary_search_tree/SameBSTs.kt)
   - [traverse bst](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/binary_search_tree/TraverseBST.kt)
   - [validate bst](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/binary_search_tree/ValidateBST.kt)
 - [binary tree](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/binary_tree)
