@@ -21,7 +21,9 @@ fun main() {
     println(bst.size()) // 10
     println(bst.get("E")) // 12
     println(bst.min()) // A
+    println(bst.max()) // X
     println(bst.floor("G")) // E
+    println(bst.ceiling("N")) // M
     println(bst.select(3)) // H
     println(bst.rank("H")) // 3
     bst.deleteMin()
@@ -81,16 +83,16 @@ class BST<Key : Comparable<Key>, Value> {
         return x
     }
 
-    fun min(): Key = min(root!!)!!.key
+    fun min(): Key = min(root!!).key
 
-    private fun min(x: Node): Node? {
+    private fun min(x: Node): Node {
         if (x.left == null) return x
         return min(x.left!!)
     }
 
-    fun max(): Key = max(root!!)!!.key
+    fun max(): Key = max(root!!).key
 
-    private fun max(x: Node): Node? {
+    private fun max(x: Node): Node {
         if (x.right == null) return x
         return max(x.right!!)
     }
@@ -110,17 +112,19 @@ class BST<Key : Comparable<Key>, Value> {
         return floor(x.right, key) ?: x
     }
 
-    fun select(k: Int): Key? = select(root, k)?.key
+    fun ceiling(key: Key): Key? {
+        val x = ceiling(root, key) ?: return null
+        return x.key
+    }
 
-    private fun select(x: Node?, k: Int): Node? {
+    private fun ceiling(x: Node?, key: Key): Node? {
         if (x == null) return null
 
-        val t = size(x.left)
-        return when {
-            t > k -> select(x.left, k)
-            t < k -> select(x.right, k - t - 1)
-            else -> x
-        }
+        val cmp = key.compareTo(x.key)
+        if (cmp == 0) return x
+        if (cmp < 0) return ceiling(x.left, key) ?: x
+
+        return floor(x.right, key)
     }
 
     fun rank(key: Key): Int = rank(key, root)
@@ -133,6 +137,19 @@ class BST<Key : Comparable<Key>, Value> {
             cmp < 0 -> rank(key, x.left)
             cmp > 0 -> rank(key, x.right) + size(x.left) + 1
             else -> return size(x.left)
+        }
+    }
+
+    fun select(k: Int): Key? = select(root, k)?.key
+
+    private fun select(x: Node?, k: Int): Node? {
+        if (x == null) return null
+
+        val t = size(x.left)
+        return when {
+            t > k -> select(x.left, k)
+            t < k -> select(x.right, k - t - 1)
+            else -> x
         }
     }
 
@@ -163,7 +180,7 @@ class BST<Key : Comparable<Key>, Value> {
                 if (x.left == null) return x.right
 
                 val t: Node = x
-                x = min(t.right!!)!!
+                x = min(t.right!!)
                 x.right = deleteMin(t.right)
                 x.left = t.left
             }
