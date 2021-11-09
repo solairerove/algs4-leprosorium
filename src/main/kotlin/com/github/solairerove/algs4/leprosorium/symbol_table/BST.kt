@@ -1,5 +1,7 @@
 package com.github.solairerove.algs4.leprosorium.symbol_table
 
+import java.util.*
+
 fun main() {
     val bst = BST<String, Int>()
     bst.put("S", 0)
@@ -26,6 +28,10 @@ fun main() {
     println(bst.min()) // C
     bst.delete("E")
     println(bst.get("E")) // null
+    println("-----")
+    bst.print()
+    println("-----")
+    println(bst.keys())
 }
 
 class BST<Key : Comparable<Key>, Value> {
@@ -80,6 +86,13 @@ class BST<Key : Comparable<Key>, Value> {
     private fun min(x: Node): Node? {
         if (x.left == null) return x
         return min(x.left!!)
+    }
+
+    fun max(): Key = max(root!!)!!.key
+
+    private fun max(x: Node): Node? {
+        if (x.right == null) return x
+        return max(x.right!!)
     }
 
     fun floor(key: Key): Key? {
@@ -157,5 +170,33 @@ class BST<Key : Comparable<Key>, Value> {
         }
         x.n = size(x.left) + size(x.right) + 1
         return x
+    }
+
+    fun print() {
+        print(root)
+    }
+
+    private fun print(x: Node?) {
+        if (x == null) return
+        print(x.left)
+        println(x.key)
+        print(x.right)
+    }
+
+    fun keys(): Iterable<Key> = keys(min(), max())
+
+    fun keys(low: Key, high: Key): Iterable<Key> {
+        val queue = LinkedList<Key>()
+        keys(root, queue, low, high)
+        return queue
+    }
+
+    private fun keys(x: Node?, queue: Queue<Key>, low: Key, high: Key) {
+        if (x == null) return
+        val cmpLow = low.compareTo(x.key)
+        val cmpHigh = high.compareTo(x.key)
+        if (cmpLow < 0) keys(x.left, queue, low, high)
+        if (cmpLow <= 0 && cmpHigh >= 0) queue.add(x.key)
+        if (cmpHigh > 0) keys(x.right, queue, low, high)
     }
 }
