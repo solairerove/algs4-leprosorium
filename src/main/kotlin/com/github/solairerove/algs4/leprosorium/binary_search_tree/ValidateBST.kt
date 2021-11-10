@@ -1,13 +1,14 @@
 package com.github.solairerove.algs4.leprosorium.binary_search_tree
 
 fun main() {
-    print(isBST(node = getValidBST())) // true
+    print(isBST(getValidBST())) // true
 }
 
 // O(n) time | O(d) space
-fun isBST(node: BSTNode?, min: Int? = Int.MIN_VALUE, max: Int? = Int.MAX_VALUE): Boolean {
-    if (node == null) return true
-    if (min != null && node.value < min) return false
-    if (max != null && node.value >= max) return false
-    return isBST(node.left, min, node.value) && isBST(node.right, node.value, max)
+fun isBST(root: BSTNode?, min: Int? = null, max: Int? = null): Boolean {
+    if (root == null) return true
+    if (min != null && root.value <= min) return false
+    if (max != null && root.value >= max) return false
+
+    return isBST(root.left, min, root.value) && isBST(root.right, root.value, max)
 }
