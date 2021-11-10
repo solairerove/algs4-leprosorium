@@ -7,7 +7,7 @@ fun main() {
 }
 
 // O(log(n)) time | O(1) space
-// worst O(n) time | O(1) space
+// worst O(n) time | O(1) space if bst has one branch
 private fun findTheClosestValueInBst(tree: BSTNode?, target: Int): Int {
     var closest = tree!!.value
     var node = tree
