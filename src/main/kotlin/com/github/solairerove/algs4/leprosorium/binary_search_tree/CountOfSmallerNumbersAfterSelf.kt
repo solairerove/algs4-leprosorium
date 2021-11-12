@@ -8,32 +8,36 @@ fun main() {
     println(countSmaller(intArrayOf(5, 2, 6, 1))) // [2, 1, 1, 0]
 }
 
-private data class ArrayValWithOrigIdx(val value: Int, val originalIdx: Int)
+private data class ValueWithIdx(val value: Int, val originalIdx: Int)
 
 // O(log(n)) time | O(n) space
 private fun countSmaller(nums: IntArray): List<Int> {
     if (nums.isEmpty()) return emptyList()
     val n = nums.size
 
-    val arr = Array(n) { ArrayValWithOrigIdx(0, 0) }
-    for (i in 0 until n) arr[i] = ArrayValWithOrigIdx(nums[i], i)
+    val arr = Array(n) { ValueWithIdx(0, 0) }
+    for (i in 0 until n) arr[i] = ValueWithIdx(nums[i], i)
 
     val res = IntArray(n)
-    mergeSortAndCount(arr, res,0, n - 1)
+    mergeSortAndCount(arr, res, 0, n - 1)
 
     return res.toList()
 }
 
-private fun mergeSortAndCount(arr: Array<ArrayValWithOrigIdx>, aux: IntArray, low: Int, high: Int) {
+private fun mergeSortAndCount(arr: Array<ValueWithIdx>, aux: IntArray, low: Int, high: Int) {
     if (low >= high) return
 
     val mid = low + (high - low) / 2
+
     mergeSortAndCount(arr, aux, low, mid)
     mergeSortAndCount(arr, aux, mid + 1, high)
+    mergeAndCount(arr, aux, low, mid, high)
+}
 
+private fun mergeAndCount(arr: Array<ValueWithIdx>, aux: IntArray, low: Int, mid: Int, high: Int) {
     var i = low
     var j = mid + 1
-    val merged = LinkedList<ArrayValWithOrigIdx>()
+    val merged = LinkedList<ValueWithIdx>()
     var numElementRightArrayLessThanLeftArray = 0
     while (i < mid + 1 && j <= high) {
         if (arr[i].value > arr[j].value) {
