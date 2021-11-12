@@ -11,37 +11,25 @@ fun main() {
 private data class ArrayValWithOrigIdx(val value: Int, val originalIdx: Int)
 
 // O(log(n)) time | O(n) space
-private fun countSmaller(arr: IntArray?): List<Int> {
-    if (arr == null || arr.isEmpty()) return emptyList()
-    val n = arr.size
+private fun countSmaller(nums: IntArray): List<Int> {
+    if (nums.isEmpty()) return emptyList()
+    val n = nums.size
+
+    val arr = Array(n) { ArrayValWithOrigIdx(0, 0) }
+    for (i in 0 until n) arr[i] = ArrayValWithOrigIdx(nums[i], i)
+
     val res = IntArray(n)
+    mergeSortAndCount(arr, res,0, n - 1)
 
-    val newNums = Array<ArrayValWithOrigIdx>(n) { ArrayValWithOrigIdx(0, 0) }
-    for (i in 0 until n) {
-        newNums[i] = ArrayValWithOrigIdx(arr[i], i)
-    }
-
-    mergeSortAndCount(newNums, 0, n - 1, res)
-
-    val resList = LinkedList<Int>()
-    for (i in res) {
-        resList.add(i)
-    }
-
-    return resList
+    return res.toList()
 }
 
-private fun mergeSortAndCount(
-    arr: Array<ArrayValWithOrigIdx>,
-    low: Int,
-    high: Int,
-    res: IntArray
-) {
+private fun mergeSortAndCount(arr: Array<ArrayValWithOrigIdx>, aux: IntArray, low: Int, high: Int) {
     if (low >= high) return
 
     val mid = low + (high - low) / 2
-    mergeSortAndCount(arr, low, mid, res)
-    mergeSortAndCount(arr, mid + 1, high, res)
+    mergeSortAndCount(arr, aux, low, mid)
+    mergeSortAndCount(arr, aux, mid + 1, high)
 
     var i = low
     var j = mid + 1
@@ -53,14 +41,14 @@ private fun mergeSortAndCount(
             merged.add(arr[j])
             ++j
         } else {
-            res[arr[i].originalIdx] += numElementRightArrayLessThanLeftArray
+            aux[arr[i].originalIdx] += numElementRightArrayLessThanLeftArray
             merged.add(arr[i])
             ++i
         }
     }
 
     while (i < mid + 1) {
-        res[arr[i].originalIdx] += numElementRightArrayLessThanLeftArray
+        aux[arr[i].originalIdx] += numElementRightArrayLessThanLeftArray
         merged.add(arr[i])
         ++i
     }
