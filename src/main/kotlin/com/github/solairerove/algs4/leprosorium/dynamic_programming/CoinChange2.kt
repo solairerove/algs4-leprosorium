@@ -8,11 +8,7 @@ fun main() {
 private fun change(coins: IntArray, amount: Int): Int {
     val ways = MutableList(amount + 1) { 0 }
     ways[0] = 1
-    for (c in coins) {
-        for (a in 1 until amount + 1) {
-            if (c <= a) ways[a] += ways[a - c]
-        }
-    }
+    coins.forEach { c -> IntRange(1, amount).filter { c <= it }.forEach { ways[it] += ways[it - c] } }
 
     return ways[amount]
 }
