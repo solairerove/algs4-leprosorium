@@ -125,6 +125,7 @@ ___
     - [balanced brackets](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/stack/BalancedBrackets.kt)
     - [min stack](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/stack/MinStack.kt)
     - [next greater element 2](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/stack/NextGreaterElement2.kt)
+    - [simplify path](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/stack/SimplifyPath.kt)
     - [sort stack](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/stack/SortStack.kt)
 - [strings](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings)
     - [caesar cipher encryptor](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/strings/CaesarCipherEncryptor.kt)
