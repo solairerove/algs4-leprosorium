@@ -17,9 +17,28 @@ fun main() {
     node6.next = node7
 
     printLinkedList(head)
-    head = deleteDuplicatesTwoLoops(head)
+    head = deleteDuplicates(head)
     println()
     printLinkedList(head)
+}
+
+// O(n) time | O(n) space
+private fun deleteDuplicates(head: ListNode): ListNode {
+    val set = hashSetOf<Int>()
+    var curr: ListNode? = head
+    var prev: ListNode? = null
+
+    while (curr != null) {
+        if (set.contains(curr.value)) {
+            prev?.next = curr.next
+        } else {
+            set.add(curr.value)
+            prev = curr
+        }
+        curr = curr.next
+    }
+
+    return head
 }
 
 // O(nˆ2) time | O(1) space
