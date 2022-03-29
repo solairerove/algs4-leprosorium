@@ -26,11 +26,11 @@ fun main() {
 private fun deleteDuplicatesTwoLoops(head: ListNode): ListNode {
     var curr1: ListNode? = head
     var curr2: ListNode?
-    while (curr1?.next != null) {
+    while (curr1 != null) {
         curr2 = curr1
-        while (curr2!!.next != null) {
-            if (curr1.value == curr2.next!!.value) {
-                curr2.next = curr2.next!!.next
+        while (curr2 != null) {
+            if (curr1.value == curr2.next?.value) {
+                curr2.next = curr2.next?.next
             } else {
                 curr2 = curr2.next
             }
