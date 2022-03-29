@@ -15,14 +15,14 @@ fun main() {
     node5.next = node6
 
     printLinkedList(head)
-    head = removeDuplicatesFromLinkedList(head)
+    head = deleteDuplicates(head)
     println()
     printLinkedList(head)
 }
 
 // O(n) time | O(1) space
-private fun removeDuplicatesFromLinkedList(linkedList: ListNode): ListNode {
-    var curr: ListNode? = linkedList
+private fun deleteDuplicates(head: ListNode): ListNode {
+    var curr: ListNode? = head
     while (curr != null) {
         var next = curr.next
         while (next != null && next.value == curr.value) {
@@ -32,5 +32,5 @@ private fun removeDuplicatesFromLinkedList(linkedList: ListNode): ListNode {
         curr = next
     }
 
-    return linkedList
+    return head
 }
