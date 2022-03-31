@@ -22,6 +22,9 @@ fun main() {
     printLinkedList(head)
 }
 
+/*
+    https://leetcode.com/problems/remove-duplicates-from-an-unsorted-linked-list/
+ */
 // O(n) time | O(n) space
 private fun deleteDuplicates(head: ListNode): ListNode {
     val set = hashSetOf<Int>()
