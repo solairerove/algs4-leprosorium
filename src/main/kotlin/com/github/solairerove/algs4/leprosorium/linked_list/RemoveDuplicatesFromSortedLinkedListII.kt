@@ -17,7 +17,7 @@ fun main() {
     node6.next = node7
 
     printLinkedList(head)
-    head = deleteDuplicates(head)!!
+    head = deleteDuplicatesDFS(head)!!
     println()
     printLinkedList(head) // 3 4
 }
@@ -35,6 +35,19 @@ private fun deleteDuplicates(head: ListNode?): ListNode? {
         node.next = deleteDuplicates(node.next)
     }
     return node
+}
+
+// O(n) time | O(n) space
+private fun deleteDuplicatesDFS(head: ListNode?, prev: ListNode? = null): ListNode? {
+    val node: ListNode = head ?: return null
+    return if (prev != null && node.value == prev.value
+        || node.next != null && node.value == (node.next as ListNode).value
+    ) {
+        deleteDuplicatesDFS(node.next, node)
+    } else {
+        node.next = deleteDuplicatesDFS(node.next, node)
+        node
+    }
 }
 
 // O(n) time | O(1) space
