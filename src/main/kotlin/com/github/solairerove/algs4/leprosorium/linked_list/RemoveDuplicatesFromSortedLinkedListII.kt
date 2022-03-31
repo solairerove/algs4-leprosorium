@@ -22,8 +22,23 @@ fun main() {
     printLinkedList(head) // 3 4
 }
 
-// O(n) time | O(1) space
+// O(n) time | O(n) space
 private fun deleteDuplicates(head: ListNode?): ListNode? {
+    var node: ListNode? = head ?: return null
+
+    if (node!!.next != null && node.value == (node.next as ListNode).value) {
+        while (node!!.next != null && node.value == (node.next as ListNode).value) {
+            node = node.next
+        }
+        return deleteDuplicates(node.next)
+    } else {
+        node.next = deleteDuplicates(node.next)
+    }
+    return node
+}
+
+// O(n) time | O(1) space
+private fun deleteDuplicatesIterative(head: ListNode?): ListNode? {
     val dummy = ListNode(0)
     var curr: ListNode? = head
     var prev: ListNode? = dummy
