@@ -25,7 +25,5 @@ private fun frequencyOfMaxValue(numbers: Array<Int>, q: Array<Int>): Array<Int> 
         cnt[i] = counter
     }
 
-    val res = mutableListOf<Int>()
-    q.forEach { res.add(cnt[it - 1]) }
-    return res.toTypedArray()
+    return q.map { cnt[it - 1] }.toTypedArray()
 }
