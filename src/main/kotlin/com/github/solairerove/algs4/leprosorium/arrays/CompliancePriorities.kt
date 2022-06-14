@@ -5,15 +5,18 @@ package com.github.solairerove.algs4.leprosorium.arrays
  */
 fun main() {
     reassignedPriorities(arrayOf(1, 4, 8, 4)).forEach { print("$it ") }// [1, 2, 3, 2]
+    println()
+    reassignedPrioritiesHS(arrayOf(1, 4, 8, 4)).forEach { print("$it ") }// [1, 2, 3, 2]
 }
 
 // O(1) time | O(1) space
 private fun reassignedPriorities(priorities: Array<Int>): Array<Int> {
+    val occur = IntArray(100) { 0 }
+    priorities.forEach { occur[it] = 1 }
+
     var priority = 1
-    val cnt = IntArray(100) { 0 }
-    priorities.forEach { cnt[it] = 1 }
-    cnt.forEachIndexed { idx, el -> if (el > 0) cnt[idx] = priority++ }
-    priorities.forEachIndexed { idx, el -> priorities[idx] = cnt[el] }
+    occur.forEachIndexed { idx, el -> if (el > 0) occur[idx] = priority++ }
+    priorities.forEachIndexed { idx, el -> priorities[idx] = occur[el] }
     return priorities
 }
 
