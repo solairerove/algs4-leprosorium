@@ -17,3 +17,10 @@ private fun reassignedPriorities(priorities: Array<Int>): Array<Int> {
 
     return priorities
 }
+
+// O(n) time | O(n) space
+private fun reassignedPrioritiesHS(priorities: Array<Int>): Array<Int> {
+    var counter = 1
+    val numberToMinimum = priorities.toSortedSet().associateWith { counter++ }
+    return priorities.map { numberToMinimum[it]!! }.toTypedArray()
+}
