@@ -9,7 +9,7 @@ fun main() {
     reassignedPrioritiesHS(arrayOf(1, 4, 8, 4)).forEach { print("$it ") }// [1, 2, 3, 2]
 }
 
-// O(1) time | O(1) space
+// O(n) time | O(1) space
 private fun reassignedPriorities(priorities: Array<Int>): Array<Int> {
     val occur = IntArray(100) { 0 }
     priorities.forEach { occur[it] = 1 }
