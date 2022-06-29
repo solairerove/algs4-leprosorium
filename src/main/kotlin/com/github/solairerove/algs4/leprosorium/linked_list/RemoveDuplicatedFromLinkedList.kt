@@ -27,12 +27,11 @@ fun main() {
  */
 // O(n) time | O(n) space
 private fun deleteDuplicates(head: ListNode): ListNode {
-    val set = hashSetOf<Int>()
     var curr: ListNode? = head
     var prev: ListNode? = null
-
+    val hs = hashSetOf<Int>()
     while (curr != null) {
-        if (set.add(curr.value)) prev = curr else prev?.next = curr.next
+        if (hs.add(curr.value)) prev = curr else prev?.next = curr.next
         curr = curr.next
     }
 
