@@ -31,3 +31,5 @@ target
 .idea
 *.iml
 
+# fleet
+.fleet/*
