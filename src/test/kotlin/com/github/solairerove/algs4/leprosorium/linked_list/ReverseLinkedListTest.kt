@@ -18,6 +18,17 @@ class ReverseLinkedListTest : StringSpec({
                         }
                     }
                 }, listOf(5, 4, 3, 2, 1)
+            ),
+            row(
+                ListNode(1).also {
+                    it.next = ListNode(2)
+                }, listOf(2, 1)
+            ),
+            row(
+                ListNode(1), listOf(1)
+            ),
+            row(
+                null, null
             )
         ) { head, res ->
             reverseList(head)?.toList() shouldBe res

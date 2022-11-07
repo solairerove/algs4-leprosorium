@@ -12,6 +12,8 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * must return a reference to the head ListNode of your
  * linked list which has the odd values removed.
  *
+ * Input: head = [1 -> 2 -> 3 -> 4]
+ * Output: [2 -> 4]
  */
 
 // O(n) time | O(n) space
