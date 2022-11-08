@@ -9,7 +9,7 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  */
 
 // O(n) time | O(n) space
-fun deleteDuplicatesUnsorted(head: ListNode?): ListNode? {
+fun deleteDuplicatesUnsortedHR(head: ListNode?): ListNode? {
     var curr: ListNode? = head
     var prev: ListNode? = null
     val hs = hashSetOf<Int>()

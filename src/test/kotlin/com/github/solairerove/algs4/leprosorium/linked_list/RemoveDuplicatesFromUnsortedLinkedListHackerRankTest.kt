@@ -5,8 +5,8 @@ import io.kotest.data.blocking.forAll
 import io.kotest.data.row
 import io.kotest.matchers.shouldBe
 
-class RemoveDuplicatesFromUnsortedLinkedListHackerRankTest: StringSpec({
-    "remove duplicated from unsorted linked list hacker rank" {
+class RemoveDuplicatesFromUnsortedLinkedListHackerRankTest : StringSpec({
+    "remove duplicates from unsorted linked list hacker rank" {
         forAll(
             row(
                 ListNode(2).also {
@@ -35,7 +35,7 @@ class RemoveDuplicatesFromUnsortedLinkedListHackerRankTest: StringSpec({
                 null, null
             )
         ) { head, res ->
-            deleteDuplicatesUnsorted(head)?.toList() shouldBe res
+            deleteDuplicatesUnsortedHR(head)?.toList() shouldBe res
         }
     }
 })
