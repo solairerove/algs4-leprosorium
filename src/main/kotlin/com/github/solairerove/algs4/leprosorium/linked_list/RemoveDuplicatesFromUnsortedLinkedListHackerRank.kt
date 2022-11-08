@@ -5,7 +5,7 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  *
  * Input: head = [2 -> 1 -> 3 -> 1 -> 4 -> 2 -> 3]
  * Output: [2 -> 1 -> 3 -> 4]
- * Explanation: Second occurrence o 12 and 21 is removed
+ * Explanation: Second occurrence o 1 and 2 is removed
  */
 
 // O(n) time | O(n) space
@@ -13,6 +13,7 @@ fun deleteDuplicatesUnsorted(head: ListNode?): ListNode? {
     var curr: ListNode? = head
     var prev: ListNode? = null
     val hs = hashSetOf<Int>()
+
     while (curr != null) {
         if (hs.add(curr.value)) prev = curr else prev?.next = curr.next
         curr = curr.next
