@@ -10,18 +10,13 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  *      so all 2's should be deleted. After deleting all 2's, we are left with [1,3].
  */
 
-// O(n) time | O(n) space
+// O(2n) time | O(n) space
 fun deleteDuplicatesUnsorted(head: ListNode?): ListNode? {
     var curr: ListNode? = head
     val valueToFrequency = mutableMapOf<Int, Int>()
 
     while (curr != null) {
-        if (valueToFrequency.containsKey(curr.value)) {
-            valueToFrequency[curr.value] = valueToFrequency[curr.value]!!.plus(1)
-        } else {
-            valueToFrequency[curr.value] = 1
-        }
-
+        if (valueToFrequency.computeIfPresent(curr.value) { _, v -> v + 1 } == null) valueToFrequency[curr.value] = 1
         curr = curr.next
     }
 
@@ -29,7 +24,6 @@ fun deleteDuplicatesUnsorted(head: ListNode?): ListNode? {
     var newHead: ListNode? = null
     var prev: ListNode? = null
 
-    // [2 -> 1 -> 3 -> 2]
     while (curr != null) {
         if (valueToFrequency[curr.value]!! > 1) {
             prev?.next = curr.next
