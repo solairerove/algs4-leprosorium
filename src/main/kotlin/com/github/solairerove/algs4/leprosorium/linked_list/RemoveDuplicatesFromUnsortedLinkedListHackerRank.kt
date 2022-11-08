@@ -1,32 +1,15 @@
 package com.github.solairerove.algs4.leprosorium.linked_list
 
-fun main() {
-    var head = ListNode(2)
-    val node2 = ListNode(1)
-    val node3 = ListNode(3)
-    val node4 = ListNode(1)
-    val node5 = ListNode(4)
-    val node6 = ListNode(2)
-    val node7 = ListNode(3)
-
-    head.next = node2
-    node2.next = node3
-    node3.next = node4
-    node4.next = node5
-    node5.next = node6
-    node6.next = node7
-
-    printLinkedList(head)
-    head = deleteDuplicates(head)
-    println()
-    printLinkedList(head)
-}
-
-/*
-    https://leetcode.com/problems/remove-duplicates-from-an-unsorted-linked-list/
+/**
+ * Given an unsorted list of nodes. The task is to remove duplicates from the list.
+ *
+ * Input: head = [2 -> 1 -> 3 -> 1 -> 4 -> 2 -> 3]
+ * Output: [2 -> 1 -> 3 -> 4]
+ * Explanation: Second occurrence o 12 and 21 is removed
  */
+
 // O(n) time | O(n) space
-private fun deleteDuplicates(head: ListNode): ListNode {
+fun deleteDuplicatesUnsorted(head: ListNode?): ListNode? {
     var curr: ListNode? = head
     var prev: ListNode? = null
     val hs = hashSetOf<Int>()
