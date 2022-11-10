@@ -12,13 +12,10 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 // O(n) time | O(1) space
 fun deleteDuplicatesFromSorted(head: ListNode?): ListNode? {
     var curr: ListNode? = head
+
     while (curr != null) {
-        var next = curr.next
-        while (next != null && next.value == curr.value) {
-            next = next.next
-        }
-        curr.next = next
-        curr = next
+        while (curr.next != null && curr.value == curr.next!!.value) curr.next = curr.next!!.next
+        curr = curr.next
     }
 
     return head
