@@ -17,13 +17,9 @@ package com.github.solairerove.algs4.leprosorium.arrays
 fun twoSum(nums: IntArray, target: Int): IntArray {
     val hm = mutableMapOf<Int, Int>()
 
-    for (i in nums.indices) {
-        val toFind = target - nums[i]
-        if (hm.containsKey(toFind)) {
-            return intArrayOf(i, hm[toFind]!!)
-        } else {
-            hm[nums[i]] = i
-        }
+    for ((i, el) in nums.withIndex()) {
+        val toFind = target - el
+        if (hm.containsKey(toFind)) return intArrayOf(i, hm[toFind]!!) else hm[el] = i
     }
 
     return intArrayOf()
