@@ -12,51 +12,48 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 
 // O(n) time | O(n) space
 fun deleteDuplicatesFromSortedII(head: ListNode?): ListNode? {
-    var node: ListNode? = head ?: return null
+    var curr: ListNode? = head ?: return null
 
-    if (node!!.next != null && node.value == node.next!!.value) {
-        while (node!!.next != null && node.value == node.next!!.value) {
-            node = node.next
+    if (curr!!.next != null && curr.value == curr.next!!.value) {
+        while (curr!!.next != null && curr.value == curr.next!!.value) {
+            curr = curr.next
         }
-        return deleteDuplicatesFromSortedII(node.next)
+        return deleteDuplicatesFromSortedII(curr.next)
     } else {
-        node.next = deleteDuplicatesFromSortedII(node.next)
+        curr.next = deleteDuplicatesFromSortedII(curr.next)
     }
-    return node
+    return curr
 }
 
 // O(n) time | O(n) space
 fun deleteDuplicatesDFSFromSortedII(head: ListNode?, prev: ListNode? = null): ListNode? {
-    val node: ListNode = head ?: return null
-    return if (prev != null && node.value == prev.value
-        || node.next != null && node.value == node.next!!.value
+    val curr: ListNode = head ?: return null
+    return if (prev != null && curr.value == prev.value
+        || curr.next != null && curr.value == curr.next!!.value
     ) {
-        deleteDuplicatesDFSFromSortedII(node.next, node)
+        deleteDuplicatesDFSFromSortedII(curr.next, curr)
     } else {
-        node.next = deleteDuplicatesDFSFromSortedII(node.next, node)
-        node
+        curr.next = deleteDuplicatesDFSFromSortedII(curr.next, curr)
+        curr
     }
 }
 
 // O(n) time | O(1) space
 fun deleteDuplicatesIterativeFromSortedII(head: ListNode?): ListNode? {
-    val dummy = ListNode(0)
     var curr: ListNode? = head
-    var prev: ListNode? = dummy
-    prev!!.next = curr
+    val sentinel = ListNode(0)
+    sentinel.next = curr
+    var prev: ListNode? = sentinel
 
     while (curr != null) {
-        while (curr?.next != null && curr.value == curr.next!!.value) {
-            curr = curr.next
-        }
-        if (prev?.next != curr) {
+        if (curr.next != null && curr.value == curr.next!!.value) {
+            while (curr?.next != null && curr?.value == curr?.next!!.value) curr = curr.next
             prev?.next = curr?.next
-            curr = prev?.next
         } else {
             prev = prev?.next
-            curr = curr?.next
         }
+        curr = curr?.next
     }
 
-    return dummy.next
+    return sentinel.next
 }
