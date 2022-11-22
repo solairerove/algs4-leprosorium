@@ -50,7 +50,9 @@ class RemoveDuplicatesFromSortedLinkedListIITest : StringSpec({
                 null, null
             )
         ) { head, res ->
+            deleteDuplicatesIterativeFromSortedII(head)?.toList() shouldBe res
             deleteDuplicatesDFSFromSortedII(head)?.toList() shouldBe res
+            deleteDuplicatesFromSortedII(head)?.toList() shouldBe res
         }
     }
 })

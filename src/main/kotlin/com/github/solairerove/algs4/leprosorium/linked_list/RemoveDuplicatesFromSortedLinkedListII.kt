@@ -14,8 +14,8 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 fun deleteDuplicatesFromSortedII(head: ListNode?): ListNode? {
     var node: ListNode? = head ?: return null
 
-    if (node!!.next != null && node.value == (node.next as ListNode).value) {
-        while (node!!.next != null && node.value == (node.next as ListNode).value) {
+    if (node!!.next != null && node.value == node.next!!.value) {
+        while (node!!.next != null && node.value == node.next!!.value) {
             node = node.next
         }
         return deleteDuplicatesFromSortedII(node.next)
@@ -29,7 +29,7 @@ fun deleteDuplicatesFromSortedII(head: ListNode?): ListNode? {
 fun deleteDuplicatesDFSFromSortedII(head: ListNode?, prev: ListNode? = null): ListNode? {
     val node: ListNode = head ?: return null
     return if (prev != null && node.value == prev.value
-        || node.next != null && node.value == (node.next as ListNode).value
+        || node.next != null && node.value == node.next!!.value
     ) {
         deleteDuplicatesDFSFromSortedII(node.next, node)
     } else {
@@ -46,7 +46,7 @@ fun deleteDuplicatesIterativeFromSortedII(head: ListNode?): ListNode? {
     prev!!.next = curr
 
     while (curr != null) {
-        while (curr?.next != null && curr.value == (curr.next as ListNode).value) {
+        while (curr?.next != null && curr.value == curr.next!!.value) {
             curr = curr.next
         }
         if (prev?.next != curr) {
