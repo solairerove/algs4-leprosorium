@@ -15,11 +15,11 @@ package com.github.solairerove.algs4.leprosorium.arrays
 
 // O(n) time | O(n) space
 fun twoSum(nums: IntArray, target: Int): IntArray {
-    val hm = mutableMapOf<Int, Int>()
+    val hm = hashMapOf<Int, Int>()
 
     for ((i, el) in nums.withIndex()) {
         val toFind = target - el
-        if (hm.containsKey(toFind)) return intArrayOf(i, hm[toFind]!!) else hm[el] = i
+        if (hm.contains(toFind)) return intArrayOf(i, hm[toFind]!!) else hm[el] = i
     }
 
     return intArrayOf()
