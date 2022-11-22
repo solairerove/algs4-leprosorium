@@ -13,28 +13,26 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 // O(2n) time | O(n) space
 fun deleteDuplicatesUnsorted(head: ListNode?): ListNode? {
     var curr: ListNode? = head
-    val valueToFrequency = mutableMapOf<Int, Int>()
+    val hm = hashMapOf<Int, Int>() // value to frequency
 
     while (curr != null) {
-        if (valueToFrequency.computeIfPresent(curr.value) { _, v -> v + 1 } == null) valueToFrequency[curr.value] = 1
+        if (hm.computeIfPresent(curr.value) { _, v -> v + 1 } == null) hm[curr.value] = 1
         curr = curr.next
     }
 
     curr = head
-    var newHead: ListNode? = null
     var prev: ListNode? = null
+    var res: ListNode? = null
 
     while (curr != null) {
-        if (valueToFrequency[curr.value]!! > 1) {
-            prev?.next = curr.next
-        } else {
-            if (newHead == null) {
-                newHead = curr
-            }
+        if (hm[curr.value] == 1) {
+            if (res == null) res = curr // new head
             prev = curr
+        } else {
+            prev?.next = curr.next
         }
         curr = curr.next
     }
 
-    return newHead
+    return res
 }
