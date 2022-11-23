@@ -1,42 +1,38 @@
 package com.github.solairerove.algs4.leprosorium.arrays
 
-fun main() {
-    val arr = mutableListOf(-9, -7, -6, -4, 0, 2, 3, 4, 5, 7)
-    println(twoNumberSum(arr, -1)) // [-6, 5]
-    print(twoNumberSumHS(arr, -1)) // [3, -4]
-}
+/**
+ * Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order,
+ * find two numbers such that they add up to a specific target number.
+ *
+ * Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
+ *
+ * Return the indices of the two numbers, index1 and index2,
+ * added by one as an integer array [index1, index2] of length 2.
+ *
+ * The tests are generated such that there is exactly one solution.
+ * You may not use the same element twice.
+ *
+ * Your solution must use only constant extra space.
+ *
+ * Input: numbers = [2,7,11,15], target = 9
+ * Output: [1,2]
+ * Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].
+ */
 
 // O(n) time | O(1) space
-private fun twoNumberSum(arr: MutableList<Int>, targetSum: Int): List<Int> {
+fun twoSumSorted(numbers: IntArray, target: Int): IntArray {
     var low = 0
-    var high = arr.size - 1
+    var high = numbers.size - 1
 
     while (low < high) {
-        val potentialSum = arr[low] + arr[high]
+        val potentialSum = numbers[low] + numbers[high]
 
         when {
-            potentialSum < targetSum -> low++
-            potentialSum > targetSum -> high--
-            else -> return listOf(arr[low], arr[high])
+            potentialSum < target -> low++
+            potentialSum > target -> high--
+            else -> return intArrayOf(low + 1, high + 1)
         }
     }
 
-    return listOf()
-}
-
-
-// O(n) time | O(n) space
-private fun twoNumberSumHS(arr: MutableList<Int>, targetSum: Int): List<Int> {
-    val numbers = hashSetOf<Int>()
-
-    for (a in arr) {
-        val potential = targetSum - a
-        if (numbers.contains(potential)) {
-            return listOf(a, potential)
-        } else {
-            numbers.add(a)
-        }
-    }
-
-    return listOf()
+    return intArrayOf()
 }
