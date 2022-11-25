@@ -44,10 +44,9 @@ fun reverseBetween(head: ListNode?, left: Int, right: Int): ListNode? {
         i++
     }
 
-//    rightNodeToUpdateNext.
-    leftNodeToUpdateNext?.next = reversedPart
     rightNodeToUpdateNext?.next = curr
-//    prev?.next
+    if (leftNodeToUpdateNext == null) return reversedPart
+    leftNodeToUpdateNext.next = reversedPart
 
     return head
 }

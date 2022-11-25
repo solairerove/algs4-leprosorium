@@ -21,6 +21,16 @@ class ReverseLinkedListTestII : StringSpec({
             ),
             row(
                 ListNode(5), 1, 1, listOf(5)
+            ),
+            row(
+                ListNode(3).also {
+                    it.next = ListNode(5)
+                }, 1, 2, listOf(5, 3)
+            ),
+            row(
+                ListNode(3).also {
+                    it.next = ListNode(5)
+                }, 1, 1, listOf(3, 5)
             )
         ) { head, left, right, res ->
             reverseBetween(head, left, right)?.toList() shouldBe res
