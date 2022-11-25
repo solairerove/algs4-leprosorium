@@ -8,14 +8,6 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  *  Output: [1 -> 4 -> 3 -> 2 -> 5]
  */
 
-//[1 -> 2 -> 3 -> 4 -> 5]
-// 1
-// 2 -> 3 -> 4
-// 4 -> 3 -> 2
-// 5
-// 1 -> [4 -> 3 -> 2]
-// 1 -> [4 -> 3 -> 2] -> 5
-// [1 -> 4 -> 3 -> 2 -> 5]
 // O(n) time | O(1) space
 fun reverseBetween(head: ListNode?, left: Int, right: Int): ListNode? {
     if (head == null) return null
@@ -50,9 +42,3 @@ fun reverseBetween(head: ListNode?, left: Int, right: Int): ListNode? {
 
     return head
 }
-
-// need to save head before left and tail after right
-// to make leftNode.next = reverse.head
-// to make rightNode.next = reverse.tail
-
-// as well needed to have head and tail in reverse part
