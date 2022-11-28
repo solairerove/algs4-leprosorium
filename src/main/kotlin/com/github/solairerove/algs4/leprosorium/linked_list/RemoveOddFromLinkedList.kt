@@ -16,7 +16,7 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * Output: [2 -> 4]
  */
 
-// O(n) time | O(n) space
+// O(n) time | O(1) space
 fun deleteOdd(head: ListNode?): ListNode? {
     var curr: ListNode? = head
     var evenHeadNode: ListNode? = null
