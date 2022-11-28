@@ -23,7 +23,6 @@ fun detectCycle(head: ListNode?): ListNode? {
 
     var slow: ListNode? = head.next
     var fast: ListNode? = slow?.next
-
     while (slow != fast) {
         if (fast?.next == null) return null
 

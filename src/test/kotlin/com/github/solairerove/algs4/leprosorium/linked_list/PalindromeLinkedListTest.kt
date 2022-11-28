@@ -23,6 +23,7 @@ class PalindromeLinkedListTest : StringSpec({
                 }, false
             )
         ) { head, res ->
+            isPalindrome(head) shouldBe res
             isPalindromeArray(head) shouldBe res
         }
     }
