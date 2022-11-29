@@ -35,11 +35,10 @@ package com.github.solairerove.algs4.leprosorium.arrays
 fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
     var high1 = m - 1
     var high2 = n - 1
-    var length = nums1.size - 1
 
-    while (length >= 0) {
-        if (high2 < 0) break
-        if (high1 >= 0 && nums1[high1] > nums2[high2]) nums1[length--] = nums1[high1--]
-        else nums1[length--] = nums2[high2--]
+    for (i in nums1.size - 1 downTo 0) {
+        if (high2 < 0) return
+        if (high1 >= 0 && nums1[high1] > nums2[high2]) nums1[i] = nums1[high1--]
+        else nums1[i] = nums2[high2--]
     }
 }
