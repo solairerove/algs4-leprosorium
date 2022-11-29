@@ -34,6 +34,6 @@ fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         prev = prev?.next
     }
 
-    if (curr1 == null) prev?.next = curr2 else prev?.next = curr1
+    prev?.next = curr1 ?: curr2
     return sentinel.next
 }
