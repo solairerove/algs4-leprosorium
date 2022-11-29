@@ -11,8 +11,12 @@ class MergeSortedArrayTest : StringSpec({
             row(intArrayOf(1, 2, 3, 0, 0, 0), 3, intArrayOf(2, 5, 6), 3, intArrayOf(1, 2, 2, 3, 5, 6)),
             row(intArrayOf(1), 1, intArrayOf(), 0, intArrayOf(1)),
             row(intArrayOf(0), 0, intArrayOf(1), 1, intArrayOf(1)),
+            row(intArrayOf(2, 0), 1, intArrayOf(1), 1, intArrayOf(1, 2)),
         ) { arr1, m, arr2, n, res ->
-            merge(arr1, m, arr2, n).toList() shouldBe res.toList()
+            run {
+                merge(arr1, m, arr2, n)
+                arr1.toList() shouldBe res.toList()
+            }
         }
     }
 })
