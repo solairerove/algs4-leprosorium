@@ -32,22 +32,14 @@ package com.github.solairerove.algs4.leprosorium.arrays
  */
 
 // O(m + n) time | O(1) space
-fun merge(arr1: IntArray, m: Int, arr2: IntArray, n: Int): Unit {
+fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
     var high1 = m - 1
     var high2 = n - 1
-    var length = arr1.size - 1
+    var length = nums1.size - 1
 
-    if (length == 0 && n > 0) arr1[0] = arr2[0]
-
-    while (length > 0) {
-        if (arr1[high1] >= arr2[high2]) {
-            arr1[length] = arr1[high1]
-            high1--
-        }
-        else if (arr1[high1] <= arr2[high2]) {
-            arr1[length] = arr2[high2]
-            high2--
-        }
-        length--
+    while (length >= 0) {
+        if (high2 < 0) break
+        if (high1 >= 0 && nums1[high1] > nums2[high2]) nums1[length--] = nums1[high1--]
+        else nums1[length--] = nums2[high2--]
     }
 }
