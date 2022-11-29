@@ -14,9 +14,6 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 
 // O(n + m) time | O(1) space
 fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
-    if (list1 == null) return list2
-    if (list2 == null) return list1
-
     var curr1: ListNode? = list1
     var curr2: ListNode? = list2
     val sentinel = ListNode(0)
