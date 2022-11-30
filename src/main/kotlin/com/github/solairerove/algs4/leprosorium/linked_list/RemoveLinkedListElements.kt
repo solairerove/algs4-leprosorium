@@ -11,7 +11,6 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 // O(n) time | O(1) space
 fun removeElements(head: ListNode?, value: Int): ListNode? {
     if (head == null) return null
-    if (head.next == null) return if (head.value == value) null else head // TODO: remove
 
     var curr: ListNode? = head
     val sentinel = ListNode(0)
