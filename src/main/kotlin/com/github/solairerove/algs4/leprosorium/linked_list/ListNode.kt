@@ -14,14 +14,3 @@ open class ListNode(var value: Int) {
         return list
     }
 }
-
-// O(n) time | O(1) space
-fun printLinkedList(head: ListNode?) {
-    if (head == null) println("empty")
-
-    var curr: ListNode? = head
-    while (curr != null) {
-        print("${curr.value} ")
-        curr = curr.next
-    }
-}

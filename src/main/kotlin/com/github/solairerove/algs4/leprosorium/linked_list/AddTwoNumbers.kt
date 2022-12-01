@@ -12,7 +12,7 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * Explanation: 342 + 465 = 807.
  */
 
-// O(n) time | O(1) space
+// O(max(n, m)) time | O(max(n, m)) + 1 space
 fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
     var curr1: ListNode? = l1
     var curr2: ListNode? = l2
