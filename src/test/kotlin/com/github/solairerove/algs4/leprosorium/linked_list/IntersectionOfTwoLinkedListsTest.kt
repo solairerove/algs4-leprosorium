@@ -63,6 +63,7 @@ class IntersectionOfTwoLinkedListsTest : StringSpec({
             ),
         ) { head1, head2, res ->
             getIntersectionNode(head1, head2) shouldBe res
+            getIntersectionNodeSet(head1, head2) shouldBe res
         }
     }
 })
