@@ -25,8 +25,8 @@ fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
     var curr1: ListNode? = headA
     var curr2: ListNode? = headB
     while (curr1 != curr2) {
-        curr1 = if (curr1 == null) headA else curr1.next
-        curr2 = if (curr2 == null) headB else curr2.next
+        curr1 = if (curr1 == null) headB else curr1.next
+        curr2 = if (curr2 == null) headA else curr2.next
     }
 
     return curr1
