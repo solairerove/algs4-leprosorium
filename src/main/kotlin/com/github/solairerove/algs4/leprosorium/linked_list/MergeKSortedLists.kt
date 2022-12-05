@@ -17,6 +17,9 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * 1->1->2->3->4->4->5->6
  */
 
+// O(Nlog(k)) time | O(1) space
+// N - is total number of nodes
+// k - is number of linked lists
 fun mergeKLists(lists: Array<ListNode?>): ListNode? {
     if (lists.isEmpty()) return null
     if (lists.size == 1) return lists[0]
