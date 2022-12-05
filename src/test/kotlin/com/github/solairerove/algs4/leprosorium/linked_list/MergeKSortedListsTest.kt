@@ -29,7 +29,7 @@ class MergeKSortedListsTest : StringSpec({
                 arrayOf(), null
             )
         ) { lists, res ->
-            mergeKLists(lists)?.toList() shouldBe res
+            mergeKListsNaive(lists)?.toList() shouldBe res
         }
     }
 })

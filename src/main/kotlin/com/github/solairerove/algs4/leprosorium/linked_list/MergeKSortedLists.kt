@@ -18,7 +18,7 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  */
 
 // O(kN) time | O(1) space
-fun mergeKLists(lists: Array<ListNode?>): ListNode? {
+fun mergeKListsNaive(lists: Array<ListNode?>): ListNode? {
     if (lists.isEmpty()) return null
     if (lists.size == 1) return lists[0]
 
