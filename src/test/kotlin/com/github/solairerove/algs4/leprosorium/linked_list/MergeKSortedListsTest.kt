@@ -26,10 +26,25 @@ class MergeKSortedListsTest : StringSpec({
                 ), listOf(1, 1, 2, 3, 4, 4, 5, 6)
             ),
             row(
+                arrayOf<ListNode?>(
+                    null,
+                    ListNode(-1).also {
+                        it.next = ListNode(5).also {
+                            it.next = ListNode(11)
+                        }
+                    },
+                    null,
+                    ListNode(6).also {
+                        it.next = ListNode(10)
+                    }
+                ), listOf(-1, 5, 6, 10, 11)
+            ),
+            row(
                 arrayOf(), null
             )
         ) { lists, res ->
-            mergeKListsNaive(lists)?.toList() shouldBe res
+            mergeKLists(lists)?.toList() shouldBe res
+//            mergeKListsNaive(lists)?.toList() shouldBe res
         }
     }
 })
