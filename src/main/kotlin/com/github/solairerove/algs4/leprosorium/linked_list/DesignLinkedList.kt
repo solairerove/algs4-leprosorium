@@ -47,7 +47,7 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * myLinkedList.get(1);              // return 3
  */
 
-class MyDoublyLinkedList() {
+class MyDoublyLinkedList {
     private class Node(var value: Int) {
         var prev: Node? = null
         var next: Node? = null
@@ -64,27 +64,94 @@ class MyDoublyLinkedList() {
 
     // O(min(k, N - k)) time | O(1) space
     fun get(index: Int): Int {
-        return -1
+        if (index < 0 || index >= size) return -1
+
+        var curr: Node? = head
+        if (index + 1 < size - index) {
+            for (i in 0 until index + 1) curr = curr?.next
+        } else {
+            curr = tail
+            for (i in 0 until size - index) curr = curr?.prev
+        }
+
+        return curr?.value ?: -1
     }
 
     // O(1) time | O(1) space
     fun addAtHead(value: Int) {
+        val prev: Node? = head
+        val next: Node? = head?.next
 
+        size++
+
+        val toAdd = Node(value)
+        toAdd.prev = prev
+        toAdd.next = next
+        prev?.next = toAdd
+        next?.prev = toAdd
     }
 
     // O(1) time | O(1) space
     fun addAtTail(value: Int) {
+        val prev: Node? = tail?.prev
+        val next: Node? = tail
 
+        size++
+
+        val toAdd = Node(value)
+        toAdd.prev = prev
+        toAdd.next = next
+        prev?.next = toAdd
+        next?.prev = toAdd
     }
 
     // O(min(k, N - k)) time | O(1) space
     fun addAtIndex(index: Int, value: Int) {
+        var idx = index // kotlin
 
+        if (idx > size) return
+        if (idx < 0) idx = 0
+
+        var prev: Node?
+        var next: Node?
+        if (idx < size - idx) {
+            prev = head
+            for (i in 0 until idx) prev = prev?.next
+            next = prev?.next
+        } else {
+            next = tail
+            for (i in 0 until size - idx) next = next?.prev
+            prev = next?.prev
+        }
+
+        size++
+
+        val toAdd = Node(value)
+        toAdd.prev = prev
+        toAdd.next = next
+        prev?.next = toAdd
+        next?.prev = toAdd
     }
 
     // O(min(k, N - k)) time | O(1) space
     fun deleteAtIndex(index: Int) {
+        if (index < 0 || index >= size) return
 
+        var prev: Node?
+        var next: Node?
+        if (index < size - index) {
+            prev = head
+            for (i in 0 until index) prev = prev?.next
+            next = prev?.next?.next
+        } else {
+            next = tail
+            for (i in 0 until size - index - 1) next = next?.prev
+            prev = next?.prev?.prev
+        }
+
+        size--
+        prev?.next = next
+        next?.prev = prev
     }
 }
 
