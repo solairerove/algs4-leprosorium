@@ -47,6 +47,47 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * myLinkedList.get(1);              // return 3
  */
 
+class MyDoublyLinkedList() {
+    private class Node(var value: Int) {
+        var prev: Node? = null
+        var next: Node? = null
+    }
+
+    private var head: Node? = Node(0)
+    private var tail: Node? = Node(0)
+    private var size: Int = 0
+
+    init {
+        head?.next = tail
+        tail?.prev = head
+    }
+
+    // O(min(k, N - k)) time | O(1) space
+    fun get(index: Int): Int {
+        return -1
+    }
+
+    // O(1) time | O(1) space
+    fun addAtHead(value: Int) {
+
+    }
+
+    // O(1) time | O(1) space
+    fun addAtTail(value: Int) {
+
+    }
+
+    // O(min(k, N - k)) time | O(1) space
+    fun addAtIndex(index: Int, value: Int) {
+
+    }
+
+    // O(min(k, N - k)) time | O(1) space
+    fun deleteAtIndex(index: Int) {
+
+    }
+}
+
 class MySinglyLinkedList {
     private class Node(var value: Int) {
         var next: Node? = null
@@ -57,7 +98,7 @@ class MySinglyLinkedList {
 
     // O(k) time | O(1) space
     fun get(index: Int): Int {
-        if (index < 0 ) return -1
+        if (index < 0) return -1
 
         var curr: Node? = head
         for (i in 0 until index + 1) curr = curr?.next
@@ -70,7 +111,7 @@ class MySinglyLinkedList {
         addAtIndex(0, value)
     }
 
-    // O(n) time | O(1) space
+    // O(N) time | O(1) space
     fun addAtTail(value: Int) {
         addAtIndex(size, value)
     }
