@@ -47,7 +47,7 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * myLinkedList.get(1);              // return 3
  */
 
-class MyLinkedList {
+class MySinglyLinkedList {
     private class Node(var value: Int) {
         var next: Node? = null
     }
@@ -55,6 +55,7 @@ class MyLinkedList {
     private var head: Node? = Node(0)
     private var size: Int = 0
 
+    // O(k) time | O(1) space
     fun get(index: Int): Int {
         if (index < 0 ) return -1
 
@@ -64,14 +65,17 @@ class MyLinkedList {
         return curr?.value ?: -1
     }
 
+    // O(1) time | O(1) space
     fun addAtHead(value: Int) {
         addAtIndex(0, value)
     }
 
+    // O(n) time | O(1) space
     fun addAtTail(value: Int) {
         addAtIndex(size, value)
     }
 
+    // O(k) time | O(1) space
     fun addAtIndex(index: Int, value: Int) {
         var idx = index // kotlin
 
@@ -88,6 +92,7 @@ class MyLinkedList {
         prev?.next = toAdd
     }
 
+    // O(k) time | O(1) space
     fun deleteAtIndex(index: Int) {
         if (index < 0 || index >= size) return
 

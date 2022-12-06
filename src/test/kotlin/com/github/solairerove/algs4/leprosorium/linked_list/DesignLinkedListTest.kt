@@ -6,7 +6,7 @@ import io.kotest.matchers.shouldBe
 class DesignLinkedListTest : FunSpec({
 
     test("design linked list basic test") {
-        val myLinkedList = MyLinkedList()
+        val myLinkedList = MySinglyLinkedList()
         myLinkedList.addAtHead(1)
         myLinkedList.addAtTail(3)
         myLinkedList.addAtIndex(1, 2)
@@ -16,13 +16,13 @@ class DesignLinkedListTest : FunSpec({
     }
 
     test("design linked list 63 test case") {
-        val myLinkedList = MyLinkedList()
+        val myLinkedList = MySinglyLinkedList()
         myLinkedList.addAtIndex(1, 0)
         myLinkedList.get(0) shouldBe -1
     }
 
     test("design linked list 40 test case") {
-        val myLinkedList = MyLinkedList()
+        val myLinkedList = MySinglyLinkedList()
         myLinkedList.addAtHead(2)
         myLinkedList.deleteAtIndex(1)
         myLinkedList.addAtHead(2)
