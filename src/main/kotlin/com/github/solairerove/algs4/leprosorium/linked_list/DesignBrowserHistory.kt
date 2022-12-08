@@ -20,70 +20,37 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  */
 
 class BrowserHistory(homepage: String) {
-    private class DLinkedNode(var value: String) {
+    private class DLinkedNode(val value: String) {
         var prev: DLinkedNode? = null
         var next: DLinkedNode? = null
     }
 
-//    private fun addAtHead(value: String) {
-//        val prev: DLinkedNode? = head
-//        val next: DLinkedNode? = head?.next
-//
-//        val node = DLinkedNode(value)
-//        node.prev = prev
-//        node.next = next
-//        prev?.next = node
-//        next?.prev = node
-//    }
-
-//    private var head: DLinkedNode? = null
-//    private var tail: DLinkedNode? = null
-    private var curr: DLinkedNode? = null
-
-    init {
-//        head = DLinkedNode(value = "-1")
-//        tail = DLinkedNode(value = "-1")
-//
-//        head?.next = tail
-//        tail?.prev = head
-//        addAtHead(value = homepage)
-//        curr = head?.next
-        curr = DLinkedNode(value = homepage)
-    }
+    private var curr: DLinkedNode? = DLinkedNode(homepage)
 
     fun visit(url: String) {
-//        curr?.prev = null
-//        val node = DLinkedNode(url)
-//        curr?.prev = node
-//        node.next = curr
-//        curr = node
-
         curr?.next = null
+
         val node = DLinkedNode(url)
-        curr!!.next = node // tail node.next = tail
         node.prev = curr
+        curr?.next = node
         curr = node
     }
 
     fun back(steps: Int): String {
-        var node: DLinkedNode? = curr
-        var i = steps
-        while (i-- > 0 && node?.prev != null) {
-            node = node.prev
-        }
-        curr = node
+        var prev: DLinkedNode? = curr
+        var i = 0
+        while (i++ < steps && prev?.prev != null) prev = prev.prev
+        curr = prev
 
-        return node!!.value
+        return prev!!.value
     }
 
     fun forward(steps: Int): String {
-        var node: DLinkedNode? = curr
-        var i = steps
-        while (i-- > 0 && node?.next != null) {
-            node = node.next
-        }
-        curr = node
+        var next: DLinkedNode? = curr
+        var i = 0
+        while (i++ < steps && next?.next != null) next = next.next
+        curr = next
 
-        return node!!.value
+        return next!!.value
     }
 }
