@@ -20,8 +20,6 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * Explanation: The multilevel linked list in the input is shown.
  */
 
-private var prev: DListNode? = null
-
 // O(n) time | O(n) space
 fun flatten(head: DListNode?): DListNode? {
     if (head == null) return null
