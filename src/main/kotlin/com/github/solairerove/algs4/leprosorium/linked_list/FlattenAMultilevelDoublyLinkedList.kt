@@ -26,6 +26,34 @@ fun flatten(head: DListNode?): DListNode? {
 
     val sentinel = DListNode(-1)
     sentinel.next = head
+    var prev: DListNode? = sentinel
+
+    val stack = ArrayDeque<DListNode>()
+    stack.addFirst(head)
+
+    while (stack.isNotEmpty()) {
+        val curr = stack.removeFirst()
+        prev?.next = curr
+        curr.prev = prev
+
+        if (curr.next != null) stack.addFirst(curr.next!!)
+        if (curr.child != null) {
+            stack.addFirst(curr.child!!)
+            curr.child = null
+        }
+        prev = curr
+    }
+    sentinel.next?.prev = null
+
+    return sentinel.next
+}
+
+// O(n) time | O(n) space
+fun flattenRecursive(head: DListNode?): DListNode? {
+    if (head == null) return null
+
+    val sentinel = DListNode(-1)
+    sentinel.next = head
 
     flattenDFS(sentinel, head)
 
