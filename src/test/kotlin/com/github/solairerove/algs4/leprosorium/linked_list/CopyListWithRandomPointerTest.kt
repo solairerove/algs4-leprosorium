@@ -22,7 +22,7 @@ class CopyListWithRandomPointerTest : FunSpec({
         node3.random = node2
         node4.random = head
 
-        val actual = copyRandomListRecursive(head)!!
+        val actual = copyRandomListIterative(head)!!
 
         actual.toList() shouldBe listOf(7, 13, 11, 10, 1)
         actual.next!!.random shouldBe actual

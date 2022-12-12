@@ -27,15 +27,38 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * Your code will only be given the head of the original linked list.
  */
 
-val visitedMap = hashMapOf<RListNode, RListNode>()
+val oldNodeToNewNode = hashMapOf<RListNode, RListNode>()
+
+// O(n) time | O(n) space
+fun copyRandomListIterative(head: RListNode?): RListNode? {
+    if (head == null) return null
+
+    var oldNode: RListNode? = head
+    var newNode: RListNode? = RListNode(head.value)
+    oldNodeToNewNode[oldNode!!] = newNode!!
+
+    while (oldNode != null) {
+        newNode?.random = oldNodeToNewNode.getOrPutNullable(oldNode.random) { RListNode(oldNode?.random?.value!!) }
+        newNode?.next = oldNodeToNewNode.getOrPutNullable(oldNode.next) {RListNode(oldNode?.next?.value!!)}
+
+        oldNode = oldNode.next
+        newNode = newNode?.next
+    }
+
+    return oldNodeToNewNode[head]
+}
+
+private inline fun <K, V> MutableMap<K, V>.getOrPutNullable(key: K?, defaultValue: () -> V?): V? {
+    return if (key == null) null else getOrPut(key) { defaultValue()!! }
+}
 
 // O(n) time | O(2n) space
 fun copyRandomListRecursive(head: RListNode?): RListNode? {
     if (head == null) return null
-    if (visitedMap.containsKey(head)) return visitedMap[head]
+    if (oldNodeToNewNode.containsKey(head)) return oldNodeToNewNode[head]
 
     val node = RListNode(head.value)
-    visitedMap[head] = node
+    oldNodeToNewNode[head] = node
 
     node.next = copyRandomListRecursive(head.next)
     node.random = copyRandomListRecursive(head.random)
