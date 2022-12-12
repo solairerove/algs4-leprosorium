@@ -27,6 +27,42 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * Your code will only be given the head of the original linked list.
  */
 
+// O(n) time | O(1) space
+fun copyRandomList(head: RListNode?): RListNode? {
+    if (head == null) return null
+
+    // create weaving list [original] -> [copy]
+    var curr: RListNode? = head
+    while (curr != null) {
+        val newNode = RListNode(curr.value)
+        newNode.next = curr.next
+        curr.next = newNode
+        curr = newNode.next
+    }
+
+    // link random
+    curr = head
+    while (curr != null) {
+        curr.next?.random = if (curr.random != null) curr.random?.next else null
+        curr = curr.next?.next
+    }
+
+    // unweave
+    var oldList: RListNode? = head
+    var newList: RListNode? = head.next
+    val oldHead: RListNode? = head.next // ?new
+
+    while (oldList != null) {
+        oldList.next = oldList.next?.next
+        newList?.next = newList?.next?.next
+
+        oldList = oldList.next
+        newList = newList?.next
+    }
+
+    return oldHead
+}
+
 val oldNodeToNewNode = hashMapOf<RListNode, RListNode>()
 
 // O(n) time | O(n) space
@@ -39,7 +75,7 @@ fun copyRandomListIterative(head: RListNode?): RListNode? {
 
     while (oldNode != null) {
         newNode?.random = oldNodeToNewNode.getOrPutNullable(oldNode.random) { RListNode(oldNode?.random?.value!!) }
-        newNode?.next = oldNodeToNewNode.getOrPutNullable(oldNode.next) {RListNode(oldNode?.next?.value!!)}
+        newNode?.next = oldNodeToNewNode.getOrPutNullable(oldNode.next) { RListNode(oldNode?.next?.value!!) }
 
         oldNode = oldNode.next
         newNode = newNode?.next
