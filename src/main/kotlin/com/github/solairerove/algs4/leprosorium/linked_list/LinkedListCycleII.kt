@@ -19,16 +19,19 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 
 // O(n) time | O(1) space
 fun detectCycle(head: ListNode?): ListNode? {
-    if (head == null) return null
+    if (head?.next == null) return null
 
     var slow: ListNode? = head.next
-    var fast: ListNode? = slow?.next
-    while (slow != fast) {
-        if (fast?.next == null) return null
+    var fast: ListNode? = head.next?.next
+
+    while (fast != null) {
+        if (fast == slow) break
 
         slow = slow?.next
         fast = fast.next?.next
     }
+
+    if (fast == null) return null
 
     slow = head
     while (slow != fast) {

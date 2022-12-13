@@ -22,16 +22,17 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 // O(n) time | O(1) space - Floyd's Cycle Finding Algorithm
 // O(n) time | O(n) space - using hash set
 fun hasCycle(head: ListNode?): Boolean {
-    if (head == null) return false
+    if (head?.next == null) return false
 
-    var slow: ListNode? = head
-    var fast: ListNode? = head.next
-    while (slow != fast) {
-        if (fast?.next == null) return false
+    var slow: ListNode? = head.next
+    var fast: ListNode? = head.next?.next
+
+    while (fast != null) {
+        if (slow == fast) return true
 
         slow = slow?.next
         fast = fast.next?.next
     }
 
-    return true
+    return false
 }
