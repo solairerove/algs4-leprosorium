@@ -7,8 +7,34 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * Output: [1 -> 2 -> 3 -> 5]
  */
 
-// O(n) time | O(1) space
+// O(L) time | O(1) space
 fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
+    if (head == null) return null
+    if (head.next == null && n == 1) return null
+
+    val sentinel = ListNode(-1)
+    sentinel.next = head
+
+    var slow: ListNode? = sentinel
+    var fast: ListNode? = sentinel
+    var cnt = 0
+    while (fast != null) {
+        if (cnt <= n) {
+            fast = fast.next
+            cnt++
+        } else {
+            slow = slow?.next
+            fast = fast.next
+        }
+    }
+
+    slow?.next = slow?.next?.next
+
+    return sentinel.next
+}
+
+// O(2n) time | O(1) space
+fun removeNthFromEndTwoPass(head: ListNode?, n: Int): ListNode? {
     if (head == null) return null
     if (head.next == null && n == 1) return null
 
