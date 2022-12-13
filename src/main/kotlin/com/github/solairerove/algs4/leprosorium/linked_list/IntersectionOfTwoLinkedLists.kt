@@ -22,6 +22,8 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 
 // O(2n + 2m) time | O(1) space
 fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
+    if (headA == null || headB == null) return null
+
     var curr1: ListNode? = headA
     var curr2: ListNode? = headB
     while (curr1 != curr2) {
