@@ -21,6 +21,21 @@ class DesignLinkedListTest : FunSpec({
         myLinkedList.get(0) shouldBe -1
     }
 
+    test("design doubly linked list hui test case") {
+        val myLinkedList = MyDoublyLinkedList()
+        myLinkedList.addAtHead(7)
+        myLinkedList.addAtHead(2)
+        myLinkedList.addAtHead(1)
+        myLinkedList.addAtIndex(3, 0)
+        myLinkedList.deleteAtIndex(2)
+        myLinkedList.addAtHead(6)
+        myLinkedList.addAtTail(4)
+        myLinkedList.get(4) shouldBe 4
+        myLinkedList.addAtHead(4)
+        myLinkedList.addAtIndex(5, 0)
+        myLinkedList.addAtHead(5)
+    }
+
     test("design doubly linked list 40 test case") {
         val myLinkedList = MyDoublyLinkedList()
         myLinkedList.addAtHead(2)

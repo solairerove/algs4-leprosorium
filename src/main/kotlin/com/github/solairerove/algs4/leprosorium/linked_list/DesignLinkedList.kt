@@ -53,8 +53,8 @@ class MyDoublyLinkedList {
         var next: Node? = null
     }
 
-    private var head: Node? = Node(0)
-    private var tail: Node? = Node(0)
+    private var head: Node? = Node(-1)
+    private var tail: Node? = Node(-1)
     private var size: Int = 0
 
     init {
@@ -68,10 +68,14 @@ class MyDoublyLinkedList {
 
         var curr: Node? = head
         if (index + 1 < size - index) {
-            for (i in 0 until index + 1) curr = curr?.next
+            for (i in 0 until index + 1) {
+                curr = curr?.next
+            }
         } else {
             curr = tail
-            for (i in 0 until size - index) curr = curr?.prev
+            for (i in 0 until size - index) {
+                curr = curr?.prev
+            }
         }
 
         return curr?.value ?: -1
@@ -84,11 +88,11 @@ class MyDoublyLinkedList {
 
         size++
 
-        val toAdd = Node(value)
-        toAdd.prev = prev
-        toAdd.next = next
-        prev?.next = toAdd
-        next?.prev = toAdd
+        val newNode = Node(value)
+        newNode.prev = prev
+        newNode.next = next
+        prev?.next = newNode
+        next?.prev = newNode
     }
 
     // O(1) time | O(1) space
@@ -98,39 +102,40 @@ class MyDoublyLinkedList {
 
         size++
 
-        val toAdd = Node(value)
-        toAdd.prev = prev
-        toAdd.next = next
-        prev?.next = toAdd
-        next?.prev = toAdd
+        val newNode = Node(value)
+        newNode.prev = prev
+        newNode.next = next
+        prev?.next = newNode
+        next?.prev = newNode
     }
 
     // O(min(k, N - k)) time | O(1) space
     fun addAtIndex(index: Int, value: Int) {
-        var idx = index // kotlin
-
-        if (idx > size) return
-        if (idx < 0) idx = 0
+        if (index < 0 || index > size) return
 
         var prev: Node?
         var next: Node?
-        if (idx < size - idx) {
+        if (index < size - index) {
             prev = head
-            for (i in 0 until idx) prev = prev?.next
+            for (i in 0 until index) {
+                prev = prev?.next
+            }
             next = prev?.next
         } else {
             next = tail
-            for (i in 0 until size - idx) next = next?.prev
+            for (i in 0 until size - index) {
+                next = next?.prev
+            }
             prev = next?.prev
         }
 
         size++
 
-        val toAdd = Node(value)
-        toAdd.prev = prev
-        toAdd.next = next
-        prev?.next = toAdd
-        next?.prev = toAdd
+        val newNode = Node(value)
+        newNode.prev = prev
+        newNode.next = next
+        prev?.next = newNode
+        next?.prev = newNode
     }
 
     // O(min(k, N - k)) time | O(1) space
@@ -141,15 +146,20 @@ class MyDoublyLinkedList {
         var next: Node?
         if (index < size - index) {
             prev = head
-            for (i in 0 until index) prev = prev?.next
+            for (i in 0 until index) {
+                prev = prev?.next
+            }
             next = prev?.next?.next
         } else {
             next = tail
-            for (i in 0 until size - index - 1) next = next?.prev
+            for (i in 0 until size - index - 1) {
+                next = next?.prev
+            }
             prev = next?.prev?.prev
         }
 
         size--
+
         prev?.next = next
         next?.prev = prev
     }
@@ -160,15 +170,15 @@ class MySinglyLinkedList {
         var next: Node? = null
     }
 
-    private var head: Node? = Node(0)
+    private var head: Node? = Node(-1)
     private var size: Int = 0
 
     // O(k) time | O(1) space
     fun get(index: Int): Int {
-        if (index < 0) return -1
+        if (index < 0 || index >= size) return -1
 
         var curr: Node? = head
-        for (i in 0 until index + 1) curr = curr?.next
+        for (i in 0..index) curr = curr?.next
 
         return curr?.value ?: -1
     }
@@ -185,19 +195,16 @@ class MySinglyLinkedList {
 
     // O(k) time | O(1) space
     fun addAtIndex(index: Int, value: Int) {
-        var idx = index // kotlin
-
-        if (idx > size) return
-        if (idx < 0) idx = 0
+        if (index < 0 || index > size) return
 
         size++
 
         var prev: Node? = head
-        for (i in 0 until idx) prev = prev?.next
+        for (i in 0 until index) prev = prev?.next
 
-        val toAdd = Node(value)
-        toAdd.next = prev?.next
-        prev?.next = toAdd
+        val newNode = Node(value)
+        newNode.next = prev?.next
+        prev?.next = newNode
     }
 
     // O(k) time | O(1) space
@@ -208,6 +215,7 @@ class MySinglyLinkedList {
 
         var prev: Node? = head
         for (i in 0 until index) prev = prev?.next
+
         prev?.next = prev?.next?.next
     }
 }
