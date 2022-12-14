@@ -9,6 +9,8 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 
 // O(n) time | O(1) space
 fun reverseList(head: ListNode?): ListNode? {
+    if (head?.next == null) return head
+
     var curr: ListNode? = head
     var prev: ListNode? = null
 
