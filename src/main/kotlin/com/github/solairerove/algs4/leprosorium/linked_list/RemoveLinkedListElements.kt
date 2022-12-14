@@ -12,16 +12,14 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 fun removeElements(head: ListNode?, value: Int): ListNode? {
     if (head == null) return null
 
-    var curr: ListNode? = head
-    val sentinel = ListNode(0)
-    var prev: ListNode? = sentinel
-    sentinel.next = curr
+    var newHead: ListNode? = head
+    while (newHead?.value == value) newHead = newHead.next
 
-    while (curr != null) {
-        if (curr.value == value) prev?.next = curr.next
-        else prev = curr
-        curr = curr.next
+    var curr: ListNode? = newHead
+    while (curr?.next != null) {
+        if (curr.next!!.value == value) curr.next = curr.next!!.next
+        else curr = curr.next
     }
 
-    return sentinel.next
+    return newHead
 }
