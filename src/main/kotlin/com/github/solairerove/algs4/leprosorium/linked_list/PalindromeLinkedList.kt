@@ -9,30 +9,29 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 
 // O(n) time | O(1) space
 fun isPalindrome(head: ListNode?): Boolean {
-    if (head == null) return true
+    if (head == null) return false
+    if (head.next == null) return true
 
-    val firstHalfTail = floydCycle(head)
-    val secondHalfHead = reverseList(firstHalfTail?.next)
+    val middleNode = findMiddleNode(head)
+    val reversedPart = reverseList(middleNode?.next)
 
     var low: ListNode? = head
-    var high: ListNode? = secondHalfHead
-    var res = true
-    while (res && high != null) {
-        if (low?.value != high.value) res = false
-        low = low?.next
+    var high: ListNode? = reversedPart
+    while (high != null) {
+        if (low?.value != high.value) return false
+        low = low.next
         high = high.next
     }
 
-    firstHalfTail?.next = reverseList(secondHalfHead)
-    return res
+    return true
 }
 
-private fun floydCycle(head: ListNode?): ListNode? {
+private fun findMiddleNode(head: ListNode?): ListNode? {
     var slow: ListNode? = head
-    var fast: ListNode? = head
-    while (fast?.next != null && fast.next?.next != null) {
-        fast = fast.next?.next
+    var fast: ListNode? = head?.next
+    while (fast?.next != null) {
         slow = slow?.next
+        fast = fast.next?.next
     }
 
     return slow

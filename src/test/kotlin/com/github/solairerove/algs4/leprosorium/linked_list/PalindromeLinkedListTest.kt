@@ -19,12 +19,43 @@ class PalindromeLinkedListTest : StringSpec({
             ),
             row(
                 ListNode(1).also {
+                    it.next = ListNode(2).also {
+                        it.next = ListNode(3).also {
+                            it.next = ListNode(2).also {
+                                it.next = ListNode(1)
+                            }
+                        }
+                    }
+                }, true
+            ),
+            row(
+                ListNode(1).also {
                     it.next = ListNode(2)
+                }, false
+            ),
+            row(
+                ListNode(0).also {
+                    it.next = ListNode(0)
+                }, true
+            ),
+            row(
+                ListNode(1).also {
+                    it.next = ListNode(0).also {
+                        it.next = ListNode(0)
+                    }
+                }, false
+            ),
+            row(
+                ListNode(1).also {
+                    it.next = ListNode(1).also {
+                        it.next = ListNode(2).also {
+                            it.next = ListNode(1)
+                        }
+                    }
                 }, false
             )
         ) { head, res ->
             isPalindrome(head) shouldBe res
-            isPalindromeArray(head) shouldBe res
         }
     }
 })
