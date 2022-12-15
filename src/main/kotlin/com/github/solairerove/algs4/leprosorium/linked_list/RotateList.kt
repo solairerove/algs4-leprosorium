@@ -15,8 +15,8 @@ fun rotateRight(head: ListNode?, k: Int): ListNode? {
     var tail: ListNode? = head
     var length = 1
     while (tail?.next != null) {
-        tail = tail.next
         length++
+        tail = tail.next
     }
 
     val shift = k % length
