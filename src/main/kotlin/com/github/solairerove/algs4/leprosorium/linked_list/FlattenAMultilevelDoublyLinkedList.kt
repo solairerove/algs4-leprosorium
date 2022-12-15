@@ -28,22 +28,22 @@ fun flatten(head: DListNode?): DListNode? {
     sentinel.next = head
     var prev: DListNode? = sentinel
 
-    val stack = ArrayDeque<DListNode>()
-    stack.addFirst(head)
-
-    while (stack.isNotEmpty()) {
-        val curr = stack.removeFirst()
+    val lifo = ArrayDeque(listOf(head))
+    while (lifo.isNotEmpty()) {
+        val curr = lifo.removeFirst()
         prev?.next = curr
         curr.prev = prev
 
-        if (curr.next != null) stack.addFirst(curr.next!!)
+        if (curr.next != null) lifo.addFirst(curr.next!!)
         if (curr.child != null) {
-            stack.addFirst(curr.child!!)
+            lifo.addFirst(curr.child!!)
             curr.child = null
         }
+
         prev = curr
     }
-    sentinel.next?.prev = null
+
+    sentinel.next?.prev = null // bullshit
 
     return sentinel.next
 }
