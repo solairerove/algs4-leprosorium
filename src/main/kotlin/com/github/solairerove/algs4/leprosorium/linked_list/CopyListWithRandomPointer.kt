@@ -64,28 +64,25 @@ fun copyRandomList(head: RListNode?): RListNode? {
 }
 
 val oldNodeToNewNode = hashMapOf<RListNode, RListNode>()
+fun copyRandomListIterative(node: RListNode?): RListNode? {
+    if (node == null) return null
 
-// O(n) time | O(n) space
-fun copyRandomListIterative(head: RListNode?): RListNode? {
-    if (head == null) return null
-
-    var oldNode: RListNode? = head
-    var newNode: RListNode? = RListNode(head.value)
+    var oldNode: RListNode? = node
+    var newNode: RListNode? = RListNode(node.value)
     oldNodeToNewNode[oldNode!!] = newNode!!
 
     while (oldNode != null) {
-        newNode?.random = oldNodeToNewNode.getOrPutNullable(oldNode.random) { RListNode(oldNode?.random?.value!!) }
-        newNode?.next = oldNodeToNewNode.getOrPutNullable(oldNode.next) { RListNode(oldNode?.next?.value!!) }
+        val random = oldNode.random
+        if (random != null) newNode?.random = oldNodeToNewNode.getOrPut(random) { RListNode(random.value) }
+
+        val next = oldNode.next
+        if (next != null) newNode?.next = oldNodeToNewNode.getOrPut(next) { RListNode(next.value) }
 
         oldNode = oldNode.next
         newNode = newNode?.next
     }
 
-    return oldNodeToNewNode[head]
-}
-
-private inline fun <K, V> MutableMap<K, V>.getOrPutNullable(key: K?, defaultValue: () -> V?): V? {
-    return if (key == null) null else getOrPut(key) { defaultValue()!! }
+    return oldNodeToNewNode[node]
 }
 
 // O(n) time | O(2n) space
