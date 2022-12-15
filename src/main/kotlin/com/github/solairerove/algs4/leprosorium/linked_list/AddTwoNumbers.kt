@@ -14,22 +14,20 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 
 // O(max(n, m)) time | O(max(n, m)) + 1 space
 fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
-    var curr1: ListNode? = l1
-    var curr2: ListNode? = l2
-
-    val sentinel = ListNode(0)
+    val sentinel = ListNode(-1)
     var prev: ListNode? = sentinel
 
+    var curr1: ListNode? = l1
+    var curr2: ListNode? = l2
     var inMemory = 0
     while (curr1 != null || curr2 != null) {
         val sum = (curr1?.value ?: 0) + (curr2?.value ?: 0) + inMemory
         inMemory = sum / 10
-
         prev?.next = ListNode(sum % 10)
-        prev = prev?.next
 
         curr1 = curr1?.next
         curr2 = curr2?.next
+        prev = prev?.next
     }
 
     if (inMemory != 0) prev?.next = ListNode(inMemory)
