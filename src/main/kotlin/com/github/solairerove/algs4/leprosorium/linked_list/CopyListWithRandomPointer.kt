@@ -31,7 +31,7 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 fun copyRandomList(head: RListNode?): RListNode? {
     if (head == null) return null
 
-    // create weaving list [original] -> [copy]
+    // [original] -> [copy] -> [original1] -> [copy1]
     var curr: RListNode? = head
     while (curr != null) {
         val newNode = RListNode(curr.value)
@@ -43,24 +43,23 @@ fun copyRandomList(head: RListNode?): RListNode? {
     // link random
     curr = head
     while (curr != null) {
-        curr.next?.random = if (curr.random != null) curr.random?.next else null
+        if (curr.random != null) curr.next?.random = curr.random?.next
         curr = curr.next?.next
     }
 
     // unweave
-    var oldList: RListNode? = head
-    var newList: RListNode? = head.next
-    val oldHead: RListNode? = head.next // ?new
+    curr = head
+    val newHead: RListNode? = head.next
+    var copy: RListNode? = head.next
+    while (curr != null) {
+        curr.next = curr.next?.next
+        copy?.next = copy?.next?.next
 
-    while (oldList != null) {
-        oldList.next = oldList.next?.next
-        newList?.next = newList?.next?.next
-
-        oldList = oldList.next
-        newList = newList?.next
+        curr = curr.next
+        copy = copy?.next
     }
 
-    return oldHead
+    return newHead
 }
 
 val oldNodeToNewNode = hashMapOf<RListNode, RListNode>()
