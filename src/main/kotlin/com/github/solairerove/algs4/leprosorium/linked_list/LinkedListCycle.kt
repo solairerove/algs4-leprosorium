@@ -26,7 +26,6 @@ fun hasCycle(head: ListNode?): Boolean {
 
     var slow: ListNode? = head.next
     var fast: ListNode? = head.next?.next
-
     while (fast != null) {
         if (slow == fast) return true
 
