@@ -9,16 +9,16 @@ package com.github.solairerove.algs4.leprosorium.linked_list
 
 // O(n) time | O(1) space
 fun isPalindrome(head: ListNode?): Boolean {
-    if (head == null) return false
-    if (head.next == null) return true
+    if (head?.next == null) return true
 
-    val middleNode = findMiddleNode(head)
-    val reversedPart = reverseList(middleNode?.next)
+    val middle = findMiddleNode(head)
+    val reversed = reverseList(middle?.next)
 
     var low: ListNode? = head
-    var high: ListNode? = reversedPart
+    var high: ListNode? = reversed
     while (high != null) {
         if (low?.value != high.value) return false
+
         low = low.next
         high = high.next
     }
