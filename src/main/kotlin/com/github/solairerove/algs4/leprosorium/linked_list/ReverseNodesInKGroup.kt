@@ -1,0 +1,60 @@
+package com.github.solairerove.algs4.leprosorium.linked_list
+
+/**
+ * Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list.
+ *
+ * k is a positive integer and is less than or equal to the length of the linked list.
+ * If the number of nodes is not a multiple of k then left-out nodes, in the end, should remain as it is.
+ *
+ * You may not alter the values in the list's nodes, only nodes themselves may be changed.
+ *
+ * Input: head = [1 -> 2 -> 3 -> 4 -> 5], k = 2
+ * Output: [2 -> 1 -> 4 -> 3 -> 5]
+ */
+
+// O(n) time | O(1) space
+fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
+    if (head?.next == null) return head
+
+    var oldHead: ListNode? = head
+    var curr: ListNode? = head
+    var ktail: ListNode? = null
+    var newHead: ListNode? = null
+    while (curr != null) {
+        var cnt = 0
+
+        curr = oldHead
+        while (cnt < k && curr != null) {
+            curr = curr.next
+            cnt += 1
+        }
+
+        if (cnt == k) {
+            val revHead = reverseKNodes(oldHead, k)
+
+            if (newHead == null) newHead = revHead
+            if (ktail != null) ktail.next = revHead
+
+            ktail = oldHead
+            oldHead = curr
+        }
+    }
+
+    if (ktail != null) ktail.next = oldHead
+
+    return newHead ?: oldHead
+}
+
+private fun reverseKNodes(head: ListNode?, k: Int): ListNode? {
+    var curr: ListNode? = head
+    var prev: ListNode? = null
+    var i = 0
+    while (i++ < k) {
+        val next = curr?.next
+        curr?.next = prev
+        prev = curr
+        curr = next
+    }
+
+    return prev
+}
