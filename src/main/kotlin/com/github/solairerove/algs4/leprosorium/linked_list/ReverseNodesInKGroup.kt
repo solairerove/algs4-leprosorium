@@ -12,7 +12,7 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * Output: [2 -> 1 -> 4 -> 3 -> 5]
  */
 
-// O(n) time | O(1) space
+// O(2n) time | O(1) space
 fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
     if (head?.next == null) return head
 
@@ -57,4 +57,27 @@ private fun reverseKNodes(head: ListNode?, k: Int): ListNode? {
     }
 
     return prev
+}
+
+// O(3n) time | O(1) space
+fun reverseKGroupUsingBetween(head: ListNode?, k: Int): ListNode? {
+    if (head?.next == null) return head
+
+    var length = 0
+    var curr = head
+    while (curr != null) {
+        length++
+        curr = curr.next
+    }
+
+    var oldHead = head
+    var low = 1
+    var high = k
+    while (high <= length) {
+        oldHead = reverseBetween(oldHead, low, high) // implemented method in reverse-linked-list-ii
+        low += k
+        high += k
+    }
+
+    return oldHead
 }
