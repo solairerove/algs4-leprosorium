@@ -13,32 +13,31 @@ fun reverseBetween(head: ListNode?, left: Int, right: Int): ListNode? {
     if (head == null) return null
     if (head.next == null) return head // but without works fine
 
-    var i = 1
-    var curr: ListNode? = head
-    var prev: ListNode? = null
+    val sentinel = ListNode(-1)
+    sentinel.next = head
 
-    var leftNodeToUpdateNext: ListNode? = null
-    while (curr != null && i < left) {
-        leftNodeToUpdateNext = curr
-        curr = curr.next
+    var curr: ListNode? = head
+    var prev: ListNode? = sentinel
+
+    var i = 1
+    while (i < left) {
+        prev = curr
+        curr = curr?.next
         i++
     }
 
-    var reversedPart: ListNode? = null
-    var rightNodeToUpdateNext: ListNode? = null
-    while (curr != null && i <= right) {
-        reversedPart = curr
-        val next = curr.next
-        if (rightNodeToUpdateNext == null) rightNodeToUpdateNext = curr
-        curr.next = prev
+    val node = prev
+
+    while (i <= right) {
+        val next = curr?.next
+        curr?.next = prev
         prev = curr
         curr = next
         i++
     }
 
-    rightNodeToUpdateNext?.next = curr
-    if (leftNodeToUpdateNext == null) return reversedPart
-    leftNodeToUpdateNext.next = reversedPart
+    node?.next?.next = curr
+    node?.next = prev
 
-    return head
+    return sentinel.next
 }
