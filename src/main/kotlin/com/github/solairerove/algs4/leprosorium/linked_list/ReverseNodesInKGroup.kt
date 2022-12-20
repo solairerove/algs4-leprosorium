@@ -18,15 +18,14 @@ fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
 
     var oldHead: ListNode? = head
     var curr: ListNode? = head
-    var ktail: ListNode? = null
+    var prev: ListNode? = null
     var newHead: ListNode? = null
     while (curr != null) {
         curr = oldHead
-
         var cnt = 0
         while (cnt < k && curr != null) {
             curr = curr.next
-            cnt += 1
+            cnt++
         }
 
         if (cnt == k) {
@@ -34,13 +33,13 @@ fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
 
             if (newHead == null) newHead = revHead
 
-            ktail?.next = revHead
-            ktail = oldHead
+            prev?.next = revHead
+            prev = oldHead
             oldHead = curr
         }
     }
 
-    ktail?.next = oldHead
+    prev?.next = oldHead
 
     return newHead ?: oldHead
 }
@@ -48,8 +47,7 @@ fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
 private fun reverseKNodes(head: ListNode?, k: Int): ListNode? {
     var curr: ListNode? = head
     var prev: ListNode? = null
-    var i = 0
-    while (i++ < k) {
+    for (i in 0 until k) {
         val next = curr?.next
         curr?.next = prev
         prev = curr
