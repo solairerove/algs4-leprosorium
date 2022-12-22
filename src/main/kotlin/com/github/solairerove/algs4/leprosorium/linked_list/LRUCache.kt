@@ -17,58 +17,52 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * The functions get and put must each run in O(1) average time complexity.
  */
 class LRUCache(var capacity: Int) {
-    private class DLinkedNode {
+    private class DoublyLinkedNode {
         var key: Int = -1
         var value: Int = -1
-        var prev: DLinkedNode? = null
-        var next: DLinkedNode? = null
+        var prev: DoublyLinkedNode? = null
+        var next: DoublyLinkedNode? = null
     }
 
-    private val cache = hashMapOf<Int, DLinkedNode>()
-    private var size: Int = 0
-    private var head: DLinkedNode? = null
-    private var tail: DLinkedNode? = null
+    private val cache = hashMapOf<Int, DoublyLinkedNode>()
+    private var size = 0
+    private val head = DoublyLinkedNode()
+    private val tail = DoublyLinkedNode()
 
     init {
-        head = DLinkedNode()
-        tail = DLinkedNode()
-
-        head?.next = tail
-        tail?.prev = head
+        head.next = tail
+        tail.prev = head
     }
 
-    // head -> [] -> tail
-    // head <- [] <- tail
-    // add node right after head
-    private fun addNode(node: DLinkedNode?) {
-        node?.prev = head
-        node?.next = head?.next
-
-        head?.next?.prev = node
-        head?.next = node
+    private fun moveToHead(node: DoublyLinkedNode) {
+        removeNode(node)
+        addNodeToHead(node)
     }
 
-    private fun removeNode(node: DLinkedNode?) {
-        val prev: DLinkedNode? = node?.prev
-        val next: DLinkedNode? = node?.next
+    private fun addNodeToHead(node: DoublyLinkedNode) {
+        node.prev = head
+        node.next = head.next
+
+        head.next?.prev = node
+        head.next = node
+    }
+
+    private fun removeNode(node: DoublyLinkedNode?) {
+        val prev = node?.prev
+        val next = node?.next
 
         prev?.next = next
         next?.prev = prev
     }
 
-    private fun moveToHead(node: DLinkedNode?) {
-        removeNode(node)
-        addNode(node)
-    }
-
-    private fun popTail(): DLinkedNode? {
-        val res: DLinkedNode? = tail?.prev
+    private fun popTail(): DoublyLinkedNode? {
+        val res = tail.prev
         removeNode(res)
         return res
     }
 
     fun get(key: Int): Int {
-        val node: DLinkedNode = cache[key] ?: return -1
+        val node: DoublyLinkedNode = cache[key] ?: return -1
 
         moveToHead(node)
 
@@ -76,20 +70,20 @@ class LRUCache(var capacity: Int) {
     }
 
     fun put(key: Int, value: Int) {
-        val node: DLinkedNode? = cache[key]
+        val node: DoublyLinkedNode? = cache[key]
 
         if (node == null) {
-            val newNode = DLinkedNode()
+            val newNode = DoublyLinkedNode()
             newNode.key = key
             newNode.value = value
 
             cache[key] = newNode
-            addNode(newNode)
+            addNodeToHead(newNode)
 
             size++
 
             if (size > this.capacity) {
-                val tail: DLinkedNode? = popTail()
+                val tail = popTail()
                 cache.remove(tail?.key)
                 size--
             }
