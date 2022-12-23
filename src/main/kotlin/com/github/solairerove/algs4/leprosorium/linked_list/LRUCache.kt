@@ -47,18 +47,18 @@ class LRUCache(var capacity: Int) {
         head.next = node
     }
 
+    private fun popTail(): DoublyLinkedNode? {
+        val res = tail.prev
+        removeNode(res)
+        return res
+    }
+
     private fun removeNode(node: DoublyLinkedNode?) {
         val prev = node?.prev
         val next = node?.next
 
         prev?.next = next
         next?.prev = prev
-    }
-
-    private fun popTail(): DoublyLinkedNode? {
-        val res = tail.prev
-        removeNode(res)
-        return res
     }
 
     fun get(key: Int): Int {
