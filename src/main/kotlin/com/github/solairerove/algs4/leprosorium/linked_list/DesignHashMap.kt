@@ -16,68 +16,40 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  * void remove(key) removes the key and its corresponding value if the map contains the mapping for the key.
  */
 
+// TODO: try to to using doubly linked node
 class MyHashMap {
-    private class Node { // TODO: constructor
-        var key: Int = -1
-        var value: Int = -1
-        var next: Node? = null // TODO: prev
+    private val maxLen = 1000000
+    private val map: Array<MutableList<Pair<Int, Int>>?> = arrayOfNulls(maxLen)
+
+    private fun getIndex(key: Int): Int = key % maxLen
+
+    private fun getPositionInBucket(key: Int, index: Int): Int {
+        val bucket = map[index] ?: return -1
+
+        return bucket.indices.find { bucket[it].first == key } ?: -1
     }
-
-    // TODO: bucket?
-    // head
-    // tail
-    // no need dlinKedNode
-
-    var n: Int = -1 // number of key/value pairs
-    var m: Int = -1 // hashtable size // TODO: size
-    private var st: Array<Node?> // TODO: List
-
-    init {
-        this.n = 0
-        this.m = 2048
-        this.st = Array(this.m) { null }
-    }
-
-    private fun hash(key: Int): Int = key.hashCode() % m
 
     fun put(key: Int, value: Int) {
-        val index = hash(key)
-        var curr: Node? = st[index]
-        while (curr != null) {
-            if (key == curr.key) {
-                curr.value = value
-                return
-            }
-            curr = curr.next
+        val index = getIndex(key)
+        val pos = getPositionInBucket(key, index)
+        if (pos < 0) {
+            if (map[index] == null) map[index] = mutableListOf()
+            map[index]!!.add(Pair(key, value))
+        } else {
+            map[index]!![pos] = Pair(key, value)
         }
-
-        n++
-        val newNode = Node()
-        newNode.key = key
-        newNode.value = value
-        newNode.next = st[index]
-        st[index] = newNode
     }
 
     fun get(key: Int): Int {
-        val index = hash(key)
-        var curr: Node? = st[index]
-        while (curr != null) {
-            if (key == curr.key) return curr.value
-            curr = curr.next
-        }
+        val index = getIndex(key)
+        val pos = getPositionInBucket(key, index)
 
-        return -1
+        return if (pos < 0) -1 else map[index]!![pos].second
     }
 
     fun remove(key: Int) {
-        val index = hash(key)
-        var curr: Node? = st[index]
-        var prev: Node? = null
-        while (curr != null) {
-            if (key == curr.key) prev?.next = curr.next
-            prev = curr
-            curr = curr.next
-        }
+        val index = getIndex(key)
+        val pos = getPositionInBucket(key, index)
+        if (pos >= 0) map[index]!!.removeAt(pos)
     }
 }
