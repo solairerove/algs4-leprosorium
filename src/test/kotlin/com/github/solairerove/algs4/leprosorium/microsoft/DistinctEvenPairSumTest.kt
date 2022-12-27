@@ -11,7 +11,14 @@ class DistinctEvenPairSumTest : StringSpec({
             row(intArrayOf(4, 2, 5, 8, 7, 3, 71), 2),
             row(intArrayOf(14, 21, 16, 35, 22), 1),
             row(intArrayOf(5, 5, 5, 5, 5, 5), 3),
+            row(intArrayOf(1, 2, 5), 1),
+            row(intArrayOf(2, 2, 5), 1),
+            row(intArrayOf(2, 2, 6), 1),
+            row(intArrayOf(1, 2, 2, 6), 1),
+            row(intArrayOf(2, 3), 0),
+            row(intArrayOf(2, 2), 1),
         ) { arr, res ->
+            getDistinctPair(arr) shouldBe res
             getDistinctPairUsingSet(arr) shouldBe res
             getDistinctPairUsingBoolArray(arr) shouldBe res
         }

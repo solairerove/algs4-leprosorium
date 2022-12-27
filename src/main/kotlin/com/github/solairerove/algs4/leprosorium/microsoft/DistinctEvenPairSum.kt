@@ -23,6 +23,37 @@ package com.github.solairerove.algs4.leprosorium.microsoft
  * [0..1,000,000,000].
  */
 
+// O(n) time | O(1) space
+fun getDistinctPair(arr: IntArray): Int {
+    if (arr.size == 1) return 0
+    if (arr.size == 2) return if ((arr[0] + arr[1]) % 2 == 0) 1 else 0
+
+    var cnt = 0
+    var slow = 0
+    var fast = arr.size - 1
+    if ((arr[slow] + arr[fast]) % 2 == 0) {
+        cnt++
+        slow = 1
+        fast = 2
+    } else {
+        fast = 1
+    }
+
+    val endIdx = if (cnt == 1) arr.size - 2 else arr.size - 1
+    while (fast <= endIdx) {
+        if ((arr[slow] + arr[fast]) % 2 == 0) {
+            slow += 2
+            fast += 2
+            cnt++
+        } else {
+            slow++
+            fast++
+        }
+    }
+
+    return cnt
+}
+
 // O(n) time | O(n) space
 fun getDistinctPairUsingSet(arr: IntArray): Int {
     val indices = hashSetOf<Int>()
