@@ -93,6 +93,7 @@ ___
     - [delete the middle node of a linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/DeleteTheMiddleNodeOfALinkedList.kt)
     - [design browser history](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/DesignBrowserHistory.kt)
     - [design hash map](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/DesignHashMap.kt)
+    - [design hash set](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/DesignHashSet.kt)
     - [design linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/DesignLinkedList.kt)
     - [flatten a multilevel doubly linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/FlattenAMultilevelDoublyLinkedList.kt)
     - [insert into a sorted circular linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/InsertIntoASortedCircularLinkedList.kt)
