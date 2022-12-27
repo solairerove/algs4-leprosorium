@@ -38,7 +38,7 @@ fun maximumIdenticalAdjacentDistance(s: String): Int {
     var distance = -1
     for (i in 0 until s.length - 1) {
         val pair = "${s[i]}${s[i + 1]}"
-        if (pairToFirstIdx.contains(pair)) {
+        if (pair in pairToFirstIdx) {
             distance = max(distance, i - pairToFirstIdx[pair]!!)
         } else {
             pairToFirstIdx[pair] = i
