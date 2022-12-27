@@ -25,7 +25,7 @@ package com.github.solairerove.algs4.leprosorium.microsoft
 
 // O(n) time | O(n) space
 fun getDistinctPairUsingSet(arr: IntArray): Int {
-    val indices = hashSetOf<Int>() // array of boolean
+    val indices = hashSetOf<Int>()
     for (i in arr.indices) {
         val idx = if (i == arr.size - 1) Pair(i, 0) else Pair(i, i + 1)
 
@@ -35,4 +35,20 @@ fun getDistinctPairUsingSet(arr: IntArray): Int {
     }
 
     return indices.size / 2
+}
+
+// O(2n) time | O(n) space
+fun getDistinctPairUsingBoolArray(arr: IntArray): Int {
+    val indices = Array(arr.size) { false }
+    for (i in arr.indices) {
+        val idx = if (i == arr.size - 1) Pair(i, 0) else Pair(i, i + 1)
+
+        if (!indices[idx.first] && !indices[idx.second]) {
+            if ((arr[idx.first] + arr[idx.second]) % 2 == 0) {
+                indices[idx.first] = true.also { indices[idx.second] = true }
+            }
+        }
+    }
+
+    return indices.filter { it }.size / 2
 }

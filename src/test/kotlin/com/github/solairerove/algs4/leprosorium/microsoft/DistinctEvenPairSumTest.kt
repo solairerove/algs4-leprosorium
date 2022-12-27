@@ -13,6 +13,7 @@ class DistinctEvenPairSumTest : StringSpec({
             row(intArrayOf(5, 5, 5, 5, 5, 5), 3),
         ) { arr, res ->
             getDistinctPairUsingSet(arr) shouldBe res
+            getDistinctPairUsingBoolArray(arr) shouldBe res
         }
     }
 })
