@@ -1,15 +1,16 @@
-package com.github.solairerove.algs4.leprosorium.microsoft
+package com.github.solairerove.algs4.leprosorium.strings
 
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.data.blocking.forAll
 import io.kotest.data.row
 import io.kotest.matchers.shouldBe
 
-class MaximumDistanceBetweenTwoSameAdjacentTest : StringSpec({
+class MaxDistanceBetweenSameElementsTest : StringSpec({
     "maximum identical adjacent distance test" {
         forAll(
             row("aakmaakmakda", 7),
             row("aaa", 1),
+            row("eeeeeee", 5),
             row("civic", -1),
             row("aa", -1),
             row("ab", -1),

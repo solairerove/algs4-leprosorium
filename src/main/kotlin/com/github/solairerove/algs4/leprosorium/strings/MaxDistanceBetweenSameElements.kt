@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.microsoft
+package com.github.solairerove.algs4.leprosorium.strings
 
 import kotlin.math.max
 

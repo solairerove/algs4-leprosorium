@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.microsoft
+package com.github.solairerove.algs4.leprosorium.arrays
 
 /**
  * Given a circular array of N integers (i.e. A[0] and A[N — 1] are adjacent to each other),

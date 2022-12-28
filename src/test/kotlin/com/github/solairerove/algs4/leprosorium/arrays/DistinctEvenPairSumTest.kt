@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.microsoft
+package com.github.solairerove.algs4.leprosorium.arrays
 
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.data.blocking.forAll
