@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.greedy
+package com.github.solairerove.algs4.leprosorium.dynamic_programming
 
 /**
  * You are given two arrays of integers nums1 and nums2, possibly of different lengths.

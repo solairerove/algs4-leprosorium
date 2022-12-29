@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.arrays
+package com.github.solairerove.algs4.leprosorium.matrix
 
 fun main() {
     val grid = mutableListOf(
