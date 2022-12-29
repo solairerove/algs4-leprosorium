@@ -46,29 +46,31 @@ fun biggestNumberFromMatrix(matrix: Array<IntArray>): Int {
     val row = matrix.size
     val col = matrix[0].size
 
+    // TODO: should improve dfs to delete this
     if (row == 1) {
         var ans = 0
         for (i in 0 until col - 3) ans = max(
             ans,
-            matrix[0][i] * 1000 + matrix[0][i + 1] * 100 + matrix[0][i + 2] * 10 + matrix[0][i + 3]
+            "${matrix[0][i]}${matrix[0][i + 1]}${matrix[0][i + 2]}${matrix[0][i + 3]}".toInt()
         )
 
         for (i in col - 1 downTo 3) ans = max(
             ans,
-            matrix[0][i] * 1000 + matrix[0][i - 1] * 100 + matrix[0][i - 2] * 10 + matrix[0][i - 3]
+            "${matrix[0][i]}${matrix[0][i - 1]}${matrix[0][i - 2]}${matrix[0][i - 3]}".toInt()
         )
         return ans
     }
 
+    // TODO: should improve dfs to delete this
     if (col == 1) {
         var ans = 0
         for (i in 0 until row - 3) ans = max(
             ans,
-            matrix[i][0] * 1000 + matrix[i + 1][0] * 100 + matrix[i + 2][0] * 10 + matrix[i + 3][0]
+            "${matrix[i][0]}${matrix[i + 1][0]}${matrix[i + 2][0]}${matrix[i + 3][0]}".toInt()
         )
         for (i in row - 1 downTo 3) ans = max(
             ans,
-            matrix[i][0] * 1000 + matrix[i - 1][0] * 100 + matrix[i - 2][0] * 10 + matrix[i - 3][0]
+            "${matrix[i][0]}${matrix[i - 1][0]}${matrix[i - 2][0]}${matrix[i - 3][0]}".toInt()
         )
         return ans
     }
