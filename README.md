@@ -114,6 +114,7 @@ ___
   - [remove duplicates from unsorted linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/RemoveDuplicatesFromUnsortedLinkedList.kt)
   - [remove duplicates from an unsorted linked list hacker rank](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/RemoveDuplicatesFromUnsortedLinkedListHackerRank.kt)
   - [remove linked list elements](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/RemoveLinkedListElements.kt)
+  - [remove nodes from linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/RemoveNodesFromLinkedList.kt)
   - [remove nth node from end of list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/RemoveNthNodeFromEndOfList.kt)
   - [remove odd from linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/RemoveOddFromLinkedList.kt)
   - [reorder list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/ReorderList.kt)
