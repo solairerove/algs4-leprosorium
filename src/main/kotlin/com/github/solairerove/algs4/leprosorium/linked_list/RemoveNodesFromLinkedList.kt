@@ -32,3 +32,21 @@ fun removeNodes(head: ListNode?): ListNode? {
 
     return reverseList(reversedHead)
 }
+
+// O(n) time | O(n) space
+fun removeNodesStack(head: ListNode?): ListNode? {
+    if (head?.next == null) return head
+
+    val sentinel = ListNode(Int.MAX_VALUE)
+    val stack = ArrayDeque(listOf(sentinel))
+    var curr: ListNode? = head
+    while (curr != null) {
+        while (stack.first().value < curr.value) stack.removeFirst()
+        stack.first().next = curr
+        stack.addFirst(curr)
+
+        curr = curr.next
+    }
+
+    return sentinel.next
+}
