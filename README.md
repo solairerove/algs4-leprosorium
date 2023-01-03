@@ -100,6 +100,7 @@ ___
   - [flatten a multilevel doubly linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/FlattenAMultilevelDoublyLinkedList.kt)
   - [insert into a sorted circular linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/InsertIntoASortedCircularLinkedList.kt)
   - [intersection of two linked lists](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/IntersectionOfTwoLinkedLists.kt)
+  - [lfu cache](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/LFUCache.kt)
   - [linked list cycle](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/LinkedListCycle.kt)
   - [linked list cycle II](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/LinkedListCycleII.kt)
   - [lru cache](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/LRUCache.kt)
