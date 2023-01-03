@@ -14,6 +14,23 @@ import kotlin.random.Random
  * All the nodes of the list should be equally likely to be chosen.
  */
 
+class LinkedListRandomNodeUsingReservoirSampling(private val head: ListNode?) {
+
+    // O(n) time | O(1) space
+    fun getRandom(): Int {
+        var scope = 1
+        var chosen = 0
+        var curr: ListNode? = head
+        while (curr != null) {
+            if (Math.random() < 1.0 / scope) chosen = curr.value
+            scope++
+            curr = curr.next
+        }
+        return chosen
+    }
+}
+
+
 class LinkedListRandomNodeUsingArray(head: ListNode?) {
     private val range = mutableListOf<Int>()
 
