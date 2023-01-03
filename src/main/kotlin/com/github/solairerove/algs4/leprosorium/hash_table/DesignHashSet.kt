@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.linked_list
+package com.github.solairerove.algs4.leprosorium.hash_table
 
 /**
  * Design a HashSet without using any built-in hash table libraries.

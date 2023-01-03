@@ -1,4 +1,4 @@
-package com.github.solairerove.algs4.leprosorium.linked_list
+package com.github.solairerove.algs4.leprosorium.hash_table
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
