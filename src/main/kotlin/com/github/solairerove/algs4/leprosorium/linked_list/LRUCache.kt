@@ -16,7 +16,7 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  *
  * The functions get and put must each run in O(1) average time complexity.
  */
-class LRUCache(var capacity: Int) {
+class LRUCache(private var capacity: Int) {
     private class DoublyLinkedNode {
         var key: Int = -1
         var value: Int = -1
