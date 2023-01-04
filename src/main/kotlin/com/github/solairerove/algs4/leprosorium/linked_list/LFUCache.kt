@@ -26,7 +26,7 @@ package com.github.solairerove.algs4.leprosorium.linked_list
  */
 
 class LFUCache(private var capacity: Int) {
-    private val cache = hashMapOf<Int, Pair<Int, Int>>()// key to pair(freq, value)
+    private val cache = hashMapOf<Int, Pair<Int, Int>>() // key to pair(freq, value)
     private val frequencies = hashMapOf<Int, LinkedHashSet<Int>>() // frequency to set of all keys with such freq
     private var minFrequency = 0
 
