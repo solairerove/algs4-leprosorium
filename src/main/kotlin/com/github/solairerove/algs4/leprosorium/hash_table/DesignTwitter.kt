@@ -85,21 +85,6 @@ class Twitter {
         }
 
         return res
-//        if (!users.containsKey(userId)) return listOf()
-//
-//        val feedToSort: Array<TweetNode?> = users[userId]!!.followers.mapNotNull { users[it]!!.tweets }.toTypedArray()
-//
-//        val sortedFeed = mergeKLists(feedToSort)
-//
-//        val feed = mutableListOf<Int>()
-//        var curr = sortedFeed
-//        var i = FEED_SIZE
-//        while (curr != null && i-- > 0) {
-//            feed.add(curr.tweet.tweetId)
-//            curr = curr.next
-//        }
-//
-//        return feed
     }
 
     fun follow(followerId: Int, followeeId: Int) {
@@ -112,48 +97,4 @@ class Twitter {
     fun unfollow(followerId: Int, followeeId: Int) {
         if (followerId != followeeId) users[followerId]?.removeFollower(followeeId)
     }
-
-    // peek 10?
-//    private fun mergeKLists(lists: Array<TweetNode?>): TweetNode? {
-//        if (lists.isEmpty()) return null
-//        if (lists.size == 1) return lists[0]
-//
-//        var interval = 1
-//        while (interval < lists.size) {
-//            var i = 0
-//            while (i + interval < lists.size) {
-//                lists[i] = mergeTwoLists(lists[i], lists[i + interval])
-//                i += interval * 2
-//            }
-//            interval *= 2
-//        }
-//
-//        return lists[0]
-//    }
-//
-//    private fun mergeTwoLists(list1: TweetNode?, list2: TweetNode?): TweetNode? {
-//        if (list1 == null) return list2
-//        if (list2 == null) return list1
-//
-//        val sentinel = TweetNode(Tweet(-1, 0))
-//        var prev: TweetNode? = sentinel
-//
-//        var curr1: TweetNode? = list1
-//        var curr2: TweetNode? = list2
-//        while (curr1 != null && curr2 != null) {
-//            if (curr1.tweet.time > curr2.tweet.time) {
-//                prev?.next = curr1
-//                curr1 = curr1.next
-//            } else {
-//                prev?.next = curr2
-//                curr2 = curr2.next
-//            }
-//
-//            prev = prev?.next
-//        }
-//
-//        prev?.next = curr1 ?: curr2
-//
-//        return sentinel.next
-//    }
 }
