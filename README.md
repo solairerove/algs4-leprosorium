@@ -85,6 +85,7 @@ ___
 - [hash table](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/hash_table)
   - [design hash map](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/hash_table/DesignHashMap.kt)
   - [design hash set](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/hash_table/DesignHashSet.kt)
+  - [design twitter](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/hash_table/DesignTwitter.kt)
   - [insert delete get random O(1)](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/hash_table/InsertDeleteGetRandom.kt)
   - [insert delete get random duplicates allowed O(1)](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/hash_table/InsertDeleteGetRandomDuplicatesAllowed.kt)
 - [heap](https://github.com/solairerove/algs4-leprosorium/tree/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/heap)
