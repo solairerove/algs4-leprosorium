@@ -26,15 +26,12 @@ fun reorderList(head: ListNode?) {
 private fun merge(list1: ListNode?, list2: ListNode?) {
     var curr1: ListNode? = list1
     var curr2: ListNode? = list2
-    var next1: ListNode?
-    var next2: ListNode?
-
     while (curr2?.next != null) {
-        next1 = curr1?.next
+        val next1 = curr1?.next
         curr1?.next = curr2
         curr1 = next1
 
-        next2 = curr2.next
+        val next2 = curr2.next
         curr2.next = curr1
         curr2 = next2
     }
