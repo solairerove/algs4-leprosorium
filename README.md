@@ -101,6 +101,7 @@ ___
   - [delete the middle node of a linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/DeleteTheMiddleNodeOfALinkedList.kt)
   - [design browser history](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/DesignBrowserHistory.kt)
   - [design linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/DesignLinkedList.kt)
+  - [find the duplicate number](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/FindTheDuplicateNumber.kt)
   - [flatten a multilevel doubly linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/FlattenAMultilevelDoublyLinkedList.kt)
   - [insert into a sorted circular linked list](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/InsertIntoASortedCircularLinkedList.kt)
   - [intersection of two linked lists](https://github.com/solairerove/algs4-leprosorium/blob/master/src/main/kotlin/com/github/solairerove/algs4/leprosorium/linked_list/IntersectionOfTwoLinkedLists.kt)
