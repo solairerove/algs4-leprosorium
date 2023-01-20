@@ -1,6 +1,6 @@
 # algs4-leprosorium
 
-Algorithms playground
+archived, look at [https://github.com/solairerove/leetcode-leprosorium-python](https://github.com/solairerove/leetcode-leprosorium-python)
 
 - [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/home/)
 - [code](https://algs4.cs.princeton.edu/code/)
